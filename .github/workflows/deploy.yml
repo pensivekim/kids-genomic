@@ -23,7 +23,7 @@ jobs:
         run: npm run build
 
       - name: Deploy
-        run: npx wrangler pages deploy dist --project-name=kids-genomic
+        run: npx wrangler pages deploy out --project-name=kids-genomic
         env:
           CLOUDFLARE_API_TOKEN: ${{ secrets.CLOUDFLARE_API_TOKEN }}
           CLOUDFLARE_ACCOUNT_ID: ${{ secrets.CLOUDFLARE_ACCOUNT_ID }}
