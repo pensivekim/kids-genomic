@@ -1,7 +1,7 @@
 import { useRef, useState } from 'react';
 import { useFrame } from '@react-three/fiber';
 import { Html } from '@react-three/drei';
-import { Mesh } from 'three';
+import { Group } from 'three';
 import { type BuildingConfig } from '../../config/buildings';
 
 interface Props {
@@ -10,51 +10,65 @@ interface Props {
 }
 
 export default function BuildingMesh({ building, onClick }: Props) {
-  const bodyRef = useRef<Mesh>(null!);
-  const roofRef = useRef<Mesh>(null!);
-  const groupRef = useRef<{ position: { y: number } }>(null!);
-
+  const groupRef   = useRef<Group>(null!);
   const [hovered, setHovered] = useState(false);
-  const targetY = useRef(0);
+  const hoverY     = useRef(0);
+  const clickScale = useRef(1);
+  const clickedAt  = useRef<number | null>(null); // clock.elapsedTime 기준
 
-  useFrame(() => {
-    const target = hovered ? 0.3 : 0;
-    targetY.current += (target - targetY.current) * 0.12;
-    if (groupRef.current) {
-      groupRef.current.position.y = targetY.current;
+  useFrame((state) => {
+    if (!groupRef.current) return;
+
+    // hover 부상 (lerp)
+    const hoverTarget = hovered ? 0.3 : 0;
+    hoverY.current += (hoverTarget - hoverY.current) * 0.12;
+
+    // 클릭 튕김
+    if (clickedAt.current !== null) {
+      const elapsed = state.clock.elapsedTime - clickedAt.current;
+      if (elapsed < 0.5) {
+        clickScale.current = 1 + Math.sin((elapsed / 0.5) * Math.PI) * 0.2;
+      } else {
+        clickScale.current = 1;
+        clickedAt.current = null;
+      }
     }
+
+    groupRef.current.position.y = hoverY.current;
+    groupRef.current.scale.setScalar(clickScale.current);
   });
 
-  const isLive = building.status === 'live';
-  const wallColor = isLive ? building.color : '#d1d5db';
+  const isLive    = building.status === 'live';
+  const wallColor = isLive ? building.color    : '#d1d5db';
   const roofColor = isLive ? building.roofColor : '#9ca3af';
-
-  // 건물 타입별 지붕 모양
   const roofShape = building.component === 'lab' ? 'box' : 'cone';
 
   return (
-    // @ts-ignore — drei group ref 타입 허용
     <group
       ref={groupRef}
       position={building.position}
-      onPointerOver={() => { setHovered(true); document.body.style.cursor = isLive ? 'pointer' : 'default'; }}
-      onPointerOut={() => { setHovered(false); document.body.style.cursor = 'default'; }}
-      onClick={() => onClick(building)}
+      onPointerOver={() => { setHovered(true);  document.body.style.cursor = isLive ? 'pointer' : 'default'; }}
+      onPointerOut ={() => { setHovered(false); document.body.style.cursor = 'default'; }}
+      onClick={(e) => {
+        e.stopPropagation();
+        clickedAt.current = e.timeStamp / 1000; // useFrame clock과 동기화
+        onClick(building);
+      }}
     >
       {/* 벽체 */}
-      <mesh ref={bodyRef} position={[0, 0.75, 0]} castShadow>
+      <mesh position={[0, 0.75, 0]}>
         <boxGeometry args={[1.8, 1.5, 1.8]} />
         <meshToonMaterial color={wallColor} />
       </mesh>
 
       {/* 지붕 */}
       {roofShape === 'cone' ? (
-        <mesh ref={roofRef} position={[0, 1.9, 0]} castShadow>
+        <mesh position={[0, 1.9, 0]}>
           <coneGeometry args={[1.4, 1.0, 4]} />
           <meshToonMaterial color={roofColor} />
         </mesh>
       ) : (
-        <mesh ref={roofRef} position={[0, 1.65, 0]} castShadow>
+        <mesh position={[0, 1.65, 0]}>
           <boxGeometry args={[2.0, 0.3, 2.0]} />
           <meshToonMaterial color={roofColor} />
         </mesh>
@@ -75,12 +89,7 @@ export default function BuildingMesh({ building, onClick }: Props) {
       )}
 
       {/* 라벨 */}
-      <Html
-        position={[0, 3.0, 0]}
-        center
-        distanceFactor={12}
-        style={{ pointerEvents: 'none' }}
-      >
+      <Html position={[0, 3.0, 0]} center distanceFactor={12} style={{ pointerEvents: 'none' }}>
         <div style={{
           background: hovered ? 'rgba(255,255,255,0.95)' : 'rgba(255,255,255,0.8)',
           borderRadius: '12px',
