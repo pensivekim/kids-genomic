@@ -117,13 +117,13 @@ export const BUILDINGS: BuildingConfig[] = [
   {
     id: 'science',
     name: '과학 연구소',
-    subtitle: '동물·식물 탐구',
+    subtitle: '동물·실험·별자리',
     icon: '🔬',
     position: [-7, 0, -1],
     color: '#6ee7b7',
     roofColor: '#059669',
-    serviceUrl: '',
-    status: 'coming_soon',
+    serviceUrl: '/science',
+    status: 'live',
     component: 'lab',
   },
   {

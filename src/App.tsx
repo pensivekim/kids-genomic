@@ -10,6 +10,7 @@ const StoryPage = lazy(() => import('./pages/story/StoryPage'));
 const EnglishPage = lazy(() => import('./pages/english/EnglishPage'));
 const MusicPage = lazy(() => import('./pages/music/MusicPage'));
 const ArtPage = lazy(() => import('./pages/art/ArtPage'));
+const SciencePage = lazy(() => import('./pages/science/SciencePage'));
 
 function World() {
   const isLowEnd = useIsLowEndDevice();
@@ -34,6 +35,7 @@ export default function App() {
           <Route path="/english" element={<EnglishPage />} />
           <Route path="/music" element={<MusicPage />} />
           <Route path="/art" element={<ArtPage />} />
+          <Route path="/science" element={<SciencePage />} />
         </Routes>
       </Suspense>
     </BrowserRouter>
