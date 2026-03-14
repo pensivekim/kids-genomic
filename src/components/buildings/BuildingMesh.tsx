@@ -89,22 +89,21 @@ export default function BuildingMesh({ building, onClick }: Props) {
       )}
 
       {/* 라벨 */}
-      <Html position={[0, 3.0, 0]} center distanceFactor={12} style={{ pointerEvents: 'none' }}>
+      <Html position={[0, 3.0, 0]} center style={{ pointerEvents: 'none' }}>
         <div style={{
-          background: hovered ? 'rgba(255,255,255,0.95)' : 'rgba(255,255,255,0.8)',
-          borderRadius: '12px',
-          padding: '4px 10px',
-          fontSize: '13px',
+          background: 'rgba(255,255,255,0.88)',
+          borderRadius: '10px',
+          padding: '3px 8px',
+          fontSize: '11px',
           fontWeight: 'bold',
           color: '#1f2937',
           whiteSpace: 'nowrap',
-          boxShadow: hovered ? '0 4px 12px rgba(0,0,0,0.2)' : '0 2px 6px rgba(0,0,0,0.1)',
-          transform: hovered ? 'scale(1.1)' : 'scale(1)',
-          transition: 'all 0.2s',
+          boxShadow: '0 2px 6px rgba(0,0,0,0.15)',
           fontFamily: 'system-ui, sans-serif',
+          userSelect: 'none',
         }}>
           {building.icon} {building.name}
-          {!isLive && <span style={{ marginLeft: '4px', fontSize: '10px', color: '#9ca3af' }}>준비중</span>}
+          {!isLive && <span style={{ marginLeft: '4px', fontSize: '9px', color: '#9ca3af' }}>준비중</span>}
         </div>
       </Html>
     </group>
