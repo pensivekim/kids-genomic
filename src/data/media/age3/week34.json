@@ -1,0 +1,61 @@
+{
+  "week": 34,
+  "age": 3,
+  "title": "미디어 약속",
+  "phase": 5,
+  "competency": "Choose",
+  "slides": [
+    {
+      "type": "intro",
+      "title": "미디어 약속을 만들어요!",
+      "emoji": "🤙",
+      "description": "미디어를 잘 사용하기 위한 우리만의 약속을 만들어봐요!"
+    },
+    {
+      "type": "content",
+      "title": "약속이 필요한 이유",
+      "emoji": "💡",
+      "description": "미디어는 재미있지만 너무 많이 보면 눈이 피로하고 다른 것을 못 할 수 있어요. 약속을 지키면 미디어를 더 즐겁게 볼 수 있어요!"
+    },
+    {
+      "type": "content",
+      "title": "좋은 미디어 약속 예시",
+      "emoji": "📋",
+      "description": "밥 먹을 때는 미디어 안 봐요. 자기 전에는 미디어 끄기. 하루에 볼 시간 정하기. 좋은 내용만 골라서 보기!"
+    },
+    {
+      "type": "activity-intro",
+      "title": "우리 약속을 투표로 정해요!",
+      "emoji": "🗳️",
+      "description": "가장 중요한 미디어 약속을 투표로 정해봐요."
+    }
+  ],
+  "activity": {
+    "type": "VoteWidget",
+    "instruction": "우리 반에서 가장 중요한 미디어 약속을 투표로 정해봐요!",
+    "question": "제일 중요한 미디어 약속은 무엇일까요?",
+    "options": [
+      {
+        "id": "time",
+        "emoji": "⏰",
+        "label": "볼 시간을 정해요"
+      },
+      {
+        "id": "meal",
+        "emoji": "🍚",
+        "label": "밥 먹을 때 안 봐요"
+      },
+      {
+        "id": "sleep",
+        "emoji": "🌙",
+        "label": "잘 때 미디어 끄기"
+      },
+      {
+        "id": "good",
+        "emoji": "⭐",
+        "label": "좋은 내용만 골라봐요"
+      }
+    ]
+  },
+  "homeActivity": "가족이 함께 '우리 집 미디어 약속'을 정해봐요! 아이가 직접 약속을 말하게 하고, 종이에 써서 잘 보이는 곳에 붙여두세요."
+}

@@ -1,0 +1,43 @@
+{
+  "week": 17,
+  "age": 5,
+  "title": "스토리보드 만들기",
+  "phase": 3,
+  "competency": "Creative",
+  "slides": [
+    {
+      "type": "intro",
+      "title": "내 이야기를 그림으로 그려요",
+      "emoji": "🎬",
+      "description": "영상을 만들기 전에 스토리보드를 그려봐요!"
+    },
+    {
+      "type": "content",
+      "title": "스토리보드가 뭐야?",
+      "emoji": "🖼️",
+      "description": "스토리보드는 영상을 만들기 전에 장면을 순서대로 그린 그림이에요. 마치 만화책처럼 장면 장면을 미리 계획하는 거예요!"
+    },
+    {
+      "type": "activity-intro",
+      "title": "스토리보드 만들기 체크리스트",
+      "emoji": "📋",
+      "description": "스토리보드를 만드는 단계를 하나씩 완성해봐요."
+    }
+  ],
+  "activity": {
+    "type": "StampBoard",
+    "instruction": "스토리보드를 만드는 단계를 완성하면 도장을 받아요!",
+    "stamp": "🎬",
+    "items": [
+      { "id": "s1", "emoji": "💡", "label": "주제를 정했어요" },
+      { "id": "s2", "emoji": "👥", "label": "등장인물을 정했어요" },
+      { "id": "s3", "emoji": "🏠", "label": "배경을 정했어요" },
+      { "id": "s4", "emoji": "1️⃣", "label": "첫 번째 장면을 그렸어요" },
+      { "id": "s5", "emoji": "2️⃣", "label": "두 번째 장면을 그렸어요" },
+      { "id": "s6", "emoji": "3️⃣", "label": "마지막 장면을 그렸어요" }
+    ],
+    "maxStamps": 6,
+    "completionMessage": "훌륭한 스토리보드가 완성됐어요! 이제 촬영할 준비가 됐어요!"
+  },
+  "homeActivity": "가족에게 내가 만들고 싶은 영상 이야기를 설명해보세요!"
+}

@@ -1,0 +1,66 @@
+{
+  "week": 11,
+  "age": 4,
+  "title": "무서운 미디어 대처",
+  "phase": 2,
+  "competency": "Connect",
+  "slides": [
+    {
+      "type": "intro",
+      "title": "무서운 미디어를 봤을 때!",
+      "emoji": "😨",
+      "description": "무서운 영상이나 이야기를 보면 어떻게 해야 할까요?"
+    },
+    {
+      "type": "content",
+      "title": "무서울 때 대처법",
+      "emoji": "🛡️",
+      "description": "무서운 미디어를 보면 바로 끄거나, 어른에게 말해요. TV 속 괴물은 진짜가 아니에요. 무서우면 꼭 부모님께 말해요!"
+    },
+    {
+      "type": "activity-intro",
+      "title": "무서울 때 어떻게 할까요?",
+      "emoji": "🎯",
+      "description": "알맞은 방법을 골라봐요."
+    }
+  ],
+  "activity": {
+    "type": "QuizCard",
+    "instruction": "무서운 미디어를 봤을 때 어떻게 하면 좋을까요?",
+    "questions": [
+      {
+        "id": "q1",
+        "question": "무서운 영상이 나오면 어떻게 해야 해요?",
+        "emoji": "📺",
+        "options": ["계속 봐요", "바로 꺼요", "더 크게 켜요"],
+        "answer": 1,
+        "explanation": "무서우면 바로 끄고 어른께 말해요!"
+      },
+      {
+        "id": "q2",
+        "question": "TV 속 무서운 괴물은 진짜예요?",
+        "emoji": "👾",
+        "options": ["진짜예요", "가짜예요", "모르겠어요"],
+        "answer": 1,
+        "explanation": "TV 속 괴물은 진짜가 아니에요. 영상으로 만든 거예요!"
+      },
+      {
+        "id": "q3",
+        "question": "무섭거나 불편한 미디어를 봤을 때 누구에게 말해야 해요?",
+        "emoji": "🗣️",
+        "options": ["혼자 참아요", "부모님이나 선생님께 말해요", "친구에게만 말해요"],
+        "answer": 1,
+        "explanation": "무서우면 꼭 어른에게 말해요. 부모님이나 선생님께 말하면 도와줄 거예요!"
+      },
+      {
+        "id": "q4",
+        "question": "잠들기 전에 무서운 영상을 보면 어떻게 돼요?",
+        "emoji": "😴",
+        "options": ["잘 자요", "무서운 꿈을 꿀 수 있어요", "아무렇지 않아요"],
+        "answer": 1,
+        "explanation": "무서운 영상은 잠자기 전에 보지 않는 게 좋아요!"
+      }
+    ]
+  },
+  "homeActivity": "무서운 미디어를 봤을 때 어떻게 했는지 부모님과 이야기해봐요!"
+}

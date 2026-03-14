@@ -1,0 +1,39 @@
+{
+  "week": 10,
+  "age": 5,
+  "title": "중독이 뭐야?",
+  "phase": 2,
+  "competency": "Connect",
+  "slides": [
+    {
+      "type": "intro",
+      "title": "미디어 중독을 알아봐요",
+      "emoji": "⚠️",
+      "description": "미디어를 너무 많이 쓰면 어떻게 될까요?"
+    },
+    {
+      "type": "content",
+      "title": "중독이란 무엇일까요?",
+      "emoji": "🔄",
+      "description": "중독은 어떤 것을 멈추기 힘들어지는 거예요. 스마트폰을 내려놓기 싫고, 계속 보고 싶다면 중독의 신호일 수 있어요. 스스로 조절하는 것이 중요해요!"
+    },
+    {
+      "type": "activity-intro",
+      "title": "중독 신호인지 투표해봐요",
+      "emoji": "🗳️",
+      "description": "어떤 행동이 중독 신호인지 알아봐요."
+    }
+  ],
+  "activity": {
+    "type": "VoteWidget",
+    "instruction": "스마트폰을 볼 때 내 모습은 어떤가요? 솔직하게 골라봐요!",
+    "options": [
+      { "id": "o1", "emoji": "⏰", "label": "정해진 시간에 멈출 수 있어요" },
+      { "id": "o2", "emoji": "😤", "label": "그만하라고 하면 화가 나요" },
+      { "id": "o3", "emoji": "😴", "label": "자야 하는데 계속 보고 싶어요" },
+      { "id": "o4", "emoji": "🙅", "label": "스스로 끄기가 힘들어요" },
+      { "id": "o5", "emoji": "✅", "label": "다 보면 스스로 끌 수 있어요" }
+    ]
+  },
+  "homeActivity": "오늘 스마트폰이나 TV를 얼마나 봤는지 가족과 함께 기록해보세요!"
+}

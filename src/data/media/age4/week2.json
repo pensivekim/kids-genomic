@@ -1,0 +1,66 @@
+{
+  "week": 2,
+  "age": 4,
+  "title": "누가 만들었을까?",
+  "phase": 1,
+  "competency": "Critical",
+  "slides": [
+    {
+      "type": "intro",
+      "title": "누가 만들었을까요?",
+      "emoji": "🤔",
+      "description": "TV 프로그램, 책, 광고는 누가 만들었을까요?"
+    },
+    {
+      "type": "content",
+      "title": "미디어를 만드는 사람들",
+      "emoji": "🎬",
+      "description": "미디어는 사람이 만들어요. 기자, PD, 작가, 디자이너 등 많은 사람들이 함께 만들지요!"
+    },
+    {
+      "type": "activity-intro",
+      "title": "누가 만들었는지 맞혀봐요!",
+      "emoji": "🎯",
+      "description": "미디어와 만든 사람을 연결해봐요."
+    }
+  ],
+  "activity": {
+    "type": "QuizCard",
+    "instruction": "미디어를 만든 사람이 누구인지 골라봐요!",
+    "questions": [
+      {
+        "id": "q1",
+        "question": "TV 뉴스는 누가 만들어요?",
+        "emoji": "📺",
+        "options": ["기자", "요리사", "운동선수"],
+        "answer": 0,
+        "explanation": "기자가 뉴스를 취재하고 전달해요!"
+      },
+      {
+        "id": "q2",
+        "question": "동화책은 누가 만들어요?",
+        "emoji": "📚",
+        "options": ["소방관", "작가", "경찰관"],
+        "answer": 1,
+        "explanation": "작가가 이야기를 쓰고 책을 만들어요!"
+      },
+      {
+        "id": "q3",
+        "question": "만화영화는 누가 만들어요?",
+        "emoji": "🎨",
+        "options": ["선생님", "의사", "애니메이터"],
+        "answer": 2,
+        "explanation": "애니메이터가 그림을 움직이게 만들어요!"
+      },
+      {
+        "id": "q4",
+        "question": "광고는 누가 만들어요?",
+        "emoji": "📢",
+        "options": ["광고 제작자", "농부", "버스 기사"],
+        "answer": 0,
+        "explanation": "광고 제작자가 물건을 소개하는 광고를 만들어요!"
+      }
+    ]
+  },
+  "homeActivity": "오늘 본 TV 프로그램이 누가 만들었는지 부모님과 함께 찾아봐요!"
+}

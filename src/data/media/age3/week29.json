@@ -1,0 +1,76 @@
+{
+  "week": 29,
+  "age": 3,
+  "title": "함께 보아요",
+  "phase": 4,
+  "competency": "Communicate",
+  "slides": [
+    {
+      "type": "intro",
+      "title": "함께 보아요!",
+      "emoji": "👨‍👩‍👧‍👦",
+      "description": "미디어를 혼자 보는 것과 함께 보는 것은 달라요!"
+    },
+    {
+      "type": "content",
+      "title": "함께 보면 좋은 점",
+      "emoji": "🤝",
+      "description": "미디어를 함께 보면 이야기를 나눌 수 있어요. 내가 몰랐던 것을 친구나 가족이 알려줄 수 있어요!"
+    },
+    {
+      "type": "content",
+      "title": "함께 볼 때 지켜야 할 것",
+      "emoji": "📋",
+      "description": "소리를 조절해서 다른 사람에게 방해가 되지 않게 해요. 이야기 중간에 끼어들지 않고 차례를 지켜요!"
+    },
+    {
+      "type": "activity-intro",
+      "title": "함께 볼 콘텐츠를 골라봐요!",
+      "emoji": "🎯",
+      "description": "친구나 가족과 함께 보고 싶은 콘텐츠를 골라봐요."
+    }
+  ],
+  "activity": {
+    "type": "ContentPicker",
+    "instruction": "가족이나 친구와 함께 보고 싶은 콘텐츠를 골라봐요! 왜 그것을 골랐는지도 이야기해봐요.",
+    "items": [
+      {
+        "id": "nature",
+        "emoji": "🦁",
+        "label": "자연 다큐멘터리",
+        "description": "동물들의 신기한 생활을 함께 봐요"
+      },
+      {
+        "id": "cartoon",
+        "emoji": "🎨",
+        "label": "창의력 만화",
+        "description": "재미있는 그림으로 이야기를 배워요"
+      },
+      {
+        "id": "science",
+        "emoji": "🔬",
+        "label": "어린이 과학",
+        "description": "신기한 과학 실험을 구경해봐요"
+      },
+      {
+        "id": "music",
+        "emoji": "🎵",
+        "label": "어린이 노래",
+        "description": "신나는 노래를 함께 불러봐요"
+      },
+      {
+        "id": "story",
+        "emoji": "📖",
+        "label": "동화 이야기",
+        "description": "따뜻한 이야기를 함께 들어봐요"
+      },
+      {
+        "id": "cooking",
+        "emoji": "🍳",
+        "label": "어린이 요리",
+        "description": "맛있는 음식 만들기를 배워봐요"
+      }
+    ]
+  },
+  "homeActivity": "이번 주말에 가족과 함께 볼 콘텐츠를 아이가 직접 골라보게 해주세요! 보고 난 후 어떤 장면이 가장 재미있었는지 이야기를 나눠봐요."
+}

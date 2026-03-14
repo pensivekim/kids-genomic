@@ -1,0 +1,39 @@
+{
+  "week": 20,
+  "age": 5,
+  "title": "음악의 역할",
+  "phase": 3,
+  "competency": "Creative",
+  "slides": [
+    {
+      "type": "intro",
+      "title": "음악이 이야기를 바꿔요",
+      "emoji": "🎵",
+      "description": "영상에서 음악이 얼마나 중요한지 알아봐요!"
+    },
+    {
+      "type": "content",
+      "title": "음악의 역할",
+      "emoji": "🎶",
+      "description": "같은 장면도 음악에 따라 완전히 다른 느낌이 들어요. 무서운 음악을 들으면 심장이 두근두근, 신나는 음악을 들으면 몸이 들썩들썩해요. 음악은 감정을 전달하는 도구예요!"
+    },
+    {
+      "type": "activity-intro",
+      "title": "어떤 음악이 어울릴까요?",
+      "emoji": "🎼",
+      "description": "장면에 어울리는 음악을 투표해봐요."
+    }
+  ],
+  "activity": {
+    "type": "VoteWidget",
+    "instruction": "친구들이 소풍 가는 장면에는 어떤 음악이 어울릴까요?",
+    "options": [
+      { "id": "o1", "emoji": "🎊", "label": "신나고 밝은 음악" },
+      { "id": "o2", "emoji": "😰", "label": "무서운 긴장감 있는 음악" },
+      { "id": "o3", "emoji": "😢", "label": "슬프고 조용한 음악" },
+      { "id": "o4", "emoji": "🌿", "label": "자연 소리가 나는 편안한 음악" },
+      { "id": "o5", "emoji": "🎺", "label": "웅장한 클래식 음악" }
+    ]
+  },
+  "homeActivity": "좋아하는 영상의 음악을 다른 음악으로 바꿔 상상해보고, 어떻게 달라질지 이야기해봐요!"
+}

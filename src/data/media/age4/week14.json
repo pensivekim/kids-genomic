@@ -1,0 +1,38 @@
+{
+  "week": 14,
+  "age": 4,
+  "title": "적당한 시간",
+  "phase": 2,
+  "competency": "Connect",
+  "slides": [
+    {
+      "type": "intro",
+      "title": "미디어는 얼마나 봐야 할까요?",
+      "emoji": "⏰",
+      "description": "미디어를 너무 많이 보면 어떻게 될까요? 적당한 시간에 대해 알아봐요!"
+    },
+    {
+      "type": "content",
+      "title": "적당한 미디어 시간",
+      "emoji": "⏳",
+      "description": "만 4세는 하루에 1시간 정도가 적당해요. 너무 많이 보면 눈이 피로해지고 놀 시간이 줄어들어요!"
+    },
+    {
+      "type": "activity-intro",
+      "title": "얼마나 보는 게 좋을까요?",
+      "emoji": "🗳️",
+      "description": "친구들과 함께 투표해봐요!"
+    }
+  ],
+  "activity": {
+    "type": "VoteWidget",
+    "instruction": "하루에 미디어를 얼마나 보는 게 좋을까요?",
+    "options": [
+      { "id": "short", "emoji": "⏱️", "label": "30분 정도" },
+      { "id": "one", "emoji": "⏰", "label": "1시간 정도" },
+      { "id": "two", "emoji": "🕑", "label": "2시간 정도" },
+      { "id": "anytime", "emoji": "📱", "label": "보고 싶을 때 마음껏" }
+    ]
+  },
+  "homeActivity": "부모님과 함께 하루에 미디어를 얼마나 볼지 약속을 정해봐요!"
+}

@@ -1,0 +1,41 @@
+{
+  "week": 4,
+  "age": 3,
+  "title": "움직이는 그림",
+  "phase": 1,
+  "competency": "Critical",
+  "slides": [
+    {
+      "type": "intro",
+      "title": "움직이는 그림",
+      "emoji": "🎬",
+      "description": "영상과 사진은 어떻게 다를까요?"
+    },
+    {
+      "type": "content",
+      "title": "영상 vs 사진",
+      "emoji": "📸",
+      "description": "사진은 멈춰있고, 영상은 움직여요. 영상은 사진을 아주 빠르게 이어붙인 거예요!"
+    },
+    {
+      "type": "activity-intro",
+      "title": "영상인지 사진인지 구분해봐요!",
+      "emoji": "🎯",
+      "description": "설명을 읽고 알맞은 곳에 놓아봐요."
+    }
+  ],
+  "activity": {
+    "type": "CardSorter",
+    "instruction": "영상인가요, 사진인가요?",
+    "categories": ["영상이에요 🎬", "사진이에요 📸"],
+    "cards": [
+      { "id": "movie", "emoji": "🎬", "label": "움직이는 만화", "answer": 0 },
+      { "id": "photo1", "emoji": "📸", "label": "가족 사진", "answer": 1 },
+      { "id": "youtube", "emoji": "▶️", "label": "유튜브 영상", "answer": 0 },
+      { "id": "portrait", "emoji": "🖼️", "label": "그림 한 장", "answer": 1 },
+      { "id": "cartoon", "emoji": "📺", "label": "TV 만화", "answer": 0 },
+      { "id": "snapshot", "emoji": "🤳", "label": "셀카 한 장", "answer": 1 }
+    ]
+  },
+  "homeActivity": "핸드폰에서 사진과 영상의 차이를 찾아보세요!"
+}

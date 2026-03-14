@@ -1,0 +1,39 @@
+{
+  "week": 7,
+  "age": 5,
+  "title": "미디어와 생각",
+  "phase": 1,
+  "competency": "Critical",
+  "slides": [
+    {
+      "type": "intro",
+      "title": "미디어가 내 생각을 바꿀 수 있어요",
+      "emoji": "🧠",
+      "description": "미디어가 우리 생각에 어떤 영향을 줄까요?"
+    },
+    {
+      "type": "content",
+      "title": "미디어와 생각의 관계",
+      "emoji": "💭",
+      "description": "우리가 많이 보는 것이 우리 생각을 바꿀 수 있어요. 예를 들어 무서운 것을 많이 보면 세상이 무섭게 느껴질 수 있어요. 내가 보는 것을 스스로 선택하는 게 중요해요!"
+    },
+    {
+      "type": "activity-intro",
+      "title": "미디어가 생각에 미치는 영향을 투표해봐요",
+      "emoji": "🗳️",
+      "description": "미디어가 내 생각을 어떻게 바꾸는지 의견을 나눠봐요."
+    }
+  ],
+  "activity": {
+    "type": "VoteWidget",
+    "instruction": "미디어를 보고 난 뒤 어떤 기분이 드나요? 골라봐요!",
+    "options": [
+      { "id": "o1", "emoji": "😊", "label": "기분이 좋아져요" },
+      { "id": "o2", "emoji": "😰", "label": "무섭거나 걱정돼요" },
+      { "id": "o3", "emoji": "🤔", "label": "궁금한 게 생겨요" },
+      { "id": "o4", "emoji": "😤", "label": "화가 나요" },
+      { "id": "o5", "emoji": "😴", "label": "지루해요" }
+    ]
+  },
+  "homeActivity": "오늘 본 미디어가 어떤 느낌을 주었는지 부모님께 이야기해보세요!"
+}

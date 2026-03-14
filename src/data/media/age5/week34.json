@@ -1,0 +1,43 @@
+{
+  "week": 34,
+  "age": 5,
+  "title": "미디어 멘토",
+  "phase": 5,
+  "competency": "Choose",
+  "slides": [
+    {
+      "type": "intro",
+      "title": "이제 내가 멘토가 될 수 있어요",
+      "emoji": "🌟",
+      "description": "동생이나 친구에게 미디어를 올바르게 사용하는 방법을 가르쳐줘요!"
+    },
+    {
+      "type": "content",
+      "title": "멘토란 무엇일까요?",
+      "emoji": "👨‍🏫",
+      "description": "멘토는 다른 사람을 가르쳐주고 도와주는 사람이에요. 우리가 배운 것을 다른 친구나 동생에게 나눠주면 우리도 멘토가 될 수 있어요!"
+    },
+    {
+      "type": "activity-intro",
+      "title": "미디어 멘토 준비하기",
+      "emoji": "📋",
+      "description": "미디어 멘토가 되기 위한 단계를 완성해봐요."
+    }
+  ],
+  "activity": {
+    "type": "StampBoard",
+    "instruction": "미디어 멘토가 되기 위한 준비를 완성해봐요!",
+    "stamp": "🏅",
+    "items": [
+      { "id": "s1", "emoji": "📚", "label": "가르쳐줄 주제를 골랐어요" },
+      { "id": "s2", "emoji": "📝", "label": "쉽게 설명하는 방법을 생각했어요" },
+      { "id": "s3", "emoji": "🗣️", "label": "동생이나 친구에게 설명해봤어요" },
+      { "id": "s4", "emoji": "❓", "label": "질문에 대답해줬어요" },
+      { "id": "s5", "emoji": "😊", "label": "상대방이 이해했는지 확인했어요" },
+      { "id": "s6", "emoji": "🤝", "label": "함께 실천해봤어요" }
+    ],
+    "maxStamps": 6,
+    "completionMessage": "훌륭한 미디어 멘토가 됐어요! 이제 주변을 도울 수 있는 리더예요!"
+  },
+  "homeActivity": "동생이나 어린 친구에게 가짜뉴스를 구별하는 방법을 가르쳐주세요!"
+}

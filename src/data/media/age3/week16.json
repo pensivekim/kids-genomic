@@ -1,0 +1,33 @@
+{
+  "week": 16,
+  "age": 3,
+  "title": "2단계 졸업 🎉",
+  "phase": 2,
+  "competency": "Connect",
+  "isGraduation": true,
+  "slides": [
+    {
+      "type": "intro",
+      "title": "2단계 졸업 축하해요! 🎉",
+      "emoji": "🏆",
+      "description": "기분과 미디어의 관계를 알게 됐어요!"
+    },
+    {
+      "type": "content",
+      "title": "우리가 배운 것",
+      "emoji": "📚",
+      "description": "미디어가 기분에 미치는 영향, 무섭거나 슬픈 미디어 다루기, 기분 좋은 미디어 고르기를 배웠어요!"
+    },
+    {
+      "type": "activity-intro",
+      "title": "졸업 앨범을 구경해봐요!",
+      "emoji": "🎓",
+      "description": "2단계 동안 우리가 함께한 활동을 돌아봐요."
+    }
+  ],
+  "activity": {
+    "type": "GalleryViewer",
+    "instruction": "2단계 동안 배운 내용을 앨범에서 구경해봐요!"
+  },
+  "homeActivity": "가족에게 미디어와 기분의 관계에 대해 이야기해봐요!"
+}

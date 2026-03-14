@@ -1,0 +1,41 @@
+{
+  "week": 15,
+  "age": 4,
+  "title": "내 감정 지도",
+  "phase": 2,
+  "competency": "Connect",
+  "slides": [
+    {
+      "type": "intro",
+      "title": "내 감정 지도를 만들어봐요!",
+      "emoji": "🗺️",
+      "description": "미디어를 볼 때 어떤 감정이 생기는지 알아봐요!"
+    },
+    {
+      "type": "content",
+      "title": "미디어와 감정",
+      "emoji": "🌈",
+      "description": "기쁨, 슬픔, 무서움, 설렘, 화남... 미디어는 다양한 감정을 불러일으켜요. 내 감정을 알면 미디어를 더 잘 이해할 수 있어요!"
+    },
+    {
+      "type": "activity-intro",
+      "title": "어떤 미디어가 어떤 감정을 만드나요?",
+      "emoji": "🎯",
+      "description": "미디어와 감정을 연결해봐요."
+    }
+  ],
+  "activity": {
+    "type": "CardSorter",
+    "instruction": "이 미디어를 보면 어떤 기분이 드나요? 두 가지로 나눠봐요!",
+    "categories": ["기분이 좋아져요 😊", "기분이 나빠져요 😔"],
+    "cards": [
+      { "id": "funny_cartoon", "emoji": "😂", "label": "웃긴 만화", "answer": 0 },
+      { "id": "scary_video", "emoji": "😨", "label": "무서운 영상", "answer": 1 },
+      { "id": "music", "emoji": "🎵", "label": "신나는 음악", "answer": 0 },
+      { "id": "sad_story", "emoji": "😢", "label": "슬픈 이야기", "answer": 1 },
+      { "id": "dance_video", "emoji": "💃", "label": "신나는 춤 영상", "answer": 0 },
+      { "id": "fight_scene", "emoji": "👊", "label": "싸우는 장면", "answer": 1 }
+    ]
+  },
+  "homeActivity": "오늘 미디어를 보고 어떤 감정이 들었는지 그림으로 그려봐요!"
+}

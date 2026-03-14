@@ -1,0 +1,43 @@
+{
+  "week": 13,
+  "age": 5,
+  "title": "내 미디어 사용 분석",
+  "phase": 2,
+  "competency": "Connect",
+  "slides": [
+    {
+      "type": "intro",
+      "title": "나는 미디어를 어떻게 쓸까요?",
+      "emoji": "📊",
+      "description": "내가 미디어를 얼마나, 어떻게 쓰는지 살펴봐요!"
+    },
+    {
+      "type": "content",
+      "title": "미디어 사용 분석",
+      "emoji": "🔍",
+      "description": "하루 동안 내가 미디어를 얼마나 쓰는지 알아보면, 더 현명하게 사용할 수 있어요. 좋은 것은 더 하고, 나쁜 습관은 줄일 수 있어요!"
+    },
+    {
+      "type": "activity-intro",
+      "title": "내 미디어 습관 체크해봐요",
+      "emoji": "✅",
+      "description": "나에게 해당되는 습관에 도장을 찍어봐요."
+    }
+  ],
+  "activity": {
+    "type": "StampBoard",
+    "instruction": "나에게 해당되는 미디어 습관에 도장을 찍어봐요!",
+    "stamp": "🌟",
+    "items": [
+      { "id": "s1", "emoji": "⏰", "label": "정해진 시간에만 봐요" },
+      { "id": "s2", "emoji": "🌙", "label": "자기 전에 스마트폰 안 봐요" },
+      { "id": "s3", "emoji": "🍽️", "label": "밥 먹을 때 미디어 안 봐요" },
+      { "id": "s4", "emoji": "📚", "label": "미디어보다 책을 더 봐요" },
+      { "id": "s5", "emoji": "🏃", "label": "미디어 대신 밖에서 놀아요" },
+      { "id": "s6", "emoji": "👨‍👩‍👧", "label": "가족과 함께 볼 때만 봐요" }
+    ],
+    "maxStamps": 6,
+    "completionMessage": "훌륭해요! 미디어를 정말 건강하게 사용하고 있어요!"
+  },
+  "homeActivity": "오늘 하루 미디어를 언제, 얼마나 봤는지 기록하고 부모님과 이야기해보세요!"
+}

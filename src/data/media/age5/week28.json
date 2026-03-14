@@ -1,0 +1,39 @@
+{
+  "week": 28,
+  "age": 5,
+  "title": "피드백 주고받기",
+  "phase": 4,
+  "competency": "Communicate",
+  "slides": [
+    {
+      "type": "intro",
+      "title": "서로 의견을 나눠요",
+      "emoji": "🔄",
+      "description": "다른 사람의 작품에 대해 어떻게 의견을 말할까요?"
+    },
+    {
+      "type": "content",
+      "title": "좋은 피드백이란?",
+      "emoji": "💝",
+      "description": "피드백은 다른 사람의 작품에 대한 의견이에요. 좋은 피드백은 잘한 점을 먼저 칭찬하고, 더 좋게 만들 방법을 친절하게 말해요. '이건 별로야'보다 '이렇게 하면 더 좋을 것 같아'가 훨씬 좋아요!"
+    },
+    {
+      "type": "activity-intro",
+      "title": "좋은 피드백과 나쁜 피드백 투표",
+      "emoji": "🗳️",
+      "description": "어떤 피드백이 더 좋은지 투표해봐요."
+    }
+  ],
+  "activity": {
+    "type": "VoteWidget",
+    "instruction": "친구의 영상을 봤어요. 어떤 피드백이 더 좋은 피드백일까요?",
+    "options": [
+      { "id": "o1", "emoji": "😊", "label": "목소리가 또렷해서 잘 들려요!" },
+      { "id": "o2", "emoji": "😤", "label": "왜 이렇게 만들었어요?" },
+      { "id": "o3", "emoji": "💡", "label": "음악을 넣으면 더 좋을 것 같아요!" },
+      { "id": "o4", "emoji": "👎", "label": "재미없어요" },
+      { "id": "o5", "emoji": "🌟", "label": "열심히 만든 게 보여요! 다음엔 자막도 넣어봐요" }
+    ]
+  },
+  "homeActivity": "가족이나 친구의 작품(그림, 영상, 글)에 좋은 피드백을 한 가지씩 해보세요!"
+}

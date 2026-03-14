@@ -1,0 +1,32 @@
+{
+  "week": 12,
+  "age": 3,
+  "title": "슬픈 이야기",
+  "phase": 2,
+  "competency": "Connect",
+  "slides": [
+    {
+      "type": "intro",
+      "title": "슬픈 이야기",
+      "emoji": "😢",
+      "description": "미디어에서 슬픈 이야기를 보면 어떤 기분이 드나요?"
+    },
+    {
+      "type": "content",
+      "title": "슬픈 미디어",
+      "emoji": "😥",
+      "description": "책이나 영상에서 슬픈 장면을 보면 눈물이 나기도 해요. 슬픈 기분은 나쁜 게 아니에요. 마음이 따뜻하다는 뜻이에요!"
+    },
+    {
+      "type": "activity-intro",
+      "title": "슬픈 미디어를 봤을 때 기분을 나타내봐요!",
+      "emoji": "🎯",
+      "description": "슬픈 이야기를 봤을 때 내 기분을 골라봐요."
+    }
+  ],
+  "activity": {
+    "type": "EmotionPicker",
+    "instruction": "슬픈 미디어를 봤을 때 기분이 어땠나요? 골라봐요!"
+  },
+  "homeActivity": "슬픈 이야기를 보고 나서 가족과 이야기를 나눠봐요!"
+}

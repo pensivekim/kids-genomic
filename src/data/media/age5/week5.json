@@ -1,0 +1,43 @@
+{
+  "week": 5,
+  "age": 5,
+  "title": "광고의 전략",
+  "phase": 1,
+  "competency": "Critical",
+  "slides": [
+    {
+      "type": "intro",
+      "title": "광고는 왜 만들까요?",
+      "emoji": "📣",
+      "description": "광고가 우리에게 무엇을 하려는지 알아봐요!"
+    },
+    {
+      "type": "content",
+      "title": "광고의 전략",
+      "emoji": "🎯",
+      "description": "광고는 물건을 사고 싶게 만들려고 해요. 예쁜 그림, 신나는 음악, 유명한 사람을 써서 우리 마음을 끌어요. 광고를 볼 때 '왜 이렇게 만들었을까?' 생각해봐요!"
+    },
+    {
+      "type": "activity-intro",
+      "title": "광고 전략을 분류해봐요",
+      "emoji": "🗂️",
+      "description": "각 광고 방법이 어떤 전략인지 분류해봐요."
+    }
+  ],
+  "activity": {
+    "type": "CardSorter",
+    "instruction": "광고 전략을 종류별로 나눠봐요!",
+    "categories": ["감정을 이용해요 ❤️", "유명한 것을 이용해요 ⭐"],
+    "cards": [
+      { "id": "c1", "emoji": "😊", "label": "행복해 보이는 가족 사진", "answer": 0 },
+      { "id": "c2", "emoji": "🌟", "label": "유명한 가수가 나와요", "answer": 1 },
+      { "id": "c3", "emoji": "😢", "label": "불쌍한 강아지 사진", "answer": 0 },
+      { "id": "c4", "emoji": "🏆", "label": "1등 상품이라고 해요", "answer": 1 },
+      { "id": "c5", "emoji": "🎵", "label": "신나는 음악이 나와요", "answer": 0 },
+      { "id": "c6", "emoji": "👨‍⚕️", "label": "의사선생님이 추천해요", "answer": 1 },
+      { "id": "c7", "emoji": "💝", "label": "선물 받는 장면이 나와요", "answer": 0 },
+      { "id": "c8", "emoji": "🥇", "label": "세계 최고라고 해요", "answer": 1 }
+    ]
+  },
+  "homeActivity": "TV 광고를 보면서 어떤 전략을 쓰는지 부모님과 함께 찾아보세요!"
+}

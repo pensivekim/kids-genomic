@@ -1,0 +1,43 @@
+{
+  "week": 5,
+  "age": 3,
+  "title": "나는 뭘 좋아해?",
+  "phase": 1,
+  "competency": "Critical",
+  "slides": [
+    {
+      "type": "intro",
+      "title": "나는 뭘 좋아해?",
+      "emoji": "⭐",
+      "description": "내가 좋아하는 미디어는 무엇인가요?"
+    },
+    {
+      "type": "content",
+      "title": "다양한 미디어",
+      "emoji": "🌈",
+      "description": "만화, 음악, 동화책, 게임... 여러 가지 미디어 중 내가 제일 좋아하는 건 뭘까요?"
+    },
+    {
+      "type": "activity-intro",
+      "title": "좋아하는 미디어에 도장을 찍어봐요!",
+      "emoji": "🌟",
+      "description": "좋아하는 것을 골라 별 도장을 받아봐요."
+    }
+  ],
+  "activity": {
+    "type": "StampBoard",
+    "instruction": "내가 좋아하는 미디어에 별 도장을 찍어봐요!",
+    "stamp": "⭐",
+    "items": [
+      { "id": "cartoon", "emoji": "📺", "label": "만화 영상" },
+      { "id": "music", "emoji": "🎵", "label": "음악" },
+      { "id": "book", "emoji": "📚", "label": "그림책" },
+      { "id": "game", "emoji": "🎮", "label": "게임" },
+      { "id": "movie", "emoji": "🎬", "label": "영화" },
+      { "id": "photo", "emoji": "📸", "label": "사진 보기" }
+    ],
+    "maxStamps": 3,
+    "completionMessage": "좋아하는 미디어를 찾았어요! 🎉"
+  },
+  "homeActivity": "가족에게 내가 좋아하는 미디어를 소개해봐요!"
+}

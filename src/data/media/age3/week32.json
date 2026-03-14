@@ -1,0 +1,61 @@
+{
+  "week": 32,
+  "age": 3,
+  "title": "왜 골랐어?",
+  "phase": 5,
+  "competency": "Choose",
+  "slides": [
+    {
+      "type": "intro",
+      "title": "왜 골랐어?",
+      "emoji": "🤔",
+      "description": "내가 미디어를 고른 이유를 생각해봐요!"
+    },
+    {
+      "type": "content",
+      "title": "이유가 있는 선택",
+      "emoji": "💭",
+      "description": "미디어를 고를 때는 이유가 있어요. 재미있어서, 배우고 싶어서, 기분이 좋아져서... 이유를 알면 더 현명한 선택을 할 수 있어요!"
+    },
+    {
+      "type": "content",
+      "title": "좋은 이유와 생각해볼 이유",
+      "emoji": "⚖️",
+      "description": "'배우고 싶어서', '즐거워서', '기분이 좋아서'는 좋은 이유예요. 이유 없이 습관적으로 보는 것은 한 번 더 생각해봐요!"
+    },
+    {
+      "type": "activity-intro",
+      "title": "친구들과 함께 투표해봐요!",
+      "emoji": "🗳️",
+      "description": "어떤 이유로 미디어를 고르는지 친구들과 투표해봐요."
+    }
+  ],
+  "activity": {
+    "type": "VoteWidget",
+    "instruction": "미디어를 고를 때 가장 중요한 이유는 무엇인가요? 투표해봐요!",
+    "question": "미디어를 고를 때 나는 이런 이유로 골라요!",
+    "options": [
+      {
+        "id": "fun",
+        "emoji": "😄",
+        "label": "재미있어서요"
+      },
+      {
+        "id": "learn",
+        "emoji": "📖",
+        "label": "배울 수 있어서요"
+      },
+      {
+        "id": "happy",
+        "emoji": "💛",
+        "label": "기분이 좋아져서요"
+      },
+      {
+        "id": "friend",
+        "emoji": "👫",
+        "label": "친구도 좋아해서요"
+      }
+    ]
+  },
+  "homeActivity": "아이가 좋아하는 영상을 고를 때 '왜 이게 좋아?'라고 물어봐요. 아이의 이유를 들어주고 '그렇구나, 좋은 이유다!'라고 긍정해주세요."
+}

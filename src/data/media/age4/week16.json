@@ -1,0 +1,49 @@
+{
+  "week": 16,
+  "age": 4,
+  "title": "2단계 졸업 🎉",
+  "phase": 2,
+  "competency": "Connect",
+  "isGraduation": true,
+  "slides": [
+    {
+      "type": "intro",
+      "title": "2단계 졸업 축하해요! 🎉",
+      "emoji": "🏆",
+      "description": "미디어와 나의 감정을 연결하는 법을 배웠어요!"
+    },
+    {
+      "type": "content",
+      "title": "우리가 배운 것",
+      "emoji": "📚",
+      "description": "미디어가 감정에 주는 영향, 무서울 때 대처법, 적당한 미디어 시간, 내 감정 지도를 배웠어요!"
+    },
+    {
+      "type": "content",
+      "title": "나는 감정 표현을 잘해요!",
+      "emoji": "🌈",
+      "description": "미디어를 보고 어떤 감정이 드는지 이제 표현할 수 있어요. 불편하면 어른께 말할 수 있어요!"
+    },
+    {
+      "type": "activity-intro",
+      "title": "졸업 도장을 받아봐요!",
+      "emoji": "🎓",
+      "description": "2단계에서 배운 것들을 확인해봐요!"
+    }
+  ],
+  "activity": {
+    "type": "StampBoard",
+    "instruction": "2단계에서 배운 것들을 확인해봐요!",
+    "stamp": "🌈",
+    "items": [
+      { "id": "emotion_change", "emoji": "😊", "label": "미디어가 기분을 바꿀 수 있어요" },
+      { "id": "ad_emotion", "emoji": "🤩", "label": "광고가 갖고 싶은 마음을 만들어요" },
+      { "id": "scary_stop", "emoji": "🛡️", "label": "무서우면 끄고 어른께 말해요" },
+      { "id": "right_time", "emoji": "⏰", "label": "적당한 시간만 봐요" },
+      { "id": "emotion_map", "emoji": "🗺️", "label": "내 감정 지도를 알아요" }
+    ],
+    "maxStamps": 5,
+    "completionMessage": "🎓 미디어 리터러시 2단계 졸업! 감정 전문가가 됐어요! 🎉"
+  },
+  "homeActivity": "가족에게 미디어를 보면 어떤 감정이 드는지 설명해봐요!"
+}

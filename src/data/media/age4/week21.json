@@ -1,0 +1,42 @@
+{
+  "week": 21,
+  "age": 4,
+  "title": "우리 반 뉴스 제작",
+  "phase": 3,
+  "competency": "Creative",
+  "slides": [
+    {
+      "type": "intro",
+      "title": "우리 반 뉴스를 만들어봐요!",
+      "emoji": "📰",
+      "description": "우리 반에서 일어난 일을 뉴스로 만들어봐요. 기자가 된 것처럼 해봐요!"
+    },
+    {
+      "type": "content",
+      "title": "뉴스를 만들려면?",
+      "emoji": "🎙️",
+      "description": "뉴스를 만들려면 사실을 잘 전달해야 해요. 누가, 언제, 어디서, 무슨 일이 있었는지 알려줘요!"
+    },
+    {
+      "type": "activity-intro",
+      "title": "뉴스 제작 체크리스트!",
+      "emoji": "📋",
+      "description": "뉴스 만들기 단계를 따라가봐요!"
+    }
+  ],
+  "activity": {
+    "type": "StampBoard",
+    "instruction": "우리 반 뉴스를 만들어봐요! 각 단계를 완료하면 도장을 받아요!",
+    "stamp": "📰",
+    "items": [
+      { "id": "topic", "emoji": "💡", "label": "뉴스 주제를 정했어요" },
+      { "id": "who", "emoji": "👤", "label": "누가 관련된 일인지 알아요" },
+      { "id": "what", "emoji": "🔍", "label": "무슨 일인지 알아요" },
+      { "id": "write", "emoji": "✏️", "label": "내용을 정리했어요" },
+      { "id": "present", "emoji": "🎤", "label": "친구들에게 발표했어요" }
+    ],
+    "maxStamps": 5,
+    "completionMessage": "우리 반 뉴스 제작 완료! 훌륭한 기자예요! 📰"
+  },
+  "homeActivity": "오늘 집에서 있었던 일을 뉴스처럼 부모님께 전달해봐요!"
+}

@@ -1,0 +1,33 @@
+{
+  "week": 18,
+  "age": 3,
+  "title": "내가 찍었어!",
+  "phase": 3,
+  "competency": "Creative",
+  "slides": [
+    {
+      "type": "intro",
+      "title": "내가 찍었어!",
+      "emoji": "🤳",
+      "description": "내가 직접 사진을 찍어볼 거예요!"
+    },
+    {
+      "type": "content",
+      "title": "사진 찍는 방법",
+      "emoji": "📱",
+      "description": "카메라를 들고 찍고 싶은 것을 화면 가운데에 놓고 찰칵! 내가 만든 사진이에요!"
+    },
+    {
+      "type": "activity-intro",
+      "title": "친구나 장난감을 찍어봐요!",
+      "emoji": "🎯",
+      "description": "내가 좋아하는 것을 직접 찍어봐요."
+    }
+  ],
+  "activity": {
+    "type": "CameraCapture",
+    "instruction": "내가 좋아하는 것을 직접 찍어봐요!",
+    "prompt": "친구, 장난감, 또는 내가 좋아하는 것을 카메라로 찍어봐요."
+  },
+  "homeActivity": "집에서 내가 찍은 사진을 가족에게 보여주고 설명해봐요!"
+}

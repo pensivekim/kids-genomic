@@ -1,0 +1,42 @@
+{
+  "week": 28,
+  "age": 4,
+  "title": "친구 작품 감상",
+  "phase": 4,
+  "competency": "Communicate",
+  "slides": [
+    {
+      "type": "intro",
+      "title": "친구 작품을 감상해봐요!",
+      "emoji": "👀",
+      "description": "친구가 만든 미디어를 보고 좋은 점을 이야기해봐요!"
+    },
+    {
+      "type": "content",
+      "title": "잘 감상하는 방법",
+      "emoji": "💕",
+      "description": "친구의 작품을 볼 때는 좋은 점을 먼저 말해줘요. '이 부분이 좋았어!', '색이 예뻐!'처럼 구체적으로 말해줘요!"
+    },
+    {
+      "type": "activity-intro",
+      "title": "친구 작품 감상 체크리스트!",
+      "emoji": "📋",
+      "description": "친구 작품을 잘 감상했나요?"
+    }
+  ],
+  "activity": {
+    "type": "StampBoard",
+    "instruction": "친구 작품을 감상하며 도장을 모아봐요!",
+    "stamp": "👀",
+    "items": [
+      { "id": "watch_well", "emoji": "👀", "label": "친구 작품을 끝까지 봤어요" },
+      { "id": "good_point", "emoji": "👍", "label": "좋은 점을 말해줬어요" },
+      { "id": "specific", "emoji": "🎯", "label": "구체적으로 말했어요" },
+      { "id": "respect", "emoji": "💕", "label": "친구 작품을 존중했어요" },
+      { "id": "question", "emoji": "❓", "label": "궁금한 것을 질문했어요" }
+    ],
+    "maxStamps": 5,
+    "completionMessage": "훌륭한 감상자예요! 친구를 기쁘게 해줬어요! 👀"
+  },
+  "homeActivity": "가족이 만든 것(요리, 청소 등)에 대해 칭찬해봐요!"
+}

@@ -1,0 +1,38 @@
+{
+  "week": 31,
+  "age": 4,
+  "title": "내 기준으로",
+  "phase": 5,
+  "competency": "Choose",
+  "slides": [
+    {
+      "type": "intro",
+      "title": "내 기준으로 미디어를 골라요!",
+      "emoji": "🌟",
+      "description": "어떤 미디어를 볼지 내가 직접 결정할 수 있어요. 내 기준을 만들어봐요!"
+    },
+    {
+      "type": "content",
+      "title": "나만의 기준",
+      "emoji": "🎯",
+      "description": "미디어를 고를 때 '재미있나?', '배울 수 있나?', '기분이 좋아지나?'를 생각해봐요. 내가 좋다고 느끼는 기준이 있어요!"
+    },
+    {
+      "type": "activity-intro",
+      "title": "내 미디어 선택 기준을 투표해봐요!",
+      "emoji": "🗳️",
+      "description": "미디어를 고를 때 무엇이 가장 중요한가요?"
+    }
+  ],
+  "activity": {
+    "type": "VoteWidget",
+    "instruction": "미디어를 고를 때 가장 중요한 것은 무엇인가요?",
+    "options": [
+      { "id": "fun", "emoji": "😄", "label": "재미있어야 해요" },
+      { "id": "learn", "emoji": "📚", "label": "배울 수 있어야 해요" },
+      { "id": "feel_good", "emoji": "😊", "label": "기분이 좋아져야 해요" },
+      { "id": "safe", "emoji": "🛡️", "label": "무섭거나 나쁜 내용이 없어야 해요" }
+    ]
+  },
+  "homeActivity": "부모님과 함께 볼 미디어를 내가 직접 골라봐요. 왜 골랐는지 이유도 말해봐요!"
+}

@@ -1,0 +1,39 @@
+{
+  "week": 15,
+  "age": 5,
+  "title": "미디어와 관계",
+  "phase": 2,
+  "competency": "Connect",
+  "slides": [
+    {
+      "type": "intro",
+      "title": "미디어가 관계에 영향을 줘요",
+      "emoji": "🤝",
+      "description": "미디어 때문에 친구, 가족과의 관계가 어떻게 달라질까요?"
+    },
+    {
+      "type": "content",
+      "title": "미디어와 관계의 관계",
+      "emoji": "❤️",
+      "description": "스마트폰만 보면 옆에 있는 가족이나 친구와 이야기할 시간이 줄어요. 함께 있을 때는 미디어보다 서로에게 집중하는 것이 더 소중해요!"
+    },
+    {
+      "type": "activity-intro",
+      "title": "미디어와 관계에 대해 투표해봐요",
+      "emoji": "🗳️",
+      "description": "내 경험을 솔직하게 표현해봐요."
+    }
+  ],
+  "activity": {
+    "type": "VoteWidget",
+    "instruction": "가족이나 친구와 함께 있을 때 미디어를 어떻게 쓰나요?",
+    "options": [
+      { "id": "o1", "emoji": "📱", "label": "스마트폰을 보느라 대화를 안 해요" },
+      { "id": "o2", "emoji": "🎮", "label": "함께 게임을 즐겨요" },
+      { "id": "o3", "emoji": "💬", "label": "미디어 없이 이야기해요" },
+      { "id": "o4", "emoji": "📺", "label": "함께 영상을 보고 이야기해요" },
+      { "id": "o5", "emoji": "🙅", "label": "함께 있을 때는 미디어를 안 봐요" }
+    ]
+  },
+  "homeActivity": "오늘 저녁 1시간 동안 가족 모두 스마트폰을 내려놓고 이야기하거나 함께 놀아보세요!"
+}

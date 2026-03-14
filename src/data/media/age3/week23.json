@@ -1,0 +1,38 @@
+{
+  "week": 23,
+  "age": 3,
+  "title": "내 작품 발표",
+  "phase": 3,
+  "competency": "Creative",
+  "slides": [
+    {
+      "type": "intro",
+      "title": "내 작품을 발표해요!",
+      "emoji": "🎤",
+      "description": "내가 만든 멋진 작품을 친구들에게 소개해봐요!"
+    },
+    {
+      "type": "content",
+      "title": "발표란 뭘까요?",
+      "emoji": "🌟",
+      "description": "내가 만들거나 생각한 것을 다른 사람들에게 보여주고 설명하는 거예요. 발표를 하면 더 많은 친구들이 내 작품을 알게 돼요!"
+    },
+    {
+      "type": "content",
+      "title": "발표 준비하기",
+      "emoji": "📋",
+      "description": "발표할 때는 '제목', '만든 이유', '가장 좋아하는 부분'을 말해봐요. 크고 자신 있는 목소리로 말하면 더 좋아요!"
+    },
+    {
+      "type": "activity-intro",
+      "title": "내 작품 슬라이드를 만들어요!",
+      "emoji": "🎯",
+      "description": "슬라이드를 넘기며 내 작품 이야기를 해봐요."
+    }
+  ],
+  "activity": {
+    "type": "SlideViewer",
+    "instruction": "슬라이드를 한 장씩 넘기면서 내 작품에 대해 발표해봐요! 각 슬라이드마다 자신 있게 말해봐요."
+  },
+  "homeActivity": "오늘 수업에서 발표한 내용을 집에서 가족들에게도 발표해봐요! 부모님은 박수로 응원해주세요."
+}

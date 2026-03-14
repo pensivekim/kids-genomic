@@ -1,0 +1,32 @@
+{
+  "week": 9,
+  "age": 4,
+  "title": "기분이 달라져요",
+  "phase": 2,
+  "competency": "Connect",
+  "slides": [
+    {
+      "type": "intro",
+      "title": "미디어를 보면 기분이 달라져요!",
+      "emoji": "😊",
+      "description": "영화를 보고 슬펐거나 즐거웠던 적 있나요? 미디어는 우리 기분에 영향을 줘요!"
+    },
+    {
+      "type": "content",
+      "title": "미디어와 감정",
+      "emoji": "💭",
+      "description": "무서운 영상을 보면 무서워지고, 웃긴 영상을 보면 즐거워져요. 미디어가 우리 마음을 움직일 수 있어요!"
+    },
+    {
+      "type": "activity-intro",
+      "title": "지금 내 기분을 골라봐요!",
+      "emoji": "🎭",
+      "description": "미디어를 본 후 느끼는 감정을 표현해봐요."
+    }
+  ],
+  "activity": {
+    "type": "EmotionPicker",
+    "instruction": "미디어를 보고 이런 기분이 든 적 있나요? 해당하는 감정을 골라봐요!"
+  },
+  "homeActivity": "오늘 본 영상 후 어떤 기분이 들었는지 부모님께 말해봐요!"
+}

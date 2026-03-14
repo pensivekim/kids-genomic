@@ -1,0 +1,43 @@
+{
+  "week": 27,
+  "age": 5,
+  "title": "내 의견 영상",
+  "phase": 4,
+  "competency": "Communicate",
+  "slides": [
+    {
+      "type": "intro",
+      "title": "내 생각을 영상으로 전해요",
+      "emoji": "🗣️",
+      "description": "미디어로 내 의견을 표현하는 방법을 배워봐요!"
+    },
+    {
+      "type": "content",
+      "title": "의견을 영상으로 만들려면?",
+      "emoji": "💬",
+      "description": "내 의견을 영상으로 만들 때는 '왜 그렇게 생각하는지' 이유를 꼭 말해야 해요. 예시도 들고, 상대방이 이해할 수 있게 쉽게 설명하는 것이 중요해요!"
+    },
+    {
+      "type": "activity-intro",
+      "title": "의견 영상 만들기 단계",
+      "emoji": "📋",
+      "description": "내 의견 영상을 만드는 단계를 하나씩 완성해봐요."
+    }
+  ],
+  "activity": {
+    "type": "StampBoard",
+    "instruction": "내 의견 영상 만들기 단계를 완성해봐요!",
+    "stamp": "🎤",
+    "items": [
+      { "id": "s1", "emoji": "💡", "label": "내 의견 주제를 정했어요" },
+      { "id": "s2", "emoji": "🤔", "label": "이유를 2가지 생각했어요" },
+      { "id": "s3", "emoji": "📝", "label": "할 말을 간단히 적었어요" },
+      { "id": "s4", "emoji": "🎬", "label": "카메라 앞에서 말했어요" },
+      { "id": "s5", "emoji": "👀", "label": "내 영상을 다시 봤어요" },
+      { "id": "s6", "emoji": "✅", "label": "친구나 가족에게 보여줬어요" }
+    ],
+    "maxStamps": 6,
+    "completionMessage": "내 생각을 멋지게 전달했어요! 훌륭한 소통가예요!"
+  },
+  "homeActivity": "학교나 집에서 바꾸고 싶은 것에 대해 의견 영상을 만들어보세요!"
+}

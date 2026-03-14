@@ -1,0 +1,43 @@
+{
+  "week": 29,
+  "age": 5,
+  "title": "미디어로 바꾸기",
+  "phase": 4,
+  "competency": "Communicate",
+  "slides": [
+    {
+      "type": "intro",
+      "title": "미디어로 세상을 바꿔요",
+      "emoji": "🌍",
+      "description": "미디어를 이용해서 좋은 변화를 만들 수 있어요!"
+    },
+    {
+      "type": "content",
+      "title": "미디어로 바꿀 수 있는 것",
+      "emoji": "✊",
+      "description": "환경을 지키자는 영상, 친구를 도와주자는 메시지, 힘든 사람을 응원하는 이야기... 미디어는 좋은 변화를 만드는 강력한 도구가 될 수 있어요!"
+    },
+    {
+      "type": "activity-intro",
+      "title": "변화를 만드는 미디어 프로젝트",
+      "emoji": "📋",
+      "description": "내가 바꾸고 싶은 것을 미디어로 표현하는 단계를 완성해봐요."
+    }
+  ],
+  "activity": {
+    "type": "StampBoard",
+    "instruction": "미디어로 변화를 만드는 프로젝트를 완성해봐요!",
+    "stamp": "🌟",
+    "items": [
+      { "id": "s1", "emoji": "💭", "label": "바꾸고 싶은 문제를 찾았어요" },
+      { "id": "s2", "emoji": "🎯", "label": "누구에게 전하고 싶은지 정했어요" },
+      { "id": "s3", "emoji": "📝", "label": "전달할 메시지를 정했어요" },
+      { "id": "s4", "emoji": "🎬", "label": "영상이나 그림을 만들었어요" },
+      { "id": "s5", "emoji": "📢", "label": "가족이나 친구에게 보여줬어요" },
+      { "id": "s6", "emoji": "😊", "label": "반응을 들었어요" }
+    ],
+    "maxStamps": 6,
+    "completionMessage": "세상을 바꾸는 멋진 미디어를 만들었어요! 훌륭한 변화 리더예요!"
+  },
+  "homeActivity": "환경 보호, 친절 나누기 등 좋은 주제로 짧은 메시지 카드나 그림을 만들어보세요!"
+}

@@ -1,0 +1,43 @@
+{
+  "week": 21,
+  "age": 5,
+  "title": "다큐멘터리 만들기",
+  "phase": 3,
+  "competency": "Creative",
+  "slides": [
+    {
+      "type": "intro",
+      "title": "진짜 이야기를 영상으로 만들어요",
+      "emoji": "🎦",
+      "description": "다큐멘터리란 무엇이고, 어떻게 만들까요?"
+    },
+    {
+      "type": "content",
+      "title": "다큐멘터리란?",
+      "emoji": "📽️",
+      "description": "다큐멘터리는 꾸미지 않은 진짜 이야기를 영상으로 만든 거예요. 동물, 자연, 사람들의 생활을 담아요. 우리도 우리 주변의 진짜 이야기를 만들 수 있어요!"
+    },
+    {
+      "type": "activity-intro",
+      "title": "다큐멘터리 만들기 단계",
+      "emoji": "📋",
+      "description": "다큐멘터리를 만드는 단계를 하나씩 완성해봐요."
+    }
+  ],
+  "activity": {
+    "type": "StampBoard",
+    "instruction": "다큐멘터리 만들기 단계를 완성해봐요!",
+    "stamp": "🎦",
+    "items": [
+      { "id": "s1", "emoji": "💡", "label": "주제를 정했어요 (예: 우리 반 식물)" },
+      { "id": "s2", "emoji": "❓", "label": "궁금한 것을 3가지 썼어요" },
+      { "id": "s3", "emoji": "📷", "label": "사진이나 영상을 찍었어요" },
+      { "id": "s4", "emoji": "📝", "label": "설명할 내용을 썼어요" },
+      { "id": "s5", "emoji": "🎙️", "label": "목소리로 설명했어요" },
+      { "id": "s6", "emoji": "✅", "label": "친구나 가족에게 보여줬어요" }
+    ],
+    "maxStamps": 6,
+    "completionMessage": "멋진 다큐멘터리가 완성됐어요! 정말 훌륭한 감독이에요!"
+  },
+  "homeActivity": "집에서 키우는 식물이나 반려동물을 주제로 짧은 다큐멘터리를 만들어보세요!"
+}

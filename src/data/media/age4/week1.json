@@ -1,0 +1,42 @@
+{
+  "week": 1,
+  "age": 4,
+  "title": "미디어 종류",
+  "phase": 1,
+  "competency": "Critical",
+  "slides": [
+    {
+      "type": "intro",
+      "title": "미디어 종류를 알아봐요!",
+      "emoji": "📱",
+      "description": "우리 주변에는 다양한 미디어가 있어요. 함께 알아볼까요?"
+    },
+    {
+      "type": "content",
+      "title": "미디어의 종류",
+      "emoji": "📺",
+      "description": "TV, 신문, 책, 스마트폰, 라디오, 인터넷 등 정보를 전달하는 것들이 모두 미디어예요!"
+    },
+    {
+      "type": "activity-intro",
+      "title": "미디어인지 아닌지 구분해봐요!",
+      "emoji": "🎯",
+      "description": "카드를 알맞은 칸에 놓아봐요."
+    }
+  ],
+  "activity": {
+    "type": "CardSorter",
+    "instruction": "미디어인 것과 아닌 것으로 나눠봐요!",
+    "categories": ["미디어예요 📱", "미디어가 아니에요 🌳"],
+    "cards": [
+      { "id": "tv", "emoji": "📺", "label": "TV", "answer": 0 },
+      { "id": "newspaper", "emoji": "📰", "label": "신문", "answer": 0 },
+      { "id": "smartphone", "emoji": "📱", "label": "스마트폰", "answer": 0 },
+      { "id": "radio", "emoji": "📻", "label": "라디오", "answer": 0 },
+      { "id": "tree", "emoji": "🌳", "label": "나무", "answer": 1 },
+      { "id": "apple", "emoji": "🍎", "label": "사과", "answer": 1 },
+      { "id": "chair", "emoji": "🪑", "label": "의자", "answer": 1 }
+    ]
+  },
+  "homeActivity": "집에서 미디어를 찾아보고 종류별로 나눠 보세요!"
+}

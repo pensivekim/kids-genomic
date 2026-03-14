@@ -1,0 +1,33 @@
+{
+  "week": 19,
+  "age": 3,
+  "title": "예쁘게 찍어요",
+  "phase": 3,
+  "competency": "Creative",
+  "slides": [
+    {
+      "type": "intro",
+      "title": "예쁘게 찍어요",
+      "emoji": "🌸",
+      "description": "어떻게 하면 더 예쁜 사진을 찍을 수 있을까요?"
+    },
+    {
+      "type": "content",
+      "title": "좋은 사진 찍는 법",
+      "emoji": "✨",
+      "description": "밝은 곳에서 찍으면 더 잘 나와요. 찍고 싶은 것을 화면 가운데에 놓으면 더 예쁜 사진이 돼요!"
+    },
+    {
+      "type": "activity-intro",
+      "title": "예쁜 사진을 찍어봐요!",
+      "emoji": "🎯",
+      "description": "밝은 곳에서 예쁘게 사진을 찍어봐요."
+    }
+  ],
+  "activity": {
+    "type": "CameraCapture",
+    "instruction": "밝은 곳에서 예쁘게 사진을 찍어봐요!",
+    "prompt": "꽃, 창가, 또는 밝고 예쁜 것을 찾아서 찍어봐요."
+  },
+  "homeActivity": "가족과 함께 예쁜 사진을 찍고 어떻게 찍었는지 이야기해봐요!"
+}

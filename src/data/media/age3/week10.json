@@ -1,0 +1,32 @@
+{
+  "week": 10,
+  "age": 3,
+  "title": "무서운 게 나왔어",
+  "phase": 2,
+  "competency": "Connect",
+  "slides": [
+    {
+      "type": "intro",
+      "title": "무서운 게 나왔어",
+      "emoji": "😨",
+      "description": "무서운 장면을 보면 어떤 기분이 들었나요?"
+    },
+    {
+      "type": "content",
+      "title": "무서운 미디어",
+      "emoji": "👻",
+      "description": "TV나 영상에서 무서운 장면이 나올 때 눈을 가리거나 끄고 싶을 수 있어요. 무서운 건 끄거나 어른에게 말해도 괜찮아요!"
+    },
+    {
+      "type": "activity-intro",
+      "title": "무서운 장면을 봤을 때 기분을 나타내봐요!",
+      "emoji": "🎯",
+      "description": "무서운 걸 봤을 때 내 기분을 골라봐요."
+    }
+  ],
+  "activity": {
+    "type": "EmotionPicker",
+    "instruction": "무서운 미디어를 봤을 때 기분이 어땠나요? 골라봐요!"
+  },
+  "homeActivity": "무서운 미디어를 봤을 때 어른에게 말하는 연습을 해봐요!"
+}

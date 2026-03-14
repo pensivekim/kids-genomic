@@ -1,0 +1,38 @@
+{
+  "week": 6,
+  "age": 3,
+  "title": "친구는 뭘 좋아해?",
+  "phase": 1,
+  "competency": "Critical",
+  "slides": [
+    {
+      "type": "intro",
+      "title": "친구는 뭘 좋아해?",
+      "emoji": "👫",
+      "description": "친구는 어떤 미디어를 좋아할까요?"
+    },
+    {
+      "type": "content",
+      "title": "친구 미디어 소개",
+      "emoji": "🗣️",
+      "description": "친구마다 좋아하는 미디어가 달라요. 서로 다른 것이 괜찮아요!"
+    },
+    {
+      "type": "activity-intro",
+      "title": "우리 반 투표를 해봐요!",
+      "emoji": "📊",
+      "description": "어떤 미디어를 제일 많이 좋아하는지 함께 골라봐요."
+    }
+  ],
+  "activity": {
+    "type": "VoteWidget",
+    "instruction": "어떤 미디어를 제일 좋아하나요? 하나만 골라봐요!",
+    "options": [
+      { "id": "cartoon", "emoji": "📺", "label": "만화 영상" },
+      { "id": "music", "emoji": "🎵", "label": "음악" },
+      { "id": "book", "emoji": "📚", "label": "그림책" },
+      { "id": "game", "emoji": "🎮", "label": "게임" }
+    ]
+  },
+  "homeActivity": "가족 중 누가 어떤 미디어를 좋아하는지 물어보세요!"
+}

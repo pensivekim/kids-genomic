@@ -1,0 +1,43 @@
+{
+  "week": 1,
+  "age": 5,
+  "title": "미디어 생태계",
+  "phase": 1,
+  "competency": "Critical",
+  "slides": [
+    {
+      "type": "intro",
+      "title": "미디어 생태계",
+      "emoji": "🌐",
+      "description": "미디어가 서로 연결된 세상을 탐험해봐요!"
+    },
+    {
+      "type": "content",
+      "title": "미디어 생태계란?",
+      "emoji": "🕸️",
+      "description": "TV, 인터넷, SNS, 뉴스... 모두 서로 연결되어 있어요. 마치 숲 속 동물들처럼 함께 살아가요!"
+    },
+    {
+      "type": "activity-intro",
+      "title": "미디어 종류를 분류해봐요",
+      "emoji": "🗂️",
+      "description": "어떤 미디어가 어디에 속하는지 카드를 분류해봐요."
+    }
+  ],
+  "activity": {
+    "type": "CardSorter",
+    "instruction": "각 미디어를 올바른 종류로 분류해봐요!",
+    "categories": ["화면이 있는 미디어 📺", "화면이 없는 미디어 📻"],
+    "cards": [
+      { "id": "tv", "emoji": "📺", "label": "TV", "answer": 0 },
+      { "id": "youtube", "emoji": "▶️", "label": "유튜브", "answer": 0 },
+      { "id": "smartphone", "emoji": "📱", "label": "스마트폰", "answer": 0 },
+      { "id": "tablet", "emoji": "💻", "label": "태블릿", "answer": 0 },
+      { "id": "radio", "emoji": "📻", "label": "라디오", "answer": 1 },
+      { "id": "podcast", "emoji": "🎙️", "label": "팟캐스트", "answer": 1 },
+      { "id": "newspaper", "emoji": "📰", "label": "신문", "answer": 1 },
+      { "id": "book", "emoji": "📚", "label": "책", "answer": 1 }
+    ]
+  },
+  "homeActivity": "집에서 볼 수 있는 미디어를 찾아서 종류별로 나눠 가족과 이야기해보세요!"
+}

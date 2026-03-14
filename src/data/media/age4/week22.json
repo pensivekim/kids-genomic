@@ -1,0 +1,42 @@
+{
+  "week": 22,
+  "age": 4,
+  "title": "기자가 됐어요",
+  "phase": 3,
+  "competency": "Creative",
+  "slides": [
+    {
+      "type": "intro",
+      "title": "내가 기자가 됐어요!",
+      "emoji": "🎙️",
+      "description": "마이크를 들고 친구들에게 질문해봐요. 기자가 되는 거예요!"
+    },
+    {
+      "type": "content",
+      "title": "기자는 어떤 일을 할까요?",
+      "emoji": "📝",
+      "description": "기자는 사람들에게 질문하고, 사진을 찍고, 이야기를 정리해서 알려줘요. 궁금한 것을 물어보는 게 기자의 일이에요!"
+    },
+    {
+      "type": "activity-intro",
+      "title": "기자 활동 체크리스트!",
+      "emoji": "📋",
+      "description": "기자처럼 활동해봐요!"
+    }
+  ],
+  "activity": {
+    "type": "StampBoard",
+    "instruction": "기자 활동을 완료하면 도장을 받아요!",
+    "stamp": "🎙️",
+    "items": [
+      { "id": "question_ready", "emoji": "❓", "label": "질문을 미리 생각했어요" },
+      { "id": "interview", "emoji": "🎤", "label": "친구에게 질문했어요" },
+      { "id": "listen", "emoji": "👂", "label": "친구의 대답을 잘 들었어요" },
+      { "id": "record", "emoji": "📝", "label": "내용을 기록했어요" },
+      { "id": "report", "emoji": "📢", "label": "다른 친구들에게 전달했어요" }
+    ],
+    "maxStamps": 5,
+    "completionMessage": "멋진 기자가 됐어요! 세상을 알리는 사람이에요! 🎙️"
+  },
+  "homeActivity": "부모님께 오늘 학교에서 있었던 일을 기자처럼 인터뷰해봐요!"
+}

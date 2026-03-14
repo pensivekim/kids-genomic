@@ -1,0 +1,43 @@
+{
+  "week": 30,
+  "age": 5,
+  "title": "4단계 졸업 🎉",
+  "phase": 4,
+  "competency": "Communicate",
+  "isGraduation": true,
+  "slides": [
+    {
+      "type": "intro",
+      "title": "4단계 졸업!",
+      "emoji": "🏆",
+      "description": "미디어로 소통하는 능력을 키웠어요!"
+    },
+    {
+      "type": "content",
+      "title": "우리가 배운 것",
+      "emoji": "📚",
+      "description": "다양한 관점, 설득하는 미디어, 내 의견 영상, 피드백 주고받기, 미디어로 바꾸기까지 모두 배웠어요!"
+    },
+    {
+      "type": "activity-intro",
+      "title": "4단계 졸업 체크리스트",
+      "emoji": "🎓",
+      "description": "4단계에서 배운 것들을 확인해봐요."
+    }
+  ],
+  "activity": {
+    "type": "StampBoard",
+    "instruction": "4단계에서 배운 것들을 확인하고 도장을 받아봐요!",
+    "stamp": "⭐",
+    "items": [
+      { "id": "s1", "emoji": "👓", "label": "같은 것도 다르게 볼 수 있어요" },
+      { "id": "s2", "emoji": "📢", "label": "설득 방법을 알아요" },
+      { "id": "s3", "emoji": "🗣️", "label": "내 의견을 영상으로 말해요" },
+      { "id": "s4", "emoji": "🔄", "label": "좋은 피드백을 줄 수 있어요" },
+      { "id": "s5", "emoji": "🌍", "label": "미디어로 변화를 만들 수 있어요" }
+    ],
+    "maxStamps": 5,
+    "completionMessage": "🎉 4단계 미디어 소통 졸업을 축하해요! 이제 미디어로 세상과 소통할 수 있어요!"
+  },
+  "homeActivity": "4단계에서 만든 작품 중 가장 마음에 드는 것을 가족에게 발표해보세요!"
+}

@@ -1,0 +1,43 @@
+{
+  "week": 12,
+  "age": 5,
+  "title": "좋은 스트레스 해소",
+  "phase": 2,
+  "competency": "Connect",
+  "slides": [
+    {
+      "type": "intro",
+      "title": "스트레스를 건강하게 풀어요",
+      "emoji": "🌈",
+      "description": "스트레스가 쌓이면 어떻게 해소할 수 있을까요?"
+    },
+    {
+      "type": "content",
+      "title": "건강한 스트레스 해소법",
+      "emoji": "🏃",
+      "description": "스트레스가 쌓였을 때 스마트폰만 보는 것은 좋지 않아요. 운동하거나, 그림을 그리거나, 친구와 놀거나, 책을 읽는 것이 더 건강한 방법이에요!"
+    },
+    {
+      "type": "activity-intro",
+      "title": "건강한 해소법을 골라봐요",
+      "emoji": "🗂️",
+      "description": "카드를 건강한 방법과 그렇지 않은 방법으로 나눠봐요."
+    }
+  ],
+  "activity": {
+    "type": "CardSorter",
+    "instruction": "스트레스 해소 방법을 나눠봐요!",
+    "categories": ["건강한 방법이에요 💪", "별로 좋지 않아요 ⚠️"],
+    "cards": [
+      { "id": "c1", "emoji": "🏃", "label": "밖에서 뛰어 놀기", "answer": 0 },
+      { "id": "c2", "emoji": "🎨", "label": "그림 그리기", "answer": 0 },
+      { "id": "c3", "emoji": "📱", "label": "스마트폰을 몇 시간 동안 보기", "answer": 1 },
+      { "id": "c4", "emoji": "🎵", "label": "좋아하는 노래 부르기", "answer": 0 },
+      { "id": "c5", "emoji": "🎮", "label": "게임을 하루 종일 하기", "answer": 1 },
+      { "id": "c6", "emoji": "💤", "label": "낮잠 자기", "answer": 0 },
+      { "id": "c7", "emoji": "📺", "label": "밥도 안 먹고 TV만 보기", "answer": 1 },
+      { "id": "c8", "emoji": "🤗", "label": "가족과 이야기하기", "answer": 0 }
+    ]
+  },
+  "homeActivity": "오늘 스트레스를 받았을 때 스마트폰 대신 다른 방법으로 해소해보고 어땠는지 말해주세요!"
+}

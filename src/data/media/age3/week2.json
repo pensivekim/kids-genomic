@@ -1,0 +1,70 @@
+{
+  "week": 2,
+  "age": 3,
+  "title": "이건 어디서 나왔어?",
+  "phase": 1,
+  "competency": "Critical",
+  "slides": [
+    {
+      "type": "intro",
+      "title": "이건 어디서 나왔어?",
+      "emoji": "🔍",
+      "description": "화면 속 세상과 진짜 세상을 비교해봐요!"
+    },
+    {
+      "type": "content",
+      "title": "화면 vs 현실",
+      "emoji": "📺",
+      "description": "TV 속 강아지와 진짜 강아지는 달라요. 화면은 찍은 것이에요!"
+    },
+    {
+      "type": "activity-intro",
+      "title": "화면인지 현실인지 맞춰봐요!",
+      "emoji": "❓",
+      "description": "O(맞아요) 또는 X(아니에요)를 눌러봐요."
+    }
+  ],
+  "activity": {
+    "type": "QuizCard",
+    "instruction": "화면(미디어) 속 모습인가요, 진짜 모습인가요?",
+    "questions": [
+      {
+        "id": "q1",
+        "question": "TV에서 나오는 강아지",
+        "emoji": "📺",
+        "correct": "media",
+        "options": ["화면 속이에요 📺", "진짜예요 🐶"],
+        "answer": 0,
+        "explanation": "TV 속 강아지는 찍어서 보여주는 거예요!"
+      },
+      {
+        "id": "q2",
+        "question": "공원에서 뛰어노는 친구",
+        "emoji": "🌳",
+        "correct": "real",
+        "options": ["화면 속이에요 📺", "진짜예요 👦"],
+        "answer": 1,
+        "explanation": "공원의 친구는 실제로 있는 거예요!"
+      },
+      {
+        "id": "q3",
+        "question": "유튜브 만화 캐릭터",
+        "emoji": "📱",
+        "correct": "media",
+        "options": ["화면 속이에요 📱", "진짜예요 🦸"],
+        "answer": 0,
+        "explanation": "만화 캐릭터는 그림으로 만든 거예요!"
+      },
+      {
+        "id": "q4",
+        "question": "교실에 있는 선생님",
+        "emoji": "🏫",
+        "correct": "real",
+        "options": ["화면 속이에요 📺", "진짜예요 👩‍🏫"],
+        "answer": 1,
+        "explanation": "선생님은 정말 교실에 계세요!"
+      }
+    ]
+  },
+  "homeActivity": "집에서 TV를 보다가 화면 속 것과 진짜 것을 구분해보세요!"
+}

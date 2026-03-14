@@ -1,0 +1,32 @@
+{
+  "week": 9,
+  "age": 5,
+  "title": "미디어와 감정 조절",
+  "phase": 2,
+  "competency": "Connect",
+  "slides": [
+    {
+      "type": "intro",
+      "title": "미디어가 내 감정을 바꿔요",
+      "emoji": "😊",
+      "description": "미디어를 볼 때 내 기분이 어떻게 변하는지 알아봐요!"
+    },
+    {
+      "type": "content",
+      "title": "미디어와 감정의 관계",
+      "emoji": "🎭",
+      "description": "무서운 영상을 보면 무서워지고, 웃긴 영상을 보면 웃게 돼요. 내 감정이 어떤지 알아채고 조절하는 것이 중요해요!"
+    },
+    {
+      "type": "activity-intro",
+      "title": "지금 내 감정을 표현해봐요",
+      "emoji": "💝",
+      "description": "미디어를 본 후 내 감정을 골라봐요."
+    }
+  ],
+  "activity": {
+    "type": "EmotionPicker",
+    "instruction": "미디어를 보고 난 후 내 감정이 어떤지 골라봐요!"
+  },
+  "homeActivity": "오늘 본 영상이 어떤 감정을 불러일으켰는지 부모님과 이야기해보세요!"
+}

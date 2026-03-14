@@ -1,0 +1,32 @@
+{
+  "week": 11,
+  "age": 3,
+  "title": "웃기는 미디어",
+  "phase": 2,
+  "competency": "Connect",
+  "slides": [
+    {
+      "type": "intro",
+      "title": "웃기는 미디어",
+      "emoji": "😂",
+      "description": "보면 배가 아프도록 웃었던 미디어가 있나요?"
+    },
+    {
+      "type": "content",
+      "title": "웃음을 주는 미디어",
+      "emoji": "🤣",
+      "description": "재미있는 만화, 웃긴 영상을 보면 기분이 밝아져요. 웃음은 건강에도 좋아요!"
+    },
+    {
+      "type": "activity-intro",
+      "title": "웃긴 미디어를 봤을 때 기분을 골라봐요!",
+      "emoji": "🎯",
+      "description": "가장 웃겼던 순간의 기분을 표현해봐요."
+    }
+  ],
+  "activity": {
+    "type": "EmotionPicker",
+    "instruction": "웃기는 미디어를 봤을 때 기분이 어땠나요? 골라봐요!"
+  },
+  "homeActivity": "가족과 함께 웃긴 영상을 찾아서 같이 웃어봐요!"
+}

@@ -1,0 +1,45 @@
+{
+  "week": 24,
+  "age": 5,
+  "title": "3단계 졸업 🎉",
+  "phase": 3,
+  "competency": "Creative",
+  "isGraduation": true,
+  "slides": [
+    {
+      "type": "intro",
+      "title": "3단계 졸업!",
+      "emoji": "🏆",
+      "description": "미디어를 직접 만드는 창의적인 능력을 키웠어요!"
+    },
+    {
+      "type": "content",
+      "title": "우리가 배운 것",
+      "emoji": "📚",
+      "description": "스토리보드, 촬영 기법, 편집의 힘, 음악의 역할, 다큐멘터리 만들기, 인터뷰 심화, 편집 완성까지 모두 배웠어요!"
+    },
+    {
+      "type": "activity-intro",
+      "title": "3단계 졸업 체크리스트",
+      "emoji": "🎓",
+      "description": "3단계에서 배운 것들을 확인해봐요."
+    }
+  ],
+  "activity": {
+    "type": "StampBoard",
+    "instruction": "3단계에서 배운 것들을 확인하고 도장을 받아봐요!",
+    "stamp": "⭐",
+    "items": [
+      { "id": "s1", "emoji": "🖼️", "label": "스토리보드를 만들 수 있어요" },
+      { "id": "s2", "emoji": "📷", "label": "다양한 각도로 찍을 수 있어요" },
+      { "id": "s3", "emoji": "✂️", "label": "편집이 이야기를 바꿔요" },
+      { "id": "s4", "emoji": "🎵", "label": "음악이 감정을 전달해요" },
+      { "id": "s5", "emoji": "🎦", "label": "다큐멘터리를 만들 수 있어요" },
+      { "id": "s6", "emoji": "🎤", "label": "좋은 인터뷰 질문을 알아요" },
+      { "id": "s7", "emoji": "🏁", "label": "영상을 처음부터 끝까지 만들 수 있어요" }
+    ],
+    "maxStamps": 7,
+    "completionMessage": "🎉 3단계 창의적 미디어 제작 졸업을 축하해요! 이제 멋진 미디어 창작자예요!"
+  },
+  "homeActivity": "3단계에서 만든 영상 중 가장 자랑스러운 것을 가족에게 보여주세요!"
+}

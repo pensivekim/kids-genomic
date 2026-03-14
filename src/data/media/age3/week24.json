@@ -1,0 +1,39 @@
+{
+  "week": 24,
+  "age": 3,
+  "title": "3단계 졸업 🎉",
+  "phase": 3,
+  "competency": "Creative",
+  "isGraduation": true,
+  "slides": [
+    {
+      "type": "intro",
+      "title": "3단계 졸업 축하해요! 🎉",
+      "emoji": "🏆",
+      "description": "우리는 창의적인 미디어 만들기를 배웠어요!"
+    },
+    {
+      "type": "content",
+      "title": "3단계에서 배운 것들",
+      "emoji": "📚",
+      "description": "그림 미디어 만들기, 소리 미디어 만들기, 나만의 이야기 꾸미기, 친구와 함께 만들기, 내 작품 발표하기를 배웠어요!"
+    },
+    {
+      "type": "content",
+      "title": "나는 미디어 창작자!",
+      "emoji": "🎨",
+      "description": "이제 나도 직접 미디어를 만들 수 있어요. 내 생각과 감정을 미디어로 표현하는 창작자가 됐어요!"
+    },
+    {
+      "type": "activity-intro",
+      "title": "나의 작품 갤러리를 구경해요!",
+      "emoji": "🖼️",
+      "description": "3단계 동안 만든 내 작품들을 갤러리에서 감상해봐요."
+    }
+  ],
+  "activity": {
+    "type": "GalleryViewer",
+    "instruction": "3단계에서 만든 내 작품들을 갤러리에서 감상해봐요! 가장 마음에 드는 작품은 어떤 건가요?"
+  },
+  "homeActivity": "가족과 함께 3단계에서 만든 작품들을 보여주고 이야기해봐요! 가족들도 어떤 작품이 제일 좋은지 골라보게 해요."
+}

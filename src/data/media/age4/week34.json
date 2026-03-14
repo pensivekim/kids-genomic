@@ -1,0 +1,42 @@
+{
+  "week": 34,
+  "age": 4,
+  "title": "규칙 실천",
+  "phase": 5,
+  "competency": "Choose",
+  "slides": [
+    {
+      "type": "intro",
+      "title": "미디어 규칙을 실천해봐요!",
+      "emoji": "💪",
+      "description": "지난 주에 만든 미디어 규칙을 잘 지켰나요? 함께 확인해봐요!"
+    },
+    {
+      "type": "content",
+      "title": "규칙 실천이 중요해요",
+      "emoji": "🌟",
+      "description": "규칙을 만드는 것보다 실천하는 게 더 중요해요. 조금씩 노력하면 규칙을 지키는 게 점점 쉬워져요!"
+    },
+    {
+      "type": "activity-intro",
+      "title": "규칙 실천 도장을 모아봐요!",
+      "emoji": "📋",
+      "description": "지킨 규칙에 도장을 찍어봐요!"
+    }
+  ],
+  "activity": {
+    "type": "StampBoard",
+    "instruction": "이번 주에 미디어 규칙을 얼마나 잘 지켰나요?",
+    "stamp": "💪",
+    "items": [
+      { "id": "meal_rule", "emoji": "🍽️", "label": "밥 먹을 때 미디어 끄기 실천했어요" },
+      { "id": "time_rule", "emoji": "⏰", "label": "정해진 시간만 봤어요" },
+      { "id": "sleep_rule", "emoji": "😴", "label": "잠자기 전에 껐어요" },
+      { "id": "stop_well", "emoji": "✋", "label": "그만하라고 할 때 멈췄어요" },
+      { "id": "outside", "emoji": "🏃", "label": "미디어 대신 밖에서 놀았어요" }
+    ],
+    "maxStamps": 5,
+    "completionMessage": "규칙을 잘 지켰어요! 정말 대단해요! 💪"
+  },
+  "homeActivity": "이번 주 미디어 규칙을 얼마나 지켰는지 부모님과 이야기해봐요!"
+}

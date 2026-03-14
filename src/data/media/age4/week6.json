@@ -1,0 +1,38 @@
+{
+  "week": 6,
+  "age": 4,
+  "title": "광고는 왜 있어?",
+  "phase": 1,
+  "competency": "Critical",
+  "slides": [
+    {
+      "type": "intro",
+      "title": "광고는 왜 있는 걸까요?",
+      "emoji": "🤷",
+      "description": "광고는 왜 만들어지는 걸까요? 함께 생각해봐요!"
+    },
+    {
+      "type": "content",
+      "title": "광고의 목적",
+      "emoji": "💰",
+      "description": "광고는 물건을 팔기 위해 만들어요. 광고를 보면 갖고 싶은 마음이 생길 수 있어요. 그래서 광고인지 아닌지 아는 게 중요해요!"
+    },
+    {
+      "type": "activity-intro",
+      "title": "광고에 대해 어떻게 생각하나요?",
+      "emoji": "🗳️",
+      "description": "친구들과 함께 투표해봐요!"
+    }
+  ],
+  "activity": {
+    "type": "VoteWidget",
+    "instruction": "광고를 보면 어떤 마음이 드나요? 골라봐요!",
+    "options": [
+      { "id": "want", "emoji": "🤩", "label": "갖고 싶어요!" },
+      { "id": "curious", "emoji": "🤔", "label": "궁금해요" },
+      { "id": "skip", "emoji": "⏭️", "label": "빨리 넘기고 싶어요" },
+      { "id": "ok", "emoji": "😐", "label": "그냥 봐요" }
+    ]
+  },
+  "homeActivity": "광고를 보고 갖고 싶어지면 정말 필요한 건지 부모님과 이야기해봐요!"
+}

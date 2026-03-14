@@ -1,0 +1,45 @@
+{
+  "week": 8,
+  "age": 5,
+  "title": "1단계 졸업 🎉",
+  "phase": 1,
+  "competency": "Critical",
+  "isGraduation": true,
+  "slides": [
+    {
+      "type": "intro",
+      "title": "1단계 졸업!",
+      "emoji": "🏆",
+      "description": "미디어를 비판적으로 생각하는 능력을 키웠어요!"
+    },
+    {
+      "type": "content",
+      "title": "우리가 배운 것",
+      "emoji": "📚",
+      "description": "미디어 생태계, 정보의 출처, 사실과 의견, 가짜뉴스, 광고의 전략, 알고리즘, 미디어와 생각을 모두 배웠어요! 정말 대단해요!"
+    },
+    {
+      "type": "activity-intro",
+      "title": "졸업 체크리스트",
+      "emoji": "🎓",
+      "description": "배운 것들을 하나씩 확인해봐요."
+    }
+  ],
+  "activity": {
+    "type": "StampBoard",
+    "instruction": "1단계에서 배운 것들을 확인하고 도장을 받아봐요!",
+    "stamp": "⭐",
+    "items": [
+      { "id": "s1", "emoji": "🌐", "label": "미디어 생태계를 알아요" },
+      { "id": "s2", "emoji": "📌", "label": "정보의 출처를 확인해요" },
+      { "id": "s3", "emoji": "⚖️", "label": "사실과 의견을 구별해요" },
+      { "id": "s4", "emoji": "🚨", "label": "가짜뉴스를 조심해요" },
+      { "id": "s5", "emoji": "📣", "label": "광고 전략을 알아요" },
+      { "id": "s6", "emoji": "🤖", "label": "알고리즘을 이해해요" },
+      { "id": "s7", "emoji": "🧠", "label": "미디어가 내 생각에 영향을 줘요" }
+    ],
+    "maxStamps": 7,
+    "completionMessage": "🎉 1단계 비판적 사고 졸업을 축하해요! 이제 미디어를 현명하게 볼 수 있어요!"
+  },
+  "homeActivity": "가족에게 1단계에서 배운 것 한 가지를 설명해주세요!"
+}

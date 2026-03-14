@@ -1,0 +1,43 @@
+{
+  "week": 35,
+  "age": 5,
+  "title": "나는 미디어 지킴이",
+  "phase": 5,
+  "competency": "Choose",
+  "slides": [
+    {
+      "type": "intro",
+      "title": "미디어 지킴이가 되어요",
+      "emoji": "🛡️",
+      "description": "미디어 세상을 더 좋은 곳으로 만드는 지킴이가 돼봐요!"
+    },
+    {
+      "type": "content",
+      "title": "미디어 지킴이의 역할",
+      "emoji": "💪",
+      "description": "미디어 지킴이는 가짜뉴스를 퍼뜨리지 않고, 나쁜 댓글을 달지 않고, 다른 사람을 도와주는 사람이에요. 한 명 한 명이 지킴이가 되면 미디어 세상이 더 좋아져요!"
+    },
+    {
+      "type": "activity-intro",
+      "title": "미디어 지킴이 다짐 도장 받기",
+      "emoji": "🛡️",
+      "description": "미디어 지킴이로서 다짐을 완성해봐요."
+    }
+  ],
+  "activity": {
+    "type": "StampBoard",
+    "instruction": "미디어 지킴이로서 지킬 다짐에 도장을 찍어봐요!",
+    "stamp": "🛡️",
+    "items": [
+      { "id": "s1", "emoji": "🚫", "label": "가짜뉴스를 퍼뜨리지 않아요" },
+      { "id": "s2", "emoji": "💝", "label": "온라인에서도 친절하게 말해요" },
+      { "id": "s3", "emoji": "🔐", "label": "개인 정보를 소중히 지켜요" },
+      { "id": "s4", "emoji": "✅", "label": "정보를 확인하고 믿어요" },
+      { "id": "s5", "emoji": "🤝", "label": "어려운 친구를 도와줘요" },
+      { "id": "s6", "emoji": "📣", "label": "문제가 생기면 어른에게 알려요" }
+    ],
+    "maxStamps": 6,
+    "completionMessage": "공식 미디어 지킴이가 됐어요! 미디어 세상을 지켜줄 멋진 영웅이에요!"
+  },
+  "homeActivity": "오늘부터 '미디어 지킴이'로서 하루에 한 가지 좋은 행동을 실천해봐요!"
+}

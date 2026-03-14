@@ -1,0 +1,38 @@
+{
+  "week": 26,
+  "age": 4,
+  "title": "의견이 달라요",
+  "phase": 4,
+  "competency": "Communicate",
+  "slides": [
+    {
+      "type": "intro",
+      "title": "친구와 생각이 다를 수 있어요!",
+      "emoji": "🤝",
+      "description": "같은 미디어를 봐도 서로 다른 생각을 할 수 있어요. 그건 괜찮아요!"
+    },
+    {
+      "type": "content",
+      "title": "다른 의견 존중하기",
+      "emoji": "💕",
+      "description": "내 생각이 다르다고 친구가 틀린 건 아니에요. 서로의 생각을 이야기하고 존중해요!"
+    },
+    {
+      "type": "activity-intro",
+      "title": "내 의견을 투표해봐요!",
+      "emoji": "🗳️",
+      "description": "이 질문에 내 생각을 골라봐요."
+    }
+  ],
+  "activity": {
+    "type": "VoteWidget",
+    "instruction": "만화 주인공이 거짓말을 했어요. 어떻게 생각하나요?",
+    "options": [
+      { "id": "bad", "emoji": "😠", "label": "나쁜 행동이에요" },
+      { "id": "understand", "emoji": "🤔", "label": "이유가 있을 수도 있어요" },
+      { "id": "okay", "emoji": "😅", "label": "괜찮아요" },
+      { "id": "talk", "emoji": "💬", "label": "더 이야기해봐야 해요" }
+    ]
+  },
+  "homeActivity": "가족이랑 같이 본 영상에 대해 각자 어떻게 생각하는지 이야기해봐요!"
+}

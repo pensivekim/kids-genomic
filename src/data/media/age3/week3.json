@@ -1,0 +1,58 @@
+{
+  "week": 3,
+  "age": 3,
+  "title": "소리가 나는 미디어",
+  "phase": 1,
+  "competency": "Critical",
+  "slides": [
+    {
+      "type": "intro",
+      "title": "소리가 나는 미디어",
+      "emoji": "🎵",
+      "description": "소리로 정보를 전해주는 미디어가 있어요!"
+    },
+    {
+      "type": "content",
+      "title": "소리 미디어",
+      "emoji": "📻",
+      "description": "라디오, TV 소리, 음악 플레이어... 귀로 듣는 미디어도 있어요!"
+    },
+    {
+      "type": "activity-intro",
+      "title": "어떤 기기에서 나는 소리일까요?",
+      "emoji": "👂",
+      "description": "설명을 읽고 알맞은 기기를 골라봐요."
+    }
+  ],
+  "activity": {
+    "type": "QuizCard",
+    "instruction": "어떤 미디어 기기에서 나는 소리일까요?",
+    "questions": [
+      {
+        "id": "q1",
+        "question": "음악이 나오고 뉴스를 들을 수 있어요. 보이지 않고 소리만 나와요.",
+        "emoji": "🎵",
+        "options": ["라디오 📻", "TV 📺", "책 📚"],
+        "answer": 0,
+        "explanation": "라디오는 소리만 나오는 미디어예요!"
+      },
+      {
+        "id": "q2",
+        "question": "화면도 있고 소리도 나와요. 뉴스, 만화, 영화를 볼 수 있어요.",
+        "emoji": "📺",
+        "options": ["라디오 📻", "TV 📺", "신문 📰"],
+        "answer": 1,
+        "explanation": "TV는 눈으로 보고 귀로 들을 수 있어요!"
+      },
+      {
+        "id": "q3",
+        "question": "손가락으로 만지면서 영상과 소리를 즐길 수 있어요.",
+        "emoji": "📱",
+        "options": ["신문 📰", "라디오 📻", "스마트폰 📱"],
+        "answer": 2,
+        "explanation": "스마트폰은 터치하며 사용하는 미디어예요!"
+      }
+    ]
+  },
+  "homeActivity": "집에서 라디오를 들어보세요. 어떤 소리가 나오나요?"
+}

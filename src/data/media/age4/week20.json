@@ -1,0 +1,42 @@
+{
+  "week": 20,
+  "age": 4,
+  "title": "편집 놀이",
+  "phase": 3,
+  "competency": "Creative",
+  "slides": [
+    {
+      "type": "intro",
+      "title": "편집 놀이를 해봐요!",
+      "emoji": "✂️",
+      "description": "사진과 그림을 자르고 붙이면 새로운 이야기가 만들어져요!"
+    },
+    {
+      "type": "content",
+      "title": "편집이란?",
+      "emoji": "🎨",
+      "description": "미디어를 만들 때는 편집이 필요해요. 좋은 부분만 고르고, 순서를 정하고, 예쁘게 꾸미는 것이 편집이에요!"
+    },
+    {
+      "type": "activity-intro",
+      "title": "편집 놀이 체크리스트!",
+      "emoji": "📋",
+      "description": "편집 활동을 하며 도장을 모아봐요!"
+    }
+  ],
+  "activity": {
+    "type": "StampBoard",
+    "instruction": "편집 놀이 활동을 해봐요!",
+    "stamp": "✂️",
+    "items": [
+      { "id": "choose", "emoji": "🎯", "label": "쓸 사진/그림을 골랐어요" },
+      { "id": "cut", "emoji": "✂️", "label": "필요 없는 부분을 잘랐어요" },
+      { "id": "arrange", "emoji": "📐", "label": "순서를 정했어요" },
+      { "id": "decorate", "emoji": "🎨", "label": "예쁘게 꾸몄어요" },
+      { "id": "show", "emoji": "👀", "label": "친구에게 보여줬어요" }
+    ],
+    "maxStamps": 5,
+    "completionMessage": "훌륭한 편집자예요! 나만의 작품이 완성됐어요! ✂️"
+  },
+  "homeActivity": "잡지나 전단지에서 좋아하는 사진을 오려서 나만의 콜라주를 만들어봐요!"
+}

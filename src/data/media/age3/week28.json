@@ -1,0 +1,38 @@
+{
+  "week": 28,
+  "age": 3,
+  "title": "발표해요",
+  "phase": 4,
+  "competency": "Communicate",
+  "slides": [
+    {
+      "type": "intro",
+      "title": "발표해봐요!",
+      "emoji": "🙋",
+      "description": "여러 사람 앞에서 내 생각을 당당하게 말해봐요!"
+    },
+    {
+      "type": "content",
+      "title": "발표가 왜 중요할까요?",
+      "emoji": "💬",
+      "description": "발표를 하면 내 생각을 많은 사람에게 전달할 수 있어요. 또 다른 사람의 생각도 들을 수 있어서 새로운 것을 배울 수 있어요!"
+    },
+    {
+      "type": "content",
+      "title": "자신 있게 발표하기",
+      "emoji": "💪",
+      "description": "눈을 보고, 크게, 천천히 말해요. 틀려도 괜찮아요. 용기 있게 발표하는 것이 더 중요해요!"
+    },
+    {
+      "type": "activity-intro",
+      "title": "슬라이드 발표를 해봐요!",
+      "emoji": "🎯",
+      "description": "슬라이드를 보며 자신 있게 발표해봐요!"
+    }
+  ],
+  "activity": {
+    "type": "SlideViewer",
+    "instruction": "슬라이드를 한 장씩 넘기며 발표해봐요! 친구들 눈을 보며 자신 있게 말해봐요."
+  },
+  "homeActivity": "가족이 모두 모였을 때 짧은 발표를 해봐요! 내가 좋아하는 것이나 오늘 배운 것을 30초 동안 발표하고 박수를 받아봐요."
+}

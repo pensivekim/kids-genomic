@@ -1,0 +1,43 @@
+{
+  "week": 3,
+  "age": 5,
+  "title": "사실 vs 의견",
+  "phase": 1,
+  "competency": "Critical",
+  "slides": [
+    {
+      "type": "intro",
+      "title": "사실과 의견은 달라요",
+      "emoji": "⚖️",
+      "description": "진짜인 것과 내 생각을 구별하는 방법을 배워봐요!"
+    },
+    {
+      "type": "content",
+      "title": "사실과 의견의 차이",
+      "emoji": "💡",
+      "description": "'사실'은 누구나 확인할 수 있는 것이에요. '의견'은 내 생각이나 느낌이에요. 둘 다 중요하지만 구별할 줄 알아야 해요!"
+    },
+    {
+      "type": "activity-intro",
+      "title": "사실인지 의견인지 분류해봐요",
+      "emoji": "🗂️",
+      "description": "카드를 사실과 의견으로 나눠봐요."
+    }
+  ],
+  "activity": {
+    "type": "CardSorter",
+    "instruction": "사실인지 의견인지 분류해봐요!",
+    "categories": ["사실이에요 ✅", "의견이에요 💭"],
+    "cards": [
+      { "id": "c1", "emoji": "🌍", "label": "지구는 둥글어요", "answer": 0 },
+      { "id": "c2", "emoji": "🐘", "label": "코끼리는 무거워요", "answer": 0 },
+      { "id": "c3", "emoji": "🍕", "label": "피자가 제일 맛있어요", "answer": 1 },
+      { "id": "c4", "emoji": "☀️", "label": "태양은 동쪽에서 떠요", "answer": 0 },
+      { "id": "c5", "emoji": "😴", "label": "잠자는 게 너무 재미없어요", "answer": 1 },
+      { "id": "c6", "emoji": "🐶", "label": "강아지가 고양이보다 더 귀여워요", "answer": 1 },
+      { "id": "c7", "emoji": "❄️", "label": "눈은 차가워요", "answer": 0 },
+      { "id": "c8", "emoji": "🎨", "label": "파란색이 세상에서 가장 예뻐요", "answer": 1 }
+    ]
+  },
+  "homeActivity": "오늘 TV나 유튜브에서 들은 것 중 사실인 것과 의견인 것을 구별해 부모님과 이야기해보세요!"
+}

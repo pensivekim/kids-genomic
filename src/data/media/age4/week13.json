@@ -1,0 +1,42 @@
+{
+  "week": 13,
+  "age": 4,
+  "title": "미디어와 나",
+  "phase": 2,
+  "competency": "Connect",
+  "slides": [
+    {
+      "type": "intro",
+      "title": "미디어와 나의 관계",
+      "emoji": "🤝",
+      "description": "나는 미디어와 어떤 관계일까요? 미디어가 내 삶에 어떤 영향을 주는지 생각해봐요!"
+    },
+    {
+      "type": "content",
+      "title": "미디어가 나에게 주는 것",
+      "emoji": "🎁",
+      "description": "미디어는 재미, 정보, 감동을 줄 수 있어요. 하지만 너무 많이 보면 놀 시간이 줄어들 수 있어요!"
+    },
+    {
+      "type": "activity-intro",
+      "title": "내가 좋아하는 미디어를 확인해봐요!",
+      "emoji": "⭐",
+      "description": "내 미디어 사용 습관을 알아봐요."
+    }
+  ],
+  "activity": {
+    "type": "StampBoard",
+    "instruction": "미디어와 나에 대해 알아봐요! 해당하는 것에 도장을 찍어봐요!",
+    "stamp": "⭐",
+    "items": [
+      { "id": "favorite_media", "emoji": "❤️", "label": "내가 좋아하는 미디어가 있어요" },
+      { "id": "feel_emotion", "emoji": "😊", "label": "미디어를 보고 감정이 생겨요" },
+      { "id": "tell_adult", "emoji": "🗣️", "label": "불편하면 어른께 말할 수 있어요" },
+      { "id": "stop_when_told", "emoji": "⏹️", "label": "그만하라고 하면 멈출 수 있어요" },
+      { "id": "play_outside", "emoji": "🏃", "label": "미디어 말고도 즐겁게 놀아요" }
+    ],
+    "maxStamps": 5,
+    "completionMessage": "나는 미디어를 잘 알고 있어요! 멋져요! ⭐"
+  },
+  "homeActivity": "오늘 미디어를 보며 느낀 감정을 부모님과 이야기해봐요!"
+}

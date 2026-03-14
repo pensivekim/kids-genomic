@@ -1,0 +1,32 @@
+{
+  "week": 22,
+  "age": 3,
+  "title": "우리 반 앨범",
+  "phase": 3,
+  "competency": "Creative",
+  "slides": [
+    {
+      "type": "intro",
+      "title": "우리 반 앨범",
+      "emoji": "📷",
+      "description": "우리 반 친구들의 사진을 모아 앨범을 만들어봐요!"
+    },
+    {
+      "type": "content",
+      "title": "앨범은 소중한 추억이에요",
+      "emoji": "💝",
+      "description": "우리가 함께 찍은 사진을 모으면 앨범이 돼요. 앨범은 나중에 보면 행복한 기억이 떠올라요!"
+    },
+    {
+      "type": "activity-intro",
+      "title": "우리 반 앨범을 구경해봐요!",
+      "emoji": "🎯",
+      "description": "우리가 함께 만든 사진들을 앨범에서 감상해봐요."
+    }
+  ],
+  "activity": {
+    "type": "GalleryViewer",
+    "instruction": "우리 반이 함께 만든 사진 앨범을 구경해봐요!"
+  },
+  "homeActivity": "가족과 함께 사진 앨범을 만들어봐요!"
+}

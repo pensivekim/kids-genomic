@@ -1,0 +1,53 @@
+{
+  "week": 7,
+  "age": 3,
+  "title": "미디어로 배워요",
+  "phase": 1,
+  "competency": "Critical",
+  "slides": [
+    {
+      "type": "intro",
+      "title": "미디어로 배워요",
+      "emoji": "🌱",
+      "description": "미디어로 새로운 것을 배울 수 있어요!"
+    },
+    {
+      "type": "content",
+      "title": "자연을 배워요",
+      "emoji": "🦋",
+      "description": "동물 영상, 자연 다큐멘터리... 미디어 덕분에 가보지 못한 곳도 알 수 있어요!"
+    },
+    {
+      "type": "content",
+      "title": "미디어로 배운 것",
+      "emoji": "💡",
+      "description": "공룡은 어떻게 생겼나요? 북극엔 무엇이 살까요? 미디어가 알려줬어요!"
+    },
+    {
+      "type": "content",
+      "title": "함께 이야기해요",
+      "emoji": "🗣️",
+      "description": "오늘 본 자연 영상에서 기억에 남는 것을 친구에게 말해봐요."
+    },
+    {
+      "type": "activity-intro",
+      "title": "배운 것을 정리해봐요",
+      "emoji": "📝",
+      "description": "오늘 알게 된 동물이나 자연에 대해 이야기해봐요."
+    }
+  ],
+  "activity": {
+    "type": "StampBoard",
+    "instruction": "오늘 미디어로 배운 것에 체크해봐요!",
+    "stamp": "✅",
+    "items": [
+      { "id": "animal", "emoji": "🦁", "label": "새 동물을 알았어요" },
+      { "id": "nature", "emoji": "🌿", "label": "자연에 대해 배웠어요" },
+      { "id": "share", "emoji": "🗣️", "label": "친구에게 말했어요" },
+      { "id": "curious", "emoji": "🤔", "label": "더 궁금한 게 생겼어요" }
+    ],
+    "maxStamps": 4,
+    "completionMessage": "미디어로 많이 배웠어요! 🌟"
+  },
+  "homeActivity": "오늘 배운 동물이나 자연을 가족에게 설명해봐요!"
+}

@@ -1,0 +1,66 @@
+{
+  "week": 18,
+  "age": 4,
+  "title": "사진 vs 영상",
+  "phase": 3,
+  "competency": "Creative",
+  "slides": [
+    {
+      "type": "intro",
+      "title": "사진과 영상은 달라요!",
+      "emoji": "🎬",
+      "description": "사진과 영상의 차이가 뭔지 알아봐요!"
+    },
+    {
+      "type": "content",
+      "title": "사진과 영상의 차이",
+      "emoji": "📸",
+      "description": "사진은 한 순간을 담아요. 영상은 움직이는 이야기를 담아요. 둘 다 소중한 기억을 남겨줘요!"
+    },
+    {
+      "type": "activity-intro",
+      "title": "사진과 영상, 언제 좋을까요?",
+      "emoji": "🎯",
+      "description": "알맞은 상황을 맞혀봐요!"
+    }
+  ],
+  "activity": {
+    "type": "QuizCard",
+    "instruction": "이럴 때는 사진이 좋을까요, 영상이 좋을까요?",
+    "questions": [
+      {
+        "id": "q1",
+        "question": "생일 케이크에 촛불을 부는 순간을 남기고 싶어요!",
+        "emoji": "🎂",
+        "options": ["사진이 좋아요", "영상이 좋아요", "둘 다 좋아요"],
+        "answer": 2,
+        "explanation": "사진으로 한 순간을, 영상으로 움직이는 장면을 남길 수 있어요!"
+      },
+      {
+        "id": "q2",
+        "question": "친구가 춤추는 모습을 남기고 싶어요!",
+        "emoji": "💃",
+        "options": ["사진이 좋아요", "영상이 좋아요", "둘 다 좋아요"],
+        "answer": 1,
+        "explanation": "춤처럼 움직이는 건 영상으로 담는 게 더 잘 보여요!"
+      },
+      {
+        "id": "q3",
+        "question": "예쁜 꽃을 기억하고 싶어요!",
+        "emoji": "🌸",
+        "options": ["사진이 좋아요", "영상이 좋아요", "둘 다 좋아요"],
+        "answer": 0,
+        "explanation": "꽃처럼 예쁜 모습은 사진 한 장으로도 충분해요!"
+      },
+      {
+        "id": "q4",
+        "question": "사진과 영상 중 무엇이 더 많은 이야기를 담을 수 있어요?",
+        "emoji": "🤔",
+        "options": ["사진", "영상", "똑같아요"],
+        "answer": 1,
+        "explanation": "영상은 움직임, 소리, 이야기를 모두 담을 수 있어요!"
+      }
+    ]
+  },
+  "homeActivity": "가족 사진과 영상을 찾아서 어떤 점이 다른지 이야기해봐요!"
+}

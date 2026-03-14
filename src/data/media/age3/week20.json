@@ -1,0 +1,33 @@
+{
+  "week": 20,
+  "age": 3,
+  "title": "소리 녹음해요",
+  "phase": 3,
+  "competency": "Creative",
+  "slides": [
+    {
+      "type": "intro",
+      "title": "소리 녹음해요",
+      "emoji": "🎙️",
+      "description": "내 목소리를 녹음해서 들어봐요!"
+    },
+    {
+      "type": "content",
+      "title": "소리도 미디어예요",
+      "emoji": "🔊",
+      "description": "노래, 이야기, 웃음소리를 녹음하면 나중에 다시 들을 수 있어요. 소리도 소중한 기억이에요!"
+    },
+    {
+      "type": "activity-intro",
+      "title": "내 목소리를 녹음해봐요!",
+      "emoji": "🎯",
+      "description": "마이크에 대고 내 이름이나 좋아하는 말을 녹음해봐요."
+    }
+  ],
+  "activity": {
+    "type": "CameraCapture",
+    "instruction": "내 목소리를 녹음해봐요!",
+    "prompt": "내 이름, 좋아하는 노래 한 소절, 또는 친구에게 하고 싶은 말을 녹음해봐요."
+  },
+  "homeActivity": "집에서 가족의 목소리를 녹음해서 들어봐요!"
+}

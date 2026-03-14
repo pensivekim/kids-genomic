@@ -1,0 +1,39 @@
+{
+  "week": 15,
+  "age": 3,
+  "title": "기분 나쁜 미디어",
+  "phase": 2,
+  "competency": "Connect",
+  "slides": [
+    {
+      "type": "intro",
+      "title": "기분 나쁜 미디어",
+      "emoji": "😤",
+      "description": "어떤 미디어가 기분을 나쁘게 만들까요?"
+    },
+    {
+      "type": "content",
+      "title": "싫은 미디어는 끌 수 있어요",
+      "emoji": "🚫",
+      "description": "무섭거나, 슬프거나, 화나게 하는 미디어는 끄거나 어른에게 말해도 돼요. 내 기분이 가장 중요해요!"
+    },
+    {
+      "type": "activity-intro",
+      "title": "기분 나쁜 미디어에 투표해봐요!",
+      "emoji": "🎯",
+      "description": "어떤 미디어가 가장 기분을 나쁘게 하는지 골라봐요."
+    }
+  ],
+  "activity": {
+    "type": "VoteWidget",
+    "instruction": "어떤 미디어가 기분을 나쁘게 만드나요? 투표해봐요!",
+    "question": "가장 기분이 나빠지는 미디어는 무엇인가요?",
+    "options": [
+      { "id": "scary", "emoji": "👻", "label": "무서운 영상" },
+      { "id": "loud", "emoji": "📢", "label": "너무 시끄러운 소리" },
+      { "id": "fight", "emoji": "😡", "label": "싸우는 장면" },
+      { "id": "sad", "emoji": "😢", "label": "슬픈 이야기" }
+    ]
+  },
+  "homeActivity": "기분 나쁜 미디어를 보면 어떻게 할지 가족과 이야기해봐요!"
+}

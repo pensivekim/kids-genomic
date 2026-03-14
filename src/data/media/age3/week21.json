@@ -1,0 +1,33 @@
+{
+  "week": 21,
+  "age": 3,
+  "title": "그림 뉴스",
+  "phase": 3,
+  "competency": "Creative",
+  "slides": [
+    {
+      "type": "intro",
+      "title": "그림 뉴스",
+      "emoji": "📰",
+      "description": "그림으로 오늘 있었던 일을 전해봐요!"
+    },
+    {
+      "type": "content",
+      "title": "나도 뉴스를 만들 수 있어요",
+      "emoji": "🗞️",
+      "description": "뉴스는 오늘 있었던 중요한 일을 다른 사람에게 전하는 거예요. 그림으로 내가 경험한 일을 뉴스처럼 그릴 수 있어요!"
+    },
+    {
+      "type": "activity-intro",
+      "title": "오늘 있었던 일을 그림 뉴스로 그려봐요!",
+      "emoji": "🎯",
+      "description": "오늘 가장 재미있었던 일을 그림으로 표현해봐요."
+    }
+  ],
+  "activity": {
+    "type": "DrawingCanvas",
+    "instruction": "오늘 있었던 일을 그림 뉴스로 그려봐요!",
+    "prompt": "오늘 가장 재미있거나 기억에 남는 일을 그림으로 그려봐요."
+  },
+  "homeActivity": "오늘 그린 그림 뉴스를 가족에게 뉴스처럼 발표해봐요!"
+}

@@ -1,0 +1,41 @@
+{
+  "week": 1,
+  "age": 3,
+  "title": "미디어가 뭐야?",
+  "phase": 1,
+  "competency": "Critical",
+  "slides": [
+    {
+      "type": "intro",
+      "title": "미디어가 뭐야?",
+      "emoji": "📺",
+      "description": "오늘 우리 함께 알아봐요!"
+    },
+    {
+      "type": "content",
+      "title": "미디어란?",
+      "emoji": "📱",
+      "description": "TV, 책, 스마트폰처럼 정보나 이야기를 전해주는 것이에요."
+    },
+    {
+      "type": "activity-intro",
+      "title": "미디어인 것을 골라봐요!",
+      "emoji": "🎯",
+      "description": "카드를 알맞은 곳에 놓아봐요."
+    }
+  ],
+  "activity": {
+    "type": "CardSorter",
+    "instruction": "미디어인 것과 아닌 것으로 나눠봐요!",
+    "categories": ["미디어예요 📺", "미디어가 아니에요 🌸"],
+    "cards": [
+      { "id": "tv", "emoji": "📺", "label": "TV", "answer": 0 },
+      { "id": "phone", "emoji": "📱", "label": "스마트폰", "answer": 0 },
+      { "id": "book", "emoji": "📚", "label": "책", "answer": 0 },
+      { "id": "flower", "emoji": "🌸", "label": "꽃", "answer": 1 },
+      { "id": "tree", "emoji": "🌳", "label": "나무", "answer": 1 },
+      { "id": "radio", "emoji": "📻", "label": "라디오", "answer": 0 }
+    ]
+  },
+  "homeActivity": "집에서 미디어 기기를 찾아보세요! 몇 개나 있나요?"
+}

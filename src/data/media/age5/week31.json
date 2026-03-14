@@ -1,0 +1,43 @@
+{
+  "week": 31,
+  "age": 5,
+  "title": "나의 미디어 철학",
+  "phase": 5,
+  "competency": "Choose",
+  "slides": [
+    {
+      "type": "intro",
+      "title": "나만의 미디어 원칙을 만들어요",
+      "emoji": "📜",
+      "description": "내가 미디어를 어떻게 쓸지 나만의 원칙을 세워봐요!"
+    },
+    {
+      "type": "content",
+      "title": "미디어 철학이란?",
+      "emoji": "🌟",
+      "description": "철학은 내가 어떻게 살고 싶은지에 대한 생각이에요. 미디어 철학은 내가 미디어를 어떻게 사용할지에 대한 나만의 약속이에요. 이 약속을 지키면 더 행복하게 살 수 있어요!"
+    },
+    {
+      "type": "activity-intro",
+      "title": "나의 미디어 철학 만들기",
+      "emoji": "✍️",
+      "description": "나의 미디어 원칙들을 도장으로 완성해봐요."
+    }
+  ],
+  "activity": {
+    "type": "StampBoard",
+    "instruction": "내가 지킬 수 있는 미디어 원칙에 도장을 찍어봐요!",
+    "stamp": "💎",
+    "items": [
+      { "id": "s1", "emoji": "⏰", "label": "미디어 시간을 스스로 정할 거예요" },
+      { "id": "s2", "emoji": "🔍", "label": "정보를 무조건 믿지 않을 거예요" },
+      { "id": "s3", "emoji": "❤️", "label": "가족과 함께 있을 때 미디어를 줄일 거예요" },
+      { "id": "s4", "emoji": "💪", "label": "미디어보다 몸을 움직이는 것을 먼저 할 거예요" },
+      { "id": "s5", "emoji": "🌱", "label": "배우는 것에 미디어를 쓸 거예요" },
+      { "id": "s6", "emoji": "🛑", "label": "나쁜 미디어는 스스로 끊을 거예요" }
+    ],
+    "maxStamps": 6,
+    "completionMessage": "나만의 훌륭한 미디어 철학이 완성됐어요! 이제 스스로 선택할 수 있어요!"
+  },
+  "homeActivity": "나만의 미디어 원칙을 종이에 예쁘게 적어서 방에 붙여놓아봐요!"
+}

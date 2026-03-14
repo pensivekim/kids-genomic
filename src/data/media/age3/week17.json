@@ -1,0 +1,33 @@
+{
+  "week": 17,
+  "age": 3,
+  "title": "사진이 뭐야?",
+  "phase": 3,
+  "competency": "Creative",
+  "slides": [
+    {
+      "type": "intro",
+      "title": "사진이 뭐야?",
+      "emoji": "📸",
+      "description": "사진은 어떻게 찍는 걸까요?"
+    },
+    {
+      "type": "content",
+      "title": "사진은 기억을 담아요",
+      "emoji": "🖼️",
+      "description": "사진은 카메라로 순간을 기록해요. 오래된 사진을 보면 그때의 기억이 생각나요!"
+    },
+    {
+      "type": "activity-intro",
+      "title": "사진을 찍어봐요!",
+      "emoji": "🎯",
+      "description": "카메라로 주변의 것들을 찍어봐요."
+    }
+  ],
+  "activity": {
+    "type": "CameraCapture",
+    "instruction": "주변에 있는 것을 사진으로 찍어봐요!",
+    "prompt": "내 주변에서 가장 마음에 드는 것을 찍어봐요."
+  },
+  "homeActivity": "가족과 함께 사진을 찍어보고 사진을 보며 이야기해봐요!"
+}

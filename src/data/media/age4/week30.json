@@ -1,0 +1,49 @@
+{
+  "week": 30,
+  "age": 4,
+  "title": "4단계 졸업 🎉",
+  "phase": 4,
+  "competency": "Communicate",
+  "isGraduation": true,
+  "slides": [
+    {
+      "type": "intro",
+      "title": "4단계 졸업 축하해요! 🎉",
+      "emoji": "🏆",
+      "description": "미디어에 대해 소통하고 나눠주는 법을 배웠어요!"
+    },
+    {
+      "type": "content",
+      "title": "우리가 배운 것",
+      "emoji": "📚",
+      "description": "다르게 말하기, 다른 의견 존중하기, 질문하기, 친구 작품 감상, 미디어 추천하기를 배웠어요!"
+    },
+    {
+      "type": "content",
+      "title": "나는 미디어 소통 전문가예요!",
+      "emoji": "💬",
+      "description": "이제 미디어를 보고 내 생각을 말하고, 친구의 생각도 들을 수 있어요!"
+    },
+    {
+      "type": "activity-intro",
+      "title": "졸업 도장을 받아봐요!",
+      "emoji": "🎓",
+      "description": "4단계에서 배운 것들을 확인해봐요!"
+    }
+  ],
+  "activity": {
+    "type": "StampBoard",
+    "instruction": "4단계에서 배운 것들을 확인해봐요!",
+    "stamp": "💬",
+    "items": [
+      { "id": "different_say", "emoji": "🗣️", "label": "같은 것도 다르게 말할 수 있어요" },
+      { "id": "respect_opinion", "emoji": "💕", "label": "다른 의견을 존중해요" },
+      { "id": "ask_question", "emoji": "❓", "label": "궁금하면 질문해요" },
+      { "id": "appreciate", "emoji": "👀", "label": "친구 작품을 잘 감상해요" },
+      { "id": "recommend", "emoji": "⭐", "label": "좋은 미디어를 추천할 수 있어요" }
+    ],
+    "maxStamps": 5,
+    "completionMessage": "🎓 미디어 리터러시 4단계 졸업! 소통 전문가가 됐어요! 🎉"
+  },
+  "homeActivity": "가족에게 좋아하는 미디어와 그 이유를 설명해봐요!"
+}

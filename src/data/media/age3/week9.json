@@ -1,0 +1,32 @@
+{
+  "week": 9,
+  "age": 3,
+  "title": "기분이 어때?",
+  "phase": 2,
+  "competency": "Connect",
+  "slides": [
+    {
+      "type": "intro",
+      "title": "기분이 어때?",
+      "emoji": "😊",
+      "description": "미디어를 보면 기분이 어떻게 바뀔까요?"
+    },
+    {
+      "type": "content",
+      "title": "미디어와 기분",
+      "emoji": "💛",
+      "description": "좋아하는 만화를 보면 기분이 좋아져요. 미디어는 우리 기분에 영향을 줄 수 있어요!"
+    },
+    {
+      "type": "activity-intro",
+      "title": "지금 내 기분을 골라봐요!",
+      "emoji": "🎯",
+      "description": "지금 이 순간 내 기분을 표현해봐요."
+    }
+  ],
+  "activity": {
+    "type": "EmotionPicker",
+    "instruction": "지금 내 기분과 가장 비슷한 표정을 골라봐요!"
+  },
+  "homeActivity": "오늘 본 미디어가 기분을 어떻게 바꿨는지 가족에게 이야기해봐요!"
+}

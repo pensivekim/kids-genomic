@@ -1,0 +1,45 @@
+{
+  "week": 16,
+  "age": 5,
+  "title": "2단계 졸업 🎉",
+  "phase": 2,
+  "competency": "Connect",
+  "isGraduation": true,
+  "slides": [
+    {
+      "type": "intro",
+      "title": "2단계 졸업!",
+      "emoji": "🏆",
+      "description": "미디어와 내 삶의 균형을 이해했어요!"
+    },
+    {
+      "type": "content",
+      "title": "우리가 배운 것",
+      "emoji": "📚",
+      "description": "감정 조절, 중독, 수면, 스트레스 해소, 미디어 사용 분석, 긍정적 활용, 관계까지 모두 배웠어요!"
+    },
+    {
+      "type": "activity-intro",
+      "title": "2단계 졸업 체크리스트",
+      "emoji": "🎓",
+      "description": "2단계에서 배운 것들을 확인해봐요."
+    }
+  ],
+  "activity": {
+    "type": "StampBoard",
+    "instruction": "2단계에서 배운 것들을 확인하고 도장을 받아봐요!",
+    "stamp": "⭐",
+    "items": [
+      { "id": "s1", "emoji": "😊", "label": "미디어가 감정에 영향을 줘요" },
+      { "id": "s2", "emoji": "⚠️", "label": "중독을 조심해야 해요" },
+      { "id": "s3", "emoji": "😴", "label": "자기 전 미디어는 줄여요" },
+      { "id": "s4", "emoji": "🌈", "label": "건강하게 스트레스를 풀어요" },
+      { "id": "s5", "emoji": "📊", "label": "내 미디어 사용을 분석해요" },
+      { "id": "s6", "emoji": "✨", "label": "미디어를 좋은 곳에 써요" },
+      { "id": "s7", "emoji": "🤝", "label": "관계가 미디어보다 소중해요" }
+    ],
+    "maxStamps": 7,
+    "completionMessage": "🎉 2단계 미디어 연결 졸업을 축하해요! 이제 미디어와 건강하게 살아갈 수 있어요!"
+  },
+  "homeActivity": "2단계에서 배운 것 중 앞으로 실천하고 싶은 것 한 가지를 가족에게 말해보세요!"
+}

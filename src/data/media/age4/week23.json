@@ -1,0 +1,42 @@
+{
+  "week": 23,
+  "age": 4,
+  "title": "영상 발표",
+  "phase": 3,
+  "competency": "Creative",
+  "slides": [
+    {
+      "type": "intro",
+      "title": "우리가 만든 영상을 발표해요!",
+      "emoji": "🎬",
+      "description": "우리가 만든 미디어를 친구들 앞에서 소개해봐요!"
+    },
+    {
+      "type": "content",
+      "title": "발표할 때 중요한 것",
+      "emoji": "🌟",
+      "description": "크고 또렷하게 말해요. 왜 만들었는지 설명해요. 친구들의 반응을 기다려요!"
+    },
+    {
+      "type": "activity-intro",
+      "title": "발표 준비 체크리스트!",
+      "emoji": "📋",
+      "description": "발표 준비가 됐는지 확인해봐요!"
+    }
+  ],
+  "activity": {
+    "type": "StampBoard",
+    "instruction": "영상 발표 준비를 확인해봐요!",
+    "stamp": "🎬",
+    "items": [
+      { "id": "ready", "emoji": "✅", "label": "발표할 내용이 준비됐어요" },
+      { "id": "loud", "emoji": "🔊", "label": "크고 또렷하게 말했어요" },
+      { "id": "why", "emoji": "💡", "label": "왜 만들었는지 설명했어요" },
+      { "id": "friends_watch", "emoji": "👀", "label": "친구들이 잘 봤어요" },
+      { "id": "feedback", "emoji": "💬", "label": "친구들의 의견을 들었어요" }
+    ],
+    "maxStamps": 5,
+    "completionMessage": "훌륭한 발표자예요! 미디어 창작자가 됐어요! 🎬"
+  },
+  "homeActivity": "가족 앞에서 내가 만든 것을 발표해봐요!"
+}

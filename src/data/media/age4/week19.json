@@ -1,0 +1,42 @@
+{
+  "week": 19,
+  "age": 4,
+  "title": "제목 붙이기",
+  "phase": 3,
+  "competency": "Creative",
+  "slides": [
+    {
+      "type": "intro",
+      "title": "사진에 제목을 붙여봐요!",
+      "emoji": "✏️",
+      "description": "좋은 제목이 있으면 사진이 더 재미있어져요. 제목 붙이기 연습을 해봐요!"
+    },
+    {
+      "type": "content",
+      "title": "제목이 왜 중요할까요?",
+      "emoji": "📝",
+      "description": "제목은 미디어의 내용을 한눈에 알게 해줘요. 재미있는 제목은 더 많은 사람이 보고 싶게 해요!"
+    },
+    {
+      "type": "activity-intro",
+      "title": "제목을 잘 붙이는 방법을 배워봐요!",
+      "emoji": "🎯",
+      "description": "어떤 제목이 더 좋은지 골라봐요."
+    }
+  ],
+  "activity": {
+    "type": "StampBoard",
+    "instruction": "좋은 제목의 조건이에요! 내가 만든 제목에 해당하는지 확인해봐요!",
+    "stamp": "✏️",
+    "items": [
+      { "id": "short", "emoji": "📏", "label": "짧고 간결해요" },
+      { "id": "interesting", "emoji": "🤩", "label": "흥미롭고 재미있어요" },
+      { "id": "match", "emoji": "🎯", "label": "내용과 잘 맞아요" },
+      { "id": "easy", "emoji": "😊", "label": "이해하기 쉬워요" },
+      { "id": "original", "emoji": "⭐", "label": "내가 직접 생각한 제목이에요" }
+    ],
+    "maxStamps": 5,
+    "completionMessage": "멋진 제목을 붙일 수 있어요! 작가 기질이 있어요! ✏️"
+  },
+  "homeActivity": "오늘 본 책이나 영상에 내가 새로운 제목을 붙여봐요!"
+}

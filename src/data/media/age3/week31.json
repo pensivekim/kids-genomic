@@ -1,0 +1,76 @@
+{
+  "week": 31,
+  "age": 3,
+  "title": "내가 고를게",
+  "phase": 5,
+  "competency": "Choose",
+  "slides": [
+    {
+      "type": "intro",
+      "title": "내가 고를게!",
+      "emoji": "✋",
+      "description": "미디어를 내가 스스로 선택해봐요!"
+    },
+    {
+      "type": "content",
+      "title": "스스로 고르는 것이 중요해요",
+      "emoji": "💡",
+      "description": "미디어는 내가 직접 고를 수 있어요. 내게 좋은 미디어, 내가 즐거운 미디어를 선택하는 것이 중요해요!"
+    },
+    {
+      "type": "content",
+      "title": "좋은 선택을 위한 생각",
+      "emoji": "🤔",
+      "description": "고르기 전에 '이것이 나에게 좋을까?', '얼마나 볼까?'를 먼저 생각해봐요. 스스로 생각하고 고르는 것이 진짜 선택이에요!"
+    },
+    {
+      "type": "activity-intro",
+      "title": "내가 보고 싶은 것을 골라봐요!",
+      "emoji": "🎯",
+      "description": "오늘 내가 보고 싶은 미디어를 직접 골라봐요."
+    }
+  ],
+  "activity": {
+    "type": "ContentPicker",
+    "instruction": "오늘 보고 싶은 미디어를 직접 골라봐요! 고른 이유도 이야기해봐요.",
+    "items": [
+      {
+        "id": "art",
+        "emoji": "🎨",
+        "label": "미술 영상",
+        "description": "그림 그리기와 만들기를 배워요"
+      },
+      {
+        "id": "sport",
+        "emoji": "⚽",
+        "label": "스포츠 영상",
+        "description": "신나게 몸을 움직여봐요"
+      },
+      {
+        "id": "nature",
+        "emoji": "🌿",
+        "label": "자연 탐구",
+        "description": "자연 속 신기한 생물들을 만나요"
+      },
+      {
+        "id": "music",
+        "emoji": "🎶",
+        "label": "음악 영상",
+        "description": "신나는 음악을 듣고 즐겨봐요"
+      },
+      {
+        "id": "story",
+        "emoji": "📚",
+        "label": "이야기 영상",
+        "description": "재미있는 이야기를 들어봐요"
+      },
+      {
+        "id": "cook",
+        "emoji": "🍰",
+        "label": "요리 영상",
+        "description": "맛있는 음식 만들기를 구경해요"
+      }
+    ]
+  },
+  "homeActivity": "저녁 시간에 아이가 직접 가족이 함께 볼 영상을 고르게 해주세요! 고르기 전에 '왜 이걸 고르고 싶어?'라고 물어봐요."
+}

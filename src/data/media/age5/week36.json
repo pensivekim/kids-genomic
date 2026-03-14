@@ -1,0 +1,43 @@
+{
+  "week": 36,
+  "age": 5,
+  "title": "연간 졸업 🏆",
+  "phase": 5,
+  "competency": "Choose",
+  "isGraduation": true,
+  "slides": [
+    {
+      "type": "intro",
+      "title": "연간 미디어 리터러시 졸업!",
+      "emoji": "🏆",
+      "description": "1년 동안 미디어를 현명하게 사용하는 방법을 모두 배웠어요!"
+    },
+    {
+      "type": "content",
+      "title": "우리가 1년 동안 배운 것",
+      "emoji": "🌈",
+      "description": "비판적 사고(1단계), 미디어와 연결(2단계), 창의적 제작(3단계), 소통하기(4단계), 스스로 선택하기(5단계)... 이 모든 것을 해낸 내가 정말 자랑스러워요!"
+    },
+    {
+      "type": "activity-intro",
+      "title": "연간 졸업 최종 체크리스트",
+      "emoji": "🎓",
+      "description": "1년 동안 배운 모든 것을 확인해봐요."
+    }
+  ],
+  "activity": {
+    "type": "StampBoard",
+    "instruction": "1년 동안 배운 5가지 능력을 확인하고 도장을 받아봐요!",
+    "stamp": "🏆",
+    "items": [
+      { "id": "s1", "emoji": "🔍", "label": "Critical: 미디어를 비판적으로 생각해요" },
+      { "id": "s2", "emoji": "❤️", "label": "Connect: 미디어와 건강하게 지내요" },
+      { "id": "s3", "emoji": "🎨", "label": "Creative: 직접 미디어를 만들어요" },
+      { "id": "s4", "emoji": "🗣️", "label": "Communicate: 미디어로 소통해요" },
+      { "id": "s5", "emoji": "⭐", "label": "Choose: 스스로 올바르게 선택해요" }
+    ],
+    "maxStamps": 5,
+    "completionMessage": "🏆 연간 미디어 리터러시 과정 졸업을 진심으로 축하해요! 이제 어떤 미디어든 현명하게 사용할 수 있는 멋진 미디어 인재가 됐어요! 정말 대단해요!"
+  },
+  "homeActivity": "1년 동안 배운 것 중 가장 기억에 남는 것을 가족과 함께 이야기하고, 앞으로의 미디어 생활을 어떻게 할지 약속해보세요!"
+}

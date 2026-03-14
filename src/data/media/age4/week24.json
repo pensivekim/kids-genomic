@@ -1,0 +1,50 @@
+{
+  "week": 24,
+  "age": 4,
+  "title": "3단계 졸업 🎉",
+  "phase": 3,
+  "competency": "Creative",
+  "isGraduation": true,
+  "slides": [
+    {
+      "type": "intro",
+      "title": "3단계 졸업 축하해요! 🎉",
+      "emoji": "🏆",
+      "description": "미디어를 직접 만들고 표현하는 법을 배웠어요!"
+    },
+    {
+      "type": "content",
+      "title": "우리가 배운 것",
+      "emoji": "📚",
+      "description": "카메라로 이야기하기, 사진과 영상의 차이, 제목 붙이기, 편집 놀이, 뉴스 제작, 기자 활동, 영상 발표를 모두 해봤어요!"
+    },
+    {
+      "type": "content",
+      "title": "나는 미디어 창작자예요!",
+      "emoji": "🎨",
+      "description": "이제 미디어를 보는 것뿐 아니라 직접 만들 수 있어요!"
+    },
+    {
+      "type": "activity-intro",
+      "title": "졸업 도장을 받아봐요!",
+      "emoji": "🎓",
+      "description": "3단계에서 배운 것들을 확인해봐요!"
+    }
+  ],
+  "activity": {
+    "type": "StampBoard",
+    "instruction": "3단계에서 배운 것들을 확인해봐요!",
+    "stamp": "🎨",
+    "items": [
+      { "id": "camera_story", "emoji": "📷", "label": "카메라로 이야기할 수 있어요" },
+      { "id": "photo_video", "emoji": "🎬", "label": "사진과 영상의 차이를 알아요" },
+      { "id": "title", "emoji": "✏️", "label": "제목을 붙일 수 있어요" },
+      { "id": "edit", "emoji": "✂️", "label": "편집 놀이를 할 수 있어요" },
+      { "id": "news", "emoji": "📰", "label": "뉴스를 만들 수 있어요" },
+      { "id": "present", "emoji": "🎤", "label": "발표를 할 수 있어요" }
+    ],
+    "maxStamps": 6,
+    "completionMessage": "🎓 미디어 리터러시 3단계 졸업! 미디어 창작자가 됐어요! 🎉"
+  },
+  "homeActivity": "가족에게 내가 만든 미디어를 자랑해봐요!"
+}

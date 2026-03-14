@@ -1,0 +1,50 @@
+{
+  "week": 8,
+  "age": 3,
+  "title": "1단계 졸업! 🎉",
+  "phase": 1,
+  "competency": "Critical",
+  "isGraduation": true,
+  "slides": [
+    {
+      "type": "intro",
+      "title": "1단계 졸업 축하해요! 🎉",
+      "emoji": "🏆",
+      "description": "미디어가 뭔지 이제 알았어요!"
+    },
+    {
+      "type": "content",
+      "title": "우리가 배운 것",
+      "emoji": "📚",
+      "description": "미디어가 뭔지, 화면과 현실의 차이, 소리 미디어, 영상과 사진, 내가 좋아하는 미디어를 배웠어요!"
+    },
+    {
+      "type": "content",
+      "title": "발표해봐요!",
+      "emoji": "🎤",
+      "description": "내가 좋아하는 미디어와 그 이유를 친구들 앞에서 말해봐요."
+    },
+    {
+      "type": "activity-intro",
+      "title": "졸업 도장을 받아봐요!",
+      "emoji": "🎓",
+      "description": "모든 항목에 체크하면 졸업 도장이 생겨요!"
+    }
+  ],
+  "activity": {
+    "type": "StampBoard",
+    "instruction": "1단계에서 배운 것들을 확인해봐요!",
+    "stamp": "🏆",
+    "items": [
+      { "id": "know_media", "emoji": "📺", "label": "미디어가 뭔지 알아요" },
+      { "id": "screen_real", "emoji": "🔍", "label": "화면과 현실을 구분해요" },
+      { "id": "sound_media", "emoji": "🎵", "label": "소리 미디어를 알아요" },
+      { "id": "video_photo", "emoji": "🎬", "label": "영상과 사진을 구분해요" },
+      { "id": "my_favorite", "emoji": "⭐", "label": "내가 좋아하는 미디어를 말해요" },
+      { "id": "friend_vote", "emoji": "👫", "label": "친구 미디어도 존중해요" }
+    ],
+    "maxStamps": 6,
+    "completionMessage": "🎓 미디어 리터러시 1단계 졸업! 멋져요! 🎉"
+  },
+  "homeActivity": "가족에게 미디어가 무엇인지 설명해봐요!"
+}

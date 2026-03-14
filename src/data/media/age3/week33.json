@@ -1,0 +1,64 @@
+{
+  "week": 33,
+  "age": 3,
+  "title": "좋은 미디어",
+  "phase": 5,
+  "competency": "Choose",
+  "slides": [
+    {
+      "type": "intro",
+      "title": "좋은 미디어가 뭘까요?",
+      "emoji": "⭐",
+      "description": "나에게 좋은 미디어를 알아봐요!"
+    },
+    {
+      "type": "content",
+      "title": "좋은 미디어의 특징",
+      "emoji": "✅",
+      "description": "좋은 미디어는 새로운 것을 배우게 해줘요. 기분을 좋게 만들어줘요. 나쁜 말이나 무서운 장면이 없어요!"
+    },
+    {
+      "type": "content",
+      "title": "조심해야 할 미디어",
+      "emoji": "⚠️",
+      "description": "무서운 장면, 나쁜 말, 싸우는 장면이 있으면 어른에게 알려요. 기분이 나빠지는 미디어는 멈추어도 돼요!"
+    },
+    {
+      "type": "activity-intro",
+      "title": "좋은 미디어에 도장을 찍어봐요!",
+      "emoji": "🎯",
+      "description": "좋은 미디어를 가리키는 항목에 도장을 찍어봐요."
+    }
+  ],
+  "activity": {
+    "type": "StampBoard",
+    "instruction": "좋은 미디어를 알아봐요! 해당하는 항목에 도장을 찍어봐요.",
+    "stamps": [
+      {
+        "emoji": "📚",
+        "label": "새로운 것을 배울 수 있어요"
+      },
+      {
+        "emoji": "😊",
+        "label": "보고 나면 기분이 좋아요"
+      },
+      {
+        "emoji": "🌈",
+        "label": "예쁘고 밝은 장면이 있어요"
+      },
+      {
+        "emoji": "💬",
+        "label": "친구나 가족과 이야기거리가 생겨요"
+      },
+      {
+        "emoji": "🎵",
+        "label": "좋은 음악이나 소리가 나와요"
+      },
+      {
+        "emoji": "🤝",
+        "label": "사이좋게 지내는 모습이 있어요"
+      }
+    ]
+  },
+  "homeActivity": "함께 영상을 보고 나서 '이건 좋은 미디어일까?'라고 아이에게 물어봐요. 왜 좋은지 나쁜지 이야기를 나눠봐요."
+}

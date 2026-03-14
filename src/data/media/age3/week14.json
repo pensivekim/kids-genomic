@@ -1,0 +1,38 @@
+{
+  "week": 14,
+  "age": 3,
+  "title": "기분 좋은 미디어",
+  "phase": 2,
+  "competency": "Connect",
+  "slides": [
+    {
+      "type": "intro",
+      "title": "기분 좋은 미디어",
+      "emoji": "🌈",
+      "description": "어떤 미디어가 기분을 좋게 만들어주나요?"
+    },
+    {
+      "type": "content",
+      "title": "나를 행복하게 하는 미디어",
+      "emoji": "💖",
+      "description": "좋아하는 노래, 재미있는 만화, 신나는 영상은 기분을 밝게 해줘요. 나를 행복하게 하는 미디어를 골라봐요!"
+    },
+    {
+      "type": "activity-intro",
+      "title": "기분 좋은 미디어를 골라봐요!",
+      "emoji": "🎯",
+      "description": "나를 기분 좋게 만드는 미디어를 선택해봐요."
+    }
+  ],
+  "activity": {
+    "type": "ContentPicker",
+    "instruction": "나를 기분 좋게 만드는 미디어를 골라봐요!",
+    "items": [
+      { "id": "cartoon", "emoji": "📺", "label": "재미있는 만화", "description": "웃음이 나오는 만화를 봐요" },
+      { "id": "music", "emoji": "🎵", "label": "신나는 노래", "description": "듣기만 해도 기분이 좋아져요" },
+      { "id": "nature", "emoji": "🌿", "label": "자연 영상", "description": "동물과 자연을 보면 마음이 편해요" },
+      { "id": "dance", "emoji": "💃", "label": "춤추는 영상", "description": "같이 따라 추고 싶어져요" }
+    ]
+  },
+  "homeActivity": "오늘 고른 기분 좋은 미디어를 가족과 함께 즐겨봐요!"
+}

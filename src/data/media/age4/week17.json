@@ -1,0 +1,42 @@
+{
+  "week": 17,
+  "age": 4,
+  "title": "카메라로 이야기해요",
+  "phase": 3,
+  "competency": "Creative",
+  "slides": [
+    {
+      "type": "intro",
+      "title": "카메라로 이야기해봐요!",
+      "emoji": "📷",
+      "description": "사진을 찍으면 내 이야기를 전할 수 있어요! 오늘은 사진으로 이야기해봐요."
+    },
+    {
+      "type": "content",
+      "title": "사진으로 이야기하기",
+      "emoji": "🖼️",
+      "description": "사진 한 장에도 많은 이야기가 담겨 있어요. 어떤 장면을 찍느냐에 따라 다른 이야기가 만들어져요!"
+    },
+    {
+      "type": "activity-intro",
+      "title": "사진으로 무엇을 전달할까요?",
+      "emoji": "🎯",
+      "description": "사진 찍기 전 계획을 세워봐요!"
+    }
+  ],
+  "activity": {
+    "type": "StampBoard",
+    "instruction": "사진 찍기 체크리스트! 준비됐나요?",
+    "stamp": "📷",
+    "items": [
+      { "id": "what_photo", "emoji": "🤔", "label": "무엇을 찍을지 정했어요" },
+      { "id": "why_photo", "emoji": "💡", "label": "왜 찍는지 알아요" },
+      { "id": "took_photo", "emoji": "📸", "label": "사진을 찍었어요" },
+      { "id": "show_photo", "emoji": "👀", "label": "친구에게 사진을 보여줬어요" },
+      { "id": "explain_photo", "emoji": "🗣️", "label": "사진에 대해 설명했어요" }
+    ],
+    "maxStamps": 5,
+    "completionMessage": "사진 작가가 됐어요! 멋진 이야기를 담았어요! 📷"
+  },
+  "homeActivity": "집에서 좋아하는 것을 사진으로 찍고 부모님께 설명해봐요!"
+}

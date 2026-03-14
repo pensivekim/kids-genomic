@@ -1,0 +1,39 @@
+{
+  "week": 30,
+  "age": 3,
+  "title": "4단계 졸업 🎉",
+  "phase": 4,
+  "competency": "Communicate",
+  "isGraduation": true,
+  "slides": [
+    {
+      "type": "intro",
+      "title": "4단계 졸업 축하해요! 🎉",
+      "emoji": "🏆",
+      "description": "우리는 미디어로 소통하는 방법을 배웠어요!"
+    },
+    {
+      "type": "content",
+      "title": "4단계에서 배운 것들",
+      "emoji": "📚",
+      "description": "친구에게 전달하기, 인터뷰하기, 뉴스 만들기, 발표하기, 함께 보기를 배웠어요!"
+    },
+    {
+      "type": "content",
+      "title": "나는 미디어 소통왕!",
+      "emoji": "📢",
+      "description": "이제 미디어를 통해 내 생각을 전달하고, 다른 사람과 소통할 수 있어요. 정말 대단해요!"
+    },
+    {
+      "type": "activity-intro",
+      "title": "우리가 만든 콘텐츠 갤러리!",
+      "emoji": "🖼️",
+      "description": "4단계 동안 만들었던 콘텐츠들을 갤러리에서 감상해봐요."
+    }
+  ],
+  "activity": {
+    "type": "GalleryViewer",
+    "instruction": "4단계에서 만들고 발표했던 내용들을 갤러리에서 감상해봐요! 어떤 활동이 가장 기억에 남나요?"
+  },
+  "homeActivity": "4단계에서 배운 것 중 가장 기억에 남는 것을 가족에게 발표해봐요! 부모님도 아이가 배운 것을 들으며 칭찬해주세요."
+}

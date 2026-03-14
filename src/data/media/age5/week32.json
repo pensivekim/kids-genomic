@@ -1,0 +1,39 @@
+{
+  "week": 32,
+  "age": 5,
+  "title": "미디어 헌법",
+  "phase": 5,
+  "competency": "Choose",
+  "slides": [
+    {
+      "type": "intro",
+      "title": "우리 반 미디어 헌법을 만들어요",
+      "emoji": "📋",
+      "description": "함께 지킬 미디어 규칙을 만들어봐요!"
+    },
+    {
+      "type": "content",
+      "title": "헌법이란 무엇일까요?",
+      "emoji": "⚖️",
+      "description": "헌법은 나라에서 모든 사람이 지켜야 하는 가장 중요한 규칙이에요. 우리도 미디어를 사용할 때 모두가 함께 지킬 규칙을 만들 수 있어요!"
+    },
+    {
+      "type": "activity-intro",
+      "title": "미디어 헌법 조항 투표",
+      "emoji": "🗳️",
+      "description": "어떤 규칙이 가장 중요한지 투표해봐요."
+    }
+  ],
+  "activity": {
+    "type": "VoteWidget",
+    "instruction": "우리 미디어 헌법에서 가장 중요한 조항은 무엇일까요?",
+    "options": [
+      { "id": "o1", "emoji": "🔍", "label": "정보는 꼭 확인하고 믿는다" },
+      { "id": "o2", "emoji": "⏰", "label": "미디어 시간을 스스로 정한다" },
+      { "id": "o3", "emoji": "❤️", "label": "다른 사람을 배려하며 미디어를 쓴다" },
+      { "id": "o4", "emoji": "📢", "label": "나쁜 정보는 퍼뜨리지 않는다" },
+      { "id": "o5", "emoji": "🌱", "label": "미디어로 배우고 성장한다" }
+    ]
+  },
+  "homeActivity": "가족 미디어 헌법을 함께 만들어보세요. 각자 한 가지씩 규칙을 제안해봐요!"
+}

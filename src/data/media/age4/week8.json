@@ -1,0 +1,50 @@
+{
+  "week": 8,
+  "age": 4,
+  "title": "1단계 졸업 🎉",
+  "phase": 1,
+  "competency": "Critical",
+  "isGraduation": true,
+  "slides": [
+    {
+      "type": "intro",
+      "title": "1단계 졸업 축하해요! 🎉",
+      "emoji": "🏆",
+      "description": "미디어를 비판적으로 보는 법을 배웠어요!"
+    },
+    {
+      "type": "content",
+      "title": "우리가 배운 것",
+      "emoji": "📚",
+      "description": "미디어 종류, 누가 만드는지, 진짜와 가짜 구분, 합성 사진, 광고와 뉴스를 모두 배웠어요!"
+    },
+    {
+      "type": "content",
+      "title": "나는 미디어 탐정이에요!",
+      "emoji": "🔍",
+      "description": "이제 미디어를 볼 때 '이게 진짜일까?', '누가 만들었을까?'라고 생각할 수 있어요!"
+    },
+    {
+      "type": "activity-intro",
+      "title": "졸업 도장을 받아봐요!",
+      "emoji": "🎓",
+      "description": "1단계에서 배운 것들을 확인해봐요!"
+    }
+  ],
+  "activity": {
+    "type": "StampBoard",
+    "instruction": "1단계에서 배운 것들을 확인해봐요!",
+    "stamp": "🏆",
+    "items": [
+      { "id": "know_media", "emoji": "📱", "label": "미디어 종류를 알아요" },
+      { "id": "who_made", "emoji": "🎬", "label": "미디어를 누가 만드는지 알아요" },
+      { "id": "real_fake", "emoji": "🔍", "label": "진짜와 가짜를 구분해요" },
+      { "id": "fake_photo", "emoji": "🖼️", "label": "합성 사진을 찾을 수 있어요" },
+      { "id": "ad_news", "emoji": "📢", "label": "광고와 뉴스를 구분해요" },
+      { "id": "why_ad", "emoji": "💡", "label": "광고가 왜 있는지 알아요" }
+    ],
+    "maxStamps": 6,
+    "completionMessage": "🎓 미디어 리터러시 1단계 졸업! 미디어 탐정이 됐어요! 🎉"
+  },
+  "homeActivity": "가족에게 광고와 뉴스의 차이를 설명해봐요!"
+}

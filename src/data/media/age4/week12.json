@@ -1,0 +1,32 @@
+{
+  "week": 12,
+  "age": 4,
+  "title": "화나는 미디어",
+  "phase": 2,
+  "competency": "Connect",
+  "slides": [
+    {
+      "type": "intro",
+      "title": "미디어를 보고 화가 날 수 있어요!",
+      "emoji": "😡",
+      "description": "TV에서 불공평한 장면을 보면 화가 나기도 해요. 그 감정은 자연스러운 거예요!"
+    },
+    {
+      "type": "content",
+      "title": "화나는 감정 표현",
+      "emoji": "💬",
+      "description": "화가 나는 건 괜찮아요! 하지만 화를 어떻게 표현하느냐가 중요해요. 말로 표현하거나 그림을 그리거나 어른에게 말해봐요."
+    },
+    {
+      "type": "activity-intro",
+      "title": "지금 기분을 표현해봐요!",
+      "emoji": "🎭",
+      "description": "미디어를 보고 화가 났던 적을 생각하며 감정을 골라봐요."
+    }
+  ],
+  "activity": {
+    "type": "EmotionPicker",
+    "instruction": "미디어를 보고 화가 난 적이 있나요? 지금 느끼는 감정을 골라봐요!"
+  },
+  "homeActivity": "미디어를 보고 화가 나면 왜 화가 났는지 부모님께 이야기해봐요!"
+}

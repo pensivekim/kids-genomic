@@ -1,0 +1,43 @@
+{
+  "week": 35,
+  "age": 4,
+  "title": "나는 미디어 지킴이",
+  "phase": 5,
+  "competency": "Choose",
+  "slides": [
+    {
+      "type": "intro",
+      "title": "나는 미디어 지킴이예요!",
+      "emoji": "🦸",
+      "description": "1년 동안 미디어에 대해 많이 배웠어요. 이제 나는 미디어 지킴이가 됐어요!"
+    },
+    {
+      "type": "content",
+      "title": "미디어 지킴이란?",
+      "emoji": "🛡️",
+      "description": "미디어를 잘 고르고, 잘 사용하고, 친구들에게도 알려주는 사람이에요. 나는 이미 많은 것을 알고 있어요!"
+    },
+    {
+      "type": "activity-intro",
+      "title": "미디어 지킴이 확인 도장을 모아봐요!",
+      "emoji": "🦸",
+      "description": "내가 미디어 지킴이인지 확인해봐요!"
+    }
+  ],
+  "activity": {
+    "type": "StampBoard",
+    "instruction": "미디어 지킴이 자격을 확인해봐요!",
+    "stamp": "🦸",
+    "items": [
+      { "id": "know_media", "emoji": "📱", "label": "미디어 종류를 알아요" },
+      { "id": "real_fake", "emoji": "🔍", "label": "진짜와 가짜를 구분해요" },
+      { "id": "emotion", "emoji": "😊", "label": "감정을 표현할 수 있어요" },
+      { "id": "create", "emoji": "🎨", "label": "미디어를 만들 수 있어요" },
+      { "id": "communicate", "emoji": "💬", "label": "미디어에 대해 이야기해요" },
+      { "id": "choose", "emoji": "⭐", "label": "좋은 미디어를 스스로 골라요" }
+    ],
+    "maxStamps": 6,
+    "completionMessage": "미디어 지킴이 자격 획득! 정말 대단해요! 🦸"
+  },
+  "homeActivity": "가족에게 미디어 지킴이로서 배운 것들을 모두 이야기해줘봐요!"
+}
