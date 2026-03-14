@@ -1,6 +1,7 @@
 'use client';
 
 import { useParams } from 'next/navigation';
+import { useEffect } from 'react';
 import PageHeader from '@/components/ui/PageHeader';
 import Mod01 from '@/components/seedling/Mod01';
 import Mod02 from '@/components/seedling/Mod02';
@@ -23,6 +24,11 @@ const MODULES: Record<string, { title: string; emoji: string; color: string; Com
 export default function SeedlingPlayClient() {
   const params = useParams<{ mod: string }>();
   const mod = params?.mod ?? '';
+
+  // 대시보드 기록용: 모듈 진입 시 localStorage에 기록
+  useEffect(() => {
+    if (mod) localStorage.setItem(`seedling_played_${mod}`, new Date().toISOString());
+  }, [mod]);
   const info = MODULES[mod];
 
   if (!info) {
