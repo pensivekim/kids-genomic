@@ -36,7 +36,7 @@ export default function MathPage() {
         <div style={{ display: 'grid', gridTemplateColumns: 'repeat(3, 1fr)', gap: 20, marginBottom: 48 }}>
           {AGES.map(a => (
             <button key={a.age}
-              onClick={() => window.open(`https://math.genomic.cc/child?age=${a.age}`, '_self')}
+              onClick={() => router.push(`/math/lesson/${a.age}/1`)}
               style={{
                 background: `linear-gradient(145deg, ${a.color}33, ${a.color}15)`,
                 border: `2px solid ${a.color}40`, borderRadius: 24, padding: '32px 20px',

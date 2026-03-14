@@ -195,6 +195,9 @@ export default function TeacherDashboardPage() {
                     <div style={{ height: '100%', background: color, borderRadius: 100, width: `${pct}%`, transition: 'width 0.4s ease' }} />
                   </div>
                   <div style={{ fontSize: 12, color: '#94a3b8', marginTop: 6 }}>{pct}% 달성</div>
+                  <button onClick={() => router.push(`/math/lesson/${age}/${week}`)} style={{ marginTop: 12, width: '100%', background: `${color}15`, border: `1px solid ${color}30`, borderRadius: 10, padding: '8px', fontSize: 13, color, fontWeight: 700, cursor: 'pointer', fontFamily: FONT }}>
+                    {week}주차 수업 →
+                  </button>
                 </div>
               );
             })}
