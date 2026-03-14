@@ -21,11 +21,9 @@ const TREE_DATA: { pos: [number, number, number]; scale: number }[] = [
 ];
 
 const CLOUD_DATA: { pos: [number, number, number]; speed: number; range: number }[] = [
-  { pos: [-8, 8, -10], speed: 0.4, range: 30 },
-  { pos: [4,  9, -12], speed: 0.25, range: 28 },
-  { pos: [10, 7, -6],  speed: 0.35, range: 32 },
-  { pos: [-5, 10, 2],  speed: 0.2,  range: 26 },
-  { pos: [7,  8,  5],  speed: 0.3,  range: 30 },
+  { pos: [-8, 14, -10], speed: 0.4, range: 30 },
+  { pos: [4,  16, -12], speed: 0.25, range: 28 },
+  { pos: [10, 13, -6],  speed: 0.35, range: 32 },
 ];
 
 function Tree({ pos, scale }: { pos: [number, number, number]; scale: number }) {
@@ -68,15 +66,15 @@ function AnimatedCloud({ initPos, speed, range }: {
   return (
     <group ref={ref} position={initPos}>
       <mesh>
-        <sphereGeometry args={[1.2, 8, 6]} />
+        <sphereGeometry args={[0.7, 8, 6]} />
         <meshToonMaterial color="white" />
       </mesh>
-      <mesh position={[1.2, 0, 0]}>
-        <sphereGeometry args={[0.9, 8, 6]} />
+      <mesh position={[0.75, 0.1, 0]}>
+        <sphereGeometry args={[0.55, 8, 6]} />
         <meshToonMaterial color="white" />
       </mesh>
-      <mesh position={[-1.0, 0, 0]}>
-        <sphereGeometry args={[0.8, 8, 6]} />
+      <mesh position={[-0.65, 0.05, 0]}>
+        <sphereGeometry args={[0.5, 8, 6]} />
         <meshToonMaterial color="white" />
       </mesh>
     </group>

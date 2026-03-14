@@ -64,7 +64,7 @@ export default function BuildingMesh({ building, onClick }: Props) {
       {/* 지붕 */}
       {roofShape === 'cone' ? (
         <mesh position={[0, 1.9, 0]}>
-          <coneGeometry args={[1.4, 1.0, 4]} />
+          <coneGeometry args={[1.3, 1.1, 8]} />
           <meshToonMaterial color={roofColor} />
         </mesh>
       ) : (
@@ -88,24 +88,26 @@ export default function BuildingMesh({ building, onClick }: Props) {
         </mesh>
       )}
 
-      {/* 라벨 */}
-      <Html position={[0, 3.0, 0]} center style={{ pointerEvents: 'none' }}>
-        <div style={{
-          background: 'rgba(255,255,255,0.88)',
-          borderRadius: '12px',
-          padding: '5px 12px',
-          fontSize: '15px',
-          fontWeight: 'bold',
-          color: '#1f2937',
-          whiteSpace: 'nowrap',
-          boxShadow: '0 2px 6px rgba(0,0,0,0.15)',
-          fontFamily: 'system-ui, sans-serif',
-          userSelect: 'none',
-        }}>
-          {building.icon} {building.name}
-          {!isLive && <span style={{ marginLeft: '6px', fontSize: '12px', color: '#9ca3af' }}>준비중</span>}
-        </div>
-      </Html>
+      {/* 라벨 — 호버할 때만 */}
+      {hovered && (
+        <Html position={[0, 3.2, 0]} center style={{ pointerEvents: 'none' }}>
+          <div style={{
+            background: 'rgba(255,255,255,0.95)',
+            borderRadius: '16px',
+            padding: '6px 14px',
+            fontSize: '14px',
+            fontWeight: 'bold',
+            color: isLive ? building.roofColor : '#9ca3af',
+            whiteSpace: 'nowrap',
+            boxShadow: '0 4px 12px rgba(0,0,0,0.12)',
+            fontFamily: 'system-ui, sans-serif',
+            userSelect: 'none',
+            border: `2px solid ${isLive ? building.roofColor + '44' : '#e5e7eb'}`,
+          }}>
+            {building.icon} {building.name}
+          </div>
+        </Html>
+      )}
     </group>
   );
 }

@@ -14,8 +14,8 @@ function PathSegment({ from, to }: {
 
   return (
     <mesh position={[midX, 0.01, midZ]} rotation={[0, angle, 0]}>
-      <boxGeometry args={[0.55, 0.06, length]} />
-      <meshToonMaterial color="#c4a882" />
+      <boxGeometry args={[0.22, 0.04, length]} />
+      <meshToonMaterial color="#e5d4b0" />
     </mesh>
   );
 }
