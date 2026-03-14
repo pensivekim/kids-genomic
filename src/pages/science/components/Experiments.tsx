@@ -1,90 +1,142 @@
 import { useState } from 'react';
 import { EXPERIMENTS, type Experiment } from '../data/science';
+import { FONT } from '../../../styles/theme';
 
 export default function Experiments() {
   const [selected, setSelected] = useState<Experiment | null>(null);
   const [step, setStep] = useState(0);
   const [done, setDone] = useState(false);
 
-  function startExp(exp: Experiment) {
-    setSelected(exp);
-    setStep(0);
-    setDone(false);
-  }
-
+  function startExp(exp: Experiment) { setSelected(exp); setStep(0); setDone(false); }
   function next() {
     if (!selected) return;
-    if (step < selected.steps.length - 1) {
-      setStep(s => s + 1);
-    } else {
-      setDone(true);
-    }
+    if (step < selected.steps.length - 1) setStep(s => s + 1);
+    else setDone(true);
   }
-
   function reset() { setSelected(null); setStep(0); setDone(false); }
 
   return (
-    <div className="px-4 pb-8 max-w-lg mx-auto">
+    <div style={{ maxWidth: 1100, margin: '0 auto', padding: '0 24px 32px', fontFamily: FONT }}>
       {!selected ? (
         <>
-          <p className="text-center text-gray-500 mb-4">실험을 선택해봐요!</p>
-          <div className="grid grid-cols-2 gap-4">
+          <p style={{ textAlign: 'center', color: '#9ca3af', marginBottom: 20, fontSize: 16 }}>
+            실험을 선택해봐요! 🔬
+          </p>
+          <div style={{
+            display: 'grid',
+            gridTemplateColumns: 'repeat(auto-fill, minmax(260px, 1fr))',
+            gap: 20,
+          }}>
             {EXPERIMENTS.map(exp => (
               <button key={exp.title} onClick={() => startExp(exp)}
-                className="flex flex-col items-center gap-2 p-5 rounded-3xl bg-white shadow-md active:scale-95 transition-all"
-                style={{ border: `3px solid ${exp.color}33` }}>
-                <span className="text-5xl">{exp.emoji}</span>
-                <span className="text-base font-bold" style={{ color: exp.color }}>{exp.title}</span>
-                <span className="text-xs text-gray-400">{exp.question}</span>
+                style={{
+                  display: 'flex', flexDirection: 'column', alignItems: 'center', gap: 12,
+                  padding: '32px 20px',
+                  borderRadius: 28,
+                  background: `linear-gradient(145deg, ${exp.color}18, ${exp.color}0a)`,
+                  border: `2px solid ${exp.color}30`,
+                  boxShadow: `0 6px 24px ${exp.color}18`,
+                  cursor: 'pointer', fontFamily: FONT,
+                  transition: 'all 0.2s',
+                }}
+                onMouseEnter={e => {
+                  (e.currentTarget as HTMLElement).style.transform = 'scale(1.03) translateY(-4px)';
+                  (e.currentTarget as HTMLElement).style.boxShadow = `0 12px 36px ${exp.color}30`;
+                }}
+                onMouseLeave={e => {
+                  (e.currentTarget as HTMLElement).style.transform = '';
+                  (e.currentTarget as HTMLElement).style.boxShadow = `0 6px 24px ${exp.color}18`;
+                }}
+              >
+                <div style={{
+                  width: 88, height: 88, borderRadius: '50%',
+                  background: `linear-gradient(135deg, ${exp.color}25, ${exp.color}12)`,
+                  display: 'flex', alignItems: 'center', justifyContent: 'center',
+                  fontSize: 52, border: `2px solid ${exp.color}20`,
+                }}>
+                  {exp.emoji}
+                </div>
+                <span style={{ fontSize: 20, fontWeight: 900, color: exp.color, fontFamily: FONT }}>
+                  {exp.title}
+                </span>
+                <span style={{ fontSize: 14, color: '#9ca3af', textAlign: 'center', fontFamily: FONT }}>
+                  {exp.question}
+                </span>
               </button>
             ))}
           </div>
         </>
       ) : (
-        <div className="flex flex-col items-center">
-          <div className="w-full bg-white rounded-3xl p-6 shadow-lg mb-4"
-            style={{ border: `3px solid ${selected.color}33` }}>
-            <div className="text-center mb-4">
-              <span className="text-6xl">{selected.emoji}</span>
-              <h2 className="text-2xl font-bold mt-2" style={{ color: selected.color }}>{selected.title}</h2>
-              <p className="text-gray-500 mt-1">{selected.question}</p>
+        <div style={{ maxWidth: 720, margin: '0 auto', display: 'flex', flexDirection: 'column', alignItems: 'center' }}>
+          <div style={{
+            width: '100%',
+            background: `linear-gradient(145deg, ${selected.color}12, ${selected.color}06)`,
+            borderRadius: 32, padding: '36px 32px',
+            border: `2px solid ${selected.color}25`,
+            boxShadow: `0 8px 32px ${selected.color}15`,
+            marginBottom: 20,
+          }}>
+            <div style={{ textAlign: 'center', marginBottom: 28 }}>
+              <span style={{ fontSize: 72, display: 'block', marginBottom: 12 }}>{selected.emoji}</span>
+              <h2 style={{ fontSize: 26, fontWeight: 900, color: selected.color, margin: '0 0 8px', fontFamily: FONT }}>
+                {selected.title}
+              </h2>
+              <p style={{ fontSize: 16, color: '#6b7280', margin: 0, fontFamily: FONT }}>{selected.question}</p>
             </div>
 
             {!done ? (
               <>
                 {/* 진행 바 */}
-                <div className="flex gap-2 mb-4">
+                <div style={{ display: 'flex', gap: 8, marginBottom: 24 }}>
                   {selected.steps.map((_, i) => (
-                    <div key={i} className="flex-1 h-2 rounded-full transition-all"
-                      style={{ background: i <= step ? selected.color : '#e5e7eb' }} />
+                    <div key={i} style={{
+                      flex: 1, height: 8, borderRadius: 4, transition: 'all 0.3s',
+                      background: i <= step ? selected.color : '#e5e7eb',
+                    }} />
                   ))}
                 </div>
 
-                <div className="flex items-start gap-3 p-4 rounded-2xl mb-4"
-                  style={{ background: selected.color + '15' }}>
-                  <span className="text-2xl">{step + 1}️⃣</span>
-                  <p className="text-lg text-gray-700 font-medium leading-relaxed">
+                <div style={{
+                  display: 'flex', alignItems: 'flex-start', gap: 16,
+                  padding: '20px 24px', borderRadius: 20, marginBottom: 24,
+                  background: selected.color + '18',
+                }}>
+                  <span style={{ fontSize: 28, flexShrink: 0 }}>{step + 1}️⃣</span>
+                  <p style={{ fontSize: 20, color: '#374151', fontWeight: 700, lineHeight: 1.6, margin: 0, fontFamily: FONT }}>
                     {selected.steps[step]}
                   </p>
                 </div>
 
                 <button onClick={next}
-                  className="w-full py-4 rounded-2xl text-white font-bold text-xl active:scale-95 transition-transform"
-                  style={{ background: selected.color }}>
+                  style={{
+                    width: '100%', padding: '20px', borderRadius: 22, border: 'none',
+                    background: `linear-gradient(135deg, ${selected.color}, ${selected.color}cc)`,
+                    color: 'white', fontSize: 22, fontWeight: 900, fontFamily: FONT, cursor: 'pointer',
+                    boxShadow: `0 6px 20px ${selected.color}40`,
+                  }}>
                   {step < selected.steps.length - 1 ? '다음 →' : '결과 보기! ✨'}
                 </button>
               </>
             ) : (
-              <div className="text-center">
-                <div className="text-5xl mb-3 animate-bounce">🎉</div>
-                <p className="text-lg text-gray-700 font-medium leading-relaxed bg-yellow-50 p-4 rounded-2xl">
+              <div style={{ textAlign: 'center' }}>
+                <div style={{ fontSize: 64, marginBottom: 16 }}>🎉</div>
+                <p style={{
+                  fontSize: 18, color: '#374151', fontWeight: 600, lineHeight: 1.7,
+                  background: '#fef9c3', padding: '20px 24px', borderRadius: 20,
+                  fontFamily: FONT,
+                }}>
                   {selected.result}
                 </p>
               </div>
             )}
           </div>
 
-          <button onClick={reset} className="text-gray-400 underline text-base">
+          <button onClick={reset}
+            style={{
+              background: 'none', border: 'none', color: '#9ca3af',
+              fontSize: 16, cursor: 'pointer', textDecoration: 'underline',
+              fontFamily: FONT,
+            }}>
             ← 다른 실험 보기
           </button>
         </div>

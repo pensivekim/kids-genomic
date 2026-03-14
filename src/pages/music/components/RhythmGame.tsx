@@ -1,10 +1,11 @@
 import { useState, useEffect, useRef } from 'react';
 import { RHYTHM_PATTERNS } from '../data/music';
 import { playClick } from '../utils/audio';
+import { FONT } from '../../../styles/theme';
 
 export default function RhythmGame() {
   const [patternIdx, setPatternIdx] = useState(0);
-  const [step, setStep] = useState(-1);       // 현재 강조 중인 박자
+  const [step, setStep] = useState(-1);
   const [playing, setPlaying] = useState(false);
   const [userTaps, setUserTaps] = useState<number[]>([]);
   const [phase, setPhase] = useState<'watch' | 'tap' | 'result'>('watch');
@@ -57,17 +58,23 @@ export default function RhythmGame() {
   useEffect(() => () => { if (intervalRef.current) clearInterval(intervalRef.current); }, []);
 
   return (
-    <div className="flex flex-col items-center px-4 pb-8 max-w-md mx-auto">
+    <div style={{ maxWidth: 800, margin: '0 auto', padding: '0 32px 32px',
+      display: 'flex', flexDirection: 'column', alignItems: 'center', fontFamily: FONT }}>
+
       {/* 패턴 선택 */}
-      <div className="flex gap-2 mb-6">
+      <div style={{ display: 'flex', gap: 12, marginBottom: 32 }}>
         {RHYTHM_PATTERNS.map((p, i) => (
           <button
             key={i}
             onClick={() => { setPatternIdx(i); setPhase('watch'); setPlaying(false); setStep(-1); }}
-            className="px-4 py-2 rounded-full font-bold text-sm transition-all"
             style={{
-              background: patternIdx === i ? '#8b5cf6' : '#f3f4f6',
+              padding: '10px 24px', borderRadius: 20, border: 'none',
+              background: patternIdx === i
+                ? 'linear-gradient(135deg, #8b5cf6, #7c3aed)'
+                : 'rgba(255,255,255,0.8)',
               color: patternIdx === i ? 'white' : '#6b7280',
+              fontSize: 16, fontWeight: 800, fontFamily: FONT, cursor: 'pointer',
+              boxShadow: patternIdx === i ? '0 4px 16px rgba(139,92,246,0.35)' : '0 2px 8px rgba(0,0,0,0.06)',
             }}
           >
             {p.name}
@@ -76,44 +83,56 @@ export default function RhythmGame() {
       </div>
 
       {/* 박자 시각화 */}
-      <div className="flex gap-3 mb-8">
+      <div style={{ display: 'flex', gap: 12, marginBottom: 36 }}>
         {pattern.pattern.map((beat, i) => (
           <div
             key={i}
-            className="rounded-2xl transition-all"
             style={{
-              width: 36, height: 36,
+              width: 52, height: 52,
+              borderRadius: 16,
               background: step === i ? '#8b5cf6' : beat === 1 ? '#ddd6fe' : '#f3f4f6',
-              transform: step === i ? 'scale(1.3)' : 'scale(1)',
+              transform: step === i ? 'scale(1.4)' : 'scale(1)',
+              transition: 'all 0.1s',
+              boxShadow: step === i ? '0 4px 16px rgba(139,92,246,0.5)' : 'none',
             }}
           />
         ))}
       </div>
 
-      {/* 안내 */}
+      {/* 안내 텍스트 */}
       {phase === 'watch' && !playing && (
-        <p className="text-gray-500 text-lg mb-4">▶ 버튼을 눌러 리듬을 들어봐요!</p>
+        <p style={{ fontSize: 20, color: '#6b7280', marginBottom: 24, fontFamily: FONT }}>▶ 버튼을 눌러 리듬을 들어봐요!</p>
       )}
       {phase === 'watch' && playing && (
-        <p className="text-purple-500 text-xl font-bold mb-4 animate-pulse">🎵 잘 들어봐요...</p>
+        <p style={{ fontSize: 22, fontWeight: 900, color: '#8b5cf6', marginBottom: 24, fontFamily: FONT }}>🎵 잘 들어봐요...</p>
       )}
       {phase === 'tap' && (
-        <p className="text-green-600 text-xl font-bold mb-4">👇 이제 탭해봐요! ({userTaps.length}/{pattern.pattern.filter(x=>x===1).length})</p>
+        <p style={{ fontSize: 22, fontWeight: 900, color: '#16a34a', marginBottom: 24, fontFamily: FONT }}>
+          👇 이제 탭해봐요! ({userTaps.length}/{pattern.pattern.filter(x => x === 1).length})
+        </p>
       )}
       {phase === 'result' && (
-        <p className="text-2xl font-bold mb-4" style={{ color: correct ? '#16a34a' : '#dc2626' }}>
+        <p style={{ fontSize: 26, fontWeight: 900, marginBottom: 24, fontFamily: FONT,
+          color: correct ? '#16a34a' : '#dc2626' }}>
           {correct ? '🎉 잘했어요!' : '💪 다시 해볼까요?'}
         </p>
       )}
 
-      {/* 버튼들 */}
-      <div className="flex gap-4">
-        {(phase === 'watch') && (
+      {/* 버튼 */}
+      <div style={{ display: 'flex', gap: 20 }}>
+        {phase === 'watch' && (
           <button
             onClick={startPlay}
             disabled={playing}
-            className="px-8 py-4 rounded-2xl text-white text-xl font-bold transition-all active:scale-95 disabled:opacity-50"
-            style={{ background: '#8b5cf6' }}
+            style={{
+              padding: '20px 48px', borderRadius: 24, border: 'none',
+              background: playing
+                ? '#e5e7eb'
+                : 'linear-gradient(135deg, #8b5cf6, #7c3aed)',
+              color: playing ? '#9ca3af' : 'white',
+              fontSize: 22, fontWeight: 900, fontFamily: FONT, cursor: playing ? 'not-allowed' : 'pointer',
+              boxShadow: playing ? 'none' : '0 8px 24px rgba(139,92,246,0.4)',
+            }}
           >
             ▶ 듣기
           </button>
@@ -121,8 +140,14 @@ export default function RhythmGame() {
         {phase === 'tap' && (
           <button
             onPointerDown={handleTap}
-            className="px-10 py-6 rounded-3xl text-white text-2xl font-bold active:scale-90 transition-transform select-none"
-            style={{ background: '#ec4899', boxShadow: '0 6px 0 #be185d' }}
+            style={{
+              padding: '28px 72px', borderRadius: 32, border: 'none',
+              background: 'linear-gradient(135deg, #ec4899, #db2777)',
+              color: 'white', fontSize: 28, fontWeight: 900, fontFamily: FONT,
+              cursor: 'pointer', userSelect: 'none',
+              boxShadow: '0 10px 0 #9d174d, 0 12px 20px rgba(236,72,153,0.4)',
+              transition: 'all 0.1s',
+            }}
           >
             👏 탭!
           </button>
@@ -130,8 +155,12 @@ export default function RhythmGame() {
         {phase === 'result' && (
           <button
             onClick={startPlay}
-            className="px-8 py-4 rounded-2xl text-white text-xl font-bold active:scale-95"
-            style={{ background: '#8b5cf6' }}
+            style={{
+              padding: '20px 48px', borderRadius: 24, border: 'none',
+              background: 'linear-gradient(135deg, #8b5cf6, #7c3aed)',
+              color: 'white', fontSize: 22, fontWeight: 900, fontFamily: FONT, cursor: 'pointer',
+              boxShadow: '0 8px 24px rgba(139,92,246,0.4)',
+            }}
           >
             🔄 다시
           </button>

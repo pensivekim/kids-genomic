@@ -1,6 +1,7 @@
 import { useState, useEffect, useCallback } from 'react';
 import { CONSONANTS, VOWELS } from '../data/hangul';
 import { speak } from '../utils/tts';
+import { FONT } from '../../../styles/theme';
 
 const ALL = [...CONSONANTS, ...VOWELS];
 
@@ -28,7 +29,6 @@ export default function Quiz() {
   }, []);
 
   useEffect(() => {
-    // 첫 문제 소리
     setTimeout(() => speak(question.name, 0.75), 300);
   }, [question]);
 
@@ -48,47 +48,73 @@ export default function Quiz() {
   const correct = selected === question.letter;
 
   return (
-    <div className="flex flex-col items-center px-4 pb-8 max-w-md mx-auto">
+    <div style={{ maxWidth: 800, margin: '0 auto', padding: '16px 32px 32px',
+      display: 'flex', flexDirection: 'column', alignItems: 'center', fontFamily: FONT }}>
+
       {/* 점수 */}
-      <div className="flex gap-4 mb-6 text-lg font-bold">
-        <span className="text-green-500">맞음 {score}</span>
-        <span className="text-gray-400">/</span>
-        <span className="text-gray-600">총 {total}</span>
+      <div style={{
+        display: 'flex', gap: 16, marginBottom: 24,
+        background: 'rgba(255,255,255,0.8)', borderRadius: 20,
+        padding: '12px 28px', boxShadow: '0 2px 12px rgba(0,0,0,0.06)',
+      }}>
+        <span style={{ fontSize: 18, fontWeight: 900, color: '#16a34a', fontFamily: FONT }}>맞음 {score}</span>
+        <span style={{ color: '#d1d5db', fontSize: 18 }}>/</span>
+        <span style={{ fontSize: 18, fontWeight: 700, color: '#6b7280', fontFamily: FONT }}>총 {total}</span>
       </div>
 
-      {/* 문제 */}
+      {/* 문제 카드 */}
       <div
-        className="w-full bg-white rounded-3xl p-8 flex flex-col items-center gap-4 mb-6 shadow-lg cursor-pointer active:scale-95 transition-transform"
         onClick={() => speak(question.name, 0.75)}
-        style={{ boxShadow: '0 8px 40px rgba(139,92,246,0.15)' }}
+        style={{
+          width: '100%',
+          background: 'linear-gradient(145deg, #f5f3ff, #ede9fe)',
+          borderRadius: 32,
+          padding: '40px 32px',
+          display: 'flex', flexDirection: 'column', alignItems: 'center', gap: 16,
+          marginBottom: 28,
+          boxShadow: '0 8px 32px rgba(139,92,246,0.15)',
+          border: '2px solid rgba(139,92,246,0.15)',
+          cursor: 'pointer',
+        }}
       >
-        <span className="text-5xl">{question.emoji}</span>
-        <p className="text-xl text-gray-600">이 소리는 어떤 글자일까요?</p>
-        <div className="flex items-center gap-2 text-purple-400 text-xl">
-          <span>🔊</span>
-          <span className="text-2xl font-bold text-purple-600">"{question.name}"</span>
+        <span style={{ fontSize: 72 }}>{question.emoji}</span>
+        <p style={{ fontSize: 20, color: '#6b7280', margin: 0, fontFamily: FONT }}>이 소리는 어떤 글자일까요?</p>
+        <div style={{ display: 'flex', alignItems: 'center', gap: 8 }}>
+          <span style={{ fontSize: 28 }}>🔊</span>
+          <span style={{ fontSize: 32, fontWeight: 900, color: '#7c3aed', fontFamily: FONT }}>"{question.name}"</span>
         </div>
-        <span className="text-sm text-gray-400">눌러서 다시 들어요</span>
+        <span style={{ fontSize: 14, color: '#9ca3af', fontFamily: FONT }}>눌러서 다시 들어요</span>
       </div>
 
       {/* 보기 */}
-      <div className="grid grid-cols-2 gap-4 w-full">
+      <div style={{
+        display: 'grid', gridTemplateColumns: 'repeat(2, 1fr)',
+        gap: 16, width: '100%',
+      }}>
         {choices.map((c) => {
-          let bg = 'white';
-          let border = '#e5e7eb';
+          let bg = 'rgba(255,255,255,0.9)';
+          let border = 'rgba(0,0,0,0.08)';
+          let color = '#1f2937';
           if (selected === c.letter) {
             bg = correct ? '#dcfce7' : '#fee2e2';
             border = correct ? '#22c55e' : '#ef4444';
+            color = correct ? '#16a34a' : '#dc2626';
           } else if (selected && c.letter === question.letter) {
-            bg = '#dcfce7';
-            border = '#22c55e';
+            bg = '#dcfce7'; border = '#22c55e'; color = '#16a34a';
           }
           return (
             <button
               key={c.letter}
               onClick={() => handleAnswer(c.letter)}
-              className="py-6 rounded-3xl text-4xl font-bold transition-all active:scale-95"
-              style={{ background: bg, border: `3px solid ${border}`, boxShadow: '0 2px 8px rgba(0,0,0,0.08)' }}
+              style={{
+                padding: '32px 16px',
+                borderRadius: 24, border: `3px solid ${border}`,
+                background: bg, color,
+                fontSize: 52, fontWeight: 900,
+                fontFamily: FONT, cursor: 'pointer',
+                boxShadow: '0 2px 12px rgba(0,0,0,0.06)',
+                transition: 'all 0.15s',
+              }}
             >
               {c.letter}
             </button>
@@ -97,7 +123,10 @@ export default function Quiz() {
       </div>
 
       {selected && (
-        <p className="mt-5 text-xl font-bold" style={{ color: correct ? '#16a34a' : '#dc2626' }}>
+        <p style={{
+          marginTop: 24, fontSize: 22, fontWeight: 900, fontFamily: FONT,
+          color: correct ? '#16a34a' : '#dc2626',
+        }}>
           {correct ? '🎉 정말 잘했어요!' : `💪 정답은 "${question.letter}" 이에요!`}
         </p>
       )}

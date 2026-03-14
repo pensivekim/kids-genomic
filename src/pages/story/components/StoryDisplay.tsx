@@ -1,5 +1,6 @@
 import { useEffect, useRef, useState } from 'react';
 import { type StoryResult } from '../StoryPage';
+import { FONT } from '../../../styles/theme';
 
 interface Props {
   result: StoryResult;
@@ -10,13 +11,10 @@ export default function StoryDisplay({ result, onReset }: Props) {
   const [speaking, setSpeaking] = useState(false);
   const utterRef = useRef<SpeechSynthesisUtterance | null>(null);
 
-  // 문단으로 분리 (빈 줄 기준)
   const paragraphs = result.story.split(/\n\n+/).filter(p => p.trim());
 
   useEffect(() => {
-    return () => {
-      window.speechSynthesis.cancel();
-    };
+    return () => { window.speechSynthesis.cancel(); };
   }, []);
 
   function handleTTS() {
@@ -25,7 +23,6 @@ export default function StoryDisplay({ result, onReset }: Props) {
       setSpeaking(false);
       return;
     }
-
     const utter = new SpeechSynthesisUtterance(result.story);
     utter.lang = 'ko-KR';
     utter.rate = 0.85;
@@ -38,17 +35,36 @@ export default function StoryDisplay({ result, onReset }: Props) {
   }
 
   return (
-    <div className="max-w-2xl mx-auto px-4 pb-16">
-
+    <div style={{ maxWidth: 900, margin: '0 auto', padding: '16px 40px 48px', fontFamily: FONT }}>
       {/* 동화 카드 */}
-      <div className="bg-white rounded-3xl shadow-xl p-8 mb-6"
-        style={{ boxShadow: '0 8px 40px rgba(168,85,247,0.15)' }}>
+      <div style={{
+        background: 'linear-gradient(145deg, #fdf4ff, #fce7f3)',
+        borderRadius: 36, padding: '48px 48px',
+        boxShadow: '0 16px 56px rgba(168,85,247,0.15)',
+        border: '2px solid rgba(168,85,247,0.12)',
+        marginBottom: 28,
+      }}>
+        {/* 동화 메타 태그 */}
+        <div style={{ display: 'flex', gap: 10, flexWrap: 'wrap', marginBottom: 28 }}>
+          {[result.character, result.setting, result.theme].map((tag, i) => (
+            <span key={i} style={{
+              padding: '6px 16px', borderRadius: 20,
+              background: 'rgba(168,85,247,0.12)',
+              color: '#7c3aed', fontSize: 14, fontWeight: 800,
+              fontFamily: FONT,
+            }}>
+              {tag}
+            </span>
+          ))}
+        </div>
 
         {/* 문단 */}
-        <div className="space-y-5">
+        <div style={{ display: 'flex', flexDirection: 'column', gap: 20 }}>
           {paragraphs.map((para, i) => (
-            <p key={i} className="text-xl leading-relaxed text-gray-800"
-              style={{ fontFamily: 'system-ui, sans-serif' }}>
+            <p key={i} style={{
+              fontSize: 20, lineHeight: 1.9, color: '#1f2937', margin: 0,
+              fontFamily: 'system-ui, sans-serif',
+            }}>
               {para}
             </p>
           ))}
@@ -56,31 +72,36 @@ export default function StoryDisplay({ result, onReset }: Props) {
       </div>
 
       {/* 버튼 영역 */}
-      <div className="flex flex-col gap-4">
-        {/* 읽어주기 버튼 */}
+      <div style={{ display: 'flex', flexDirection: 'column', gap: 16 }}>
         <button
           onClick={handleTTS}
-          className="w-full py-5 rounded-3xl text-2xl font-bold text-white transition-all active:scale-95"
           style={{
+            width: '100%', padding: '22px',
+            borderRadius: 28, border: 'none',
             background: speaking
               ? 'linear-gradient(135deg, #ef4444, #f97316)'
               : 'linear-gradient(135deg, #3b82f6, #06b6d4)',
-            boxShadow: '0 6px 24px rgba(59,130,246,0.3)',
+            color: 'white', fontSize: 24, fontWeight: 900,
+            fontFamily: FONT, cursor: 'pointer',
+            boxShadow: speaking
+              ? '0 8px 28px rgba(239,68,68,0.35)'
+              : '0 8px 28px rgba(59,130,246,0.35)',
+            transition: 'all 0.2s',
           }}
         >
           {speaking ? '⏹ 그만 읽기' : '🔊 읽어줘!'}
         </button>
 
-        {/* 새 동화 버튼 */}
         <button
-          onClick={() => {
-            window.speechSynthesis.cancel();
-            onReset();
-          }}
-          className="w-full py-5 rounded-3xl text-2xl font-bold text-white transition-all active:scale-95"
+          onClick={() => { window.speechSynthesis.cancel(); onReset(); }}
           style={{
+            width: '100%', padding: '22px',
+            borderRadius: 28, border: 'none',
             background: 'linear-gradient(135deg, #a855f7, #ec4899)',
-            boxShadow: '0 6px 24px rgba(168,85,247,0.3)',
+            color: 'white', fontSize: 24, fontWeight: 900,
+            fontFamily: FONT, cursor: 'pointer',
+            boxShadow: '0 8px 28px rgba(168,85,247,0.35)',
+            transition: 'all 0.2s',
           }}
         >
           ✨ 새 동화 만들기

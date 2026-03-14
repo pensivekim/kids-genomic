@@ -1,4 +1,5 @@
 import { useRef, useState } from 'react';
+import { FONT } from '../../../styles/theme';
 
 const STAMPS = ['⭐', '❤️', '🌸', '🌈', '🎈', '🦋', '🌙', '☀️', '🍀', '🐾', '✨', '🎵'];
 const COLORS = ['#ef4444', '#f97316', '#eab308', '#22c55e', '#3b82f6', '#8b5cf6', '#ec4899', '#06b6d4'];
@@ -7,7 +8,7 @@ interface Stamp { id: number; x: number; y: number; emoji: string; size: number;
 
 export default function StampPlay() {
   const [stamp, setStamp] = useState('⭐');
-  const [stampSize, setStampSize] = useState(40);
+  const [stampSize, setStampSize] = useState(44);
   const [stamps, setStamps] = useState<Stamp[]>([]);
   const [bgColor, setBgColor] = useState('#fffbf0');
   const idRef = useRef(0);
@@ -20,20 +21,26 @@ export default function StampPlay() {
   }
 
   return (
-    <div className="flex flex-col items-center px-4 pb-8 max-w-lg mx-auto">
+    <div style={{ maxWidth: 1100, margin: '0 auto', padding: '0 24px 32px', fontFamily: FONT }}>
       {/* 도장 선택 */}
-      <div className="flex flex-wrap gap-2 justify-center mb-3">
+      <div style={{
+        display: 'flex', flexWrap: 'wrap', gap: 10, justifyContent: 'center',
+        marginBottom: 16,
+        background: 'rgba(255,255,255,0.85)', borderRadius: 20,
+        padding: '16px 20px', boxShadow: '0 2px 12px rgba(0,0,0,0.06)',
+      }}>
         {STAMPS.map(s => (
           <button
             key={s}
             onClick={() => setStamp(s)}
-            className="rounded-2xl transition-transform active:scale-90 flex items-center justify-center"
             style={{
-              width: 44, height: 44,
-              background: stamp === s ? '#fef3c7' : '#f3f4f6',
+              width: 52, height: 52, borderRadius: 16,
+              background: stamp === s ? '#fef3c7' : '#f9fafb',
               border: stamp === s ? '3px solid #f59e0b' : '2px solid #e5e7eb',
-              fontSize: 24,
+              fontSize: 28, cursor: 'pointer',
               transform: stamp === s ? 'scale(1.2)' : 'scale(1)',
+              transition: 'all 0.15s',
+              display: 'flex', alignItems: 'center', justifyContent: 'center',
             }}
           >
             {s}
@@ -41,58 +48,88 @@ export default function StampPlay() {
         ))}
       </div>
 
-      {/* 크기 */}
-      <div className="flex items-center gap-2 mb-3">
-        <span className="text-gray-400 text-sm">크기</span>
+      {/* 크기 + 배경 */}
+      <div style={{
+        display: 'flex', alignItems: 'center', gap: 20, justifyContent: 'center',
+        marginBottom: 16,
+      }}>
+        <span style={{ fontSize: 15, color: '#9ca3af', fontFamily: FONT }}>크기</span>
         {[28, 44, 60, 80].map(sz => (
-          <button
-            key={sz}
-            onClick={() => setStampSize(sz)}
-            className="rounded-full bg-gray-100 flex items-center justify-center"
-            style={{ width: 44, height: 44, border: stampSize === sz ? '3px solid #f59e0b' : '2px solid transparent', fontSize: sz * 0.5 }}
-          >
+          <button key={sz} onClick={() => setStampSize(sz)}
+            style={{
+              width: 52, height: 52, borderRadius: '50%',
+              background: stampSize === sz ? '#fef3c7' : '#f3f4f6',
+              border: stampSize === sz ? '3px solid #f59e0b' : '2px solid transparent',
+              fontSize: sz * 0.5, cursor: 'pointer',
+              display: 'flex', alignItems: 'center', justifyContent: 'center',
+            }}>
             ⭐
           </button>
         ))}
-      </div>
-
-      {/* 배경색 */}
-      <div className="flex gap-2 mb-3">
+        <span style={{ color: '#d1d5db' }}>|</span>
+        <span style={{ fontSize: 15, color: '#9ca3af', fontFamily: FONT }}>배경</span>
         {COLORS.map(c => (
           <button key={c} onClick={() => setBgColor(c + '33')}
-            className="rounded-full" style={{ width: 28, height: 28, background: c, border: bgColor === c + '33' ? '3px solid #000' : '2px solid #e5e7eb' }} />
+            style={{
+              width: 32, height: 32, borderRadius: '50%',
+              background: c, cursor: 'pointer',
+              border: bgColor === c + '33' ? '3px solid #000' : '2px solid #e5e7eb',
+            }} />
         ))}
-        <button onClick={() => setBgColor('#fffbf0')} className="rounded-full bg-white" style={{ width: 28, height: 28, border: '2px solid #e5e7eb' }} />
+        <button onClick={() => setBgColor('#fffbf0')}
+          style={{ width: 32, height: 32, borderRadius: '50%', background: 'white',
+            border: '2px solid #e5e7eb', cursor: 'pointer' }} />
       </div>
 
       {/* 캔버스 */}
       <div
-        className="rounded-2xl shadow-lg w-full relative overflow-hidden touch-none select-none"
-        style={{ height: 340, background: bgColor, border: '3px solid #e5e7eb', cursor: 'copy' }}
+        style={{
+          width: '100%', height: 480,
+          background: bgColor,
+          borderRadius: 24, border: '3px solid rgba(0,0,0,0.08)',
+          boxShadow: '0 8px 32px rgba(0,0,0,0.1)',
+          position: 'relative', overflow: 'hidden',
+          cursor: 'copy', userSelect: 'none', touchAction: 'none',
+        }}
         onPointerDown={handleCanvas}
       >
         {stamps.map(s => (
           <span
             key={s.id}
-            className="absolute pointer-events-none select-none"
-            style={{ left: s.x - s.size / 2, top: s.y - s.size / 2, fontSize: s.size, lineHeight: 1 }}
+            style={{
+              position: 'absolute',
+              left: s.x - s.size / 2, top: s.y - s.size / 2,
+              fontSize: s.size, lineHeight: 1,
+              pointerEvents: 'none', userSelect: 'none',
+            }}
           >
             {s.emoji}
           </span>
         ))}
         {stamps.length === 0 && (
-          <p className="absolute inset-0 flex items-center justify-center text-gray-300 text-xl">
+          <div style={{
+            position: 'absolute', inset: 0,
+            display: 'flex', alignItems: 'center', justifyContent: 'center',
+            color: '#d1d5db', fontSize: 22, fontFamily: FONT,
+          }}>
             여기를 눌러서 도장을 찍어요! 🖐️
-          </p>
+          </div>
         )}
       </div>
 
-      <button
-        onClick={() => setStamps([])}
-        className="mt-4 px-6 py-3 rounded-2xl bg-red-100 text-red-500 font-bold active:scale-95 transition-transform"
-      >
-        🗑️ 처음부터
-      </button>
+      <div style={{ display: 'flex', justifyContent: 'center', marginTop: 16 }}>
+        <button
+          onClick={() => setStamps([])}
+          style={{
+            padding: '14px 32px', borderRadius: 20, border: 'none',
+            background: 'linear-gradient(135deg, #fee2e2, #fecaca)',
+            color: '#dc2626', fontSize: 18, fontWeight: 800,
+            fontFamily: FONT, cursor: 'pointer',
+            boxShadow: '0 4px 16px rgba(239,68,68,0.2)',
+          }}>
+          🗑️ 처음부터
+        </button>
+      </div>
     </div>
   );
 }

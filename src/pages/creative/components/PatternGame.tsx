@@ -1,4 +1,5 @@
 import { useState, useEffect } from 'react';
+import { FONT } from '../../../styles/theme';
 
 const ITEMS = ['🔴', '🟡', '🔵', '🟢', '🟠', '🟣'];
 
@@ -49,29 +50,45 @@ export default function PatternGame() {
   const allFilled = blanks.every(i => answers[i]);
 
   return (
-    <div className="flex flex-col items-center px-4 pb-8 max-w-lg mx-auto">
-      <div className="flex items-center gap-3 mb-4">
-        <span className="text-gray-500 text-sm">레벨 {level}</span>
+    <div style={{ maxWidth: 800, margin: '0 auto', padding: '0 32px 32px',
+      display: 'flex', flexDirection: 'column', alignItems: 'center', fontFamily: FONT }}>
+
+      {/* 레벨 선택 */}
+      <div style={{ display: 'flex', alignItems: 'center', gap: 12, marginBottom: 28 }}>
+        <span style={{ fontSize: 16, color: '#9ca3af', fontFamily: FONT }}>레벨</span>
         {[1, 2, 3].map(lv => (
           <button key={lv} onClick={() => setLevel(lv)}
-            className="w-8 h-8 rounded-full font-bold text-sm transition-all"
-            style={{ background: level === lv ? '#8b5cf6' : '#f3f4f6', color: level === lv ? 'white' : '#6b7280' }}>
+            style={{
+              width: 52, height: 52, borderRadius: '50%', border: 'none',
+              background: level === lv
+                ? 'linear-gradient(135deg, #8b5cf6, #7c3aed)'
+                : 'rgba(255,255,255,0.8)',
+              color: level === lv ? 'white' : '#6b7280',
+              fontSize: 18, fontWeight: 900, fontFamily: FONT, cursor: 'pointer',
+              boxShadow: level === lv ? '0 4px 16px rgba(139,92,246,0.4)' : '0 2px 8px rgba(0,0,0,0.06)',
+            }}>
             {lv}
           </button>
         ))}
       </div>
 
-      <p className="text-gray-500 mb-4">빈칸에 맞는 모양을 골라요!</p>
+      <p style={{ fontSize: 16, color: '#9ca3af', marginBottom: 24, fontFamily: FONT }}>
+        빈칸에 맞는 모양을 골라요!
+      </p>
 
       {/* 패턴 줄 */}
-      <div className="flex gap-2 mb-6 flex-wrap justify-center">
+      <div style={{ display: 'flex', gap: 16, marginBottom: 36, flexWrap: 'wrap', justifyContent: 'center' }}>
         {pattern.map((item, i) => (
-          <div key={i} className="w-14 h-14 rounded-2xl flex items-center justify-center text-3xl shadow"
+          <div key={i}
             style={{
+              width: 72, height: 72, borderRadius: 20,
+              display: 'flex', alignItems: 'center', justifyContent: 'center',
+              fontSize: 40,
               background: blanks.includes(i)
-                ? (checked ? (answers[i] === pattern[i] ? '#dcfce7' : '#fee2e2') : '#ede9fe')
-                : '#f9fafb',
-              border: blanks.includes(i) ? '2px dashed #8b5cf6' : '2px solid #e5e7eb',
+                ? (checked ? (answers[i] === pattern[i] ? '#dcfce7' : '#fee2e2') : 'linear-gradient(135deg, #ede9fe, #ddd6fe)')
+                : 'rgba(255,255,255,0.85)',
+              border: blanks.includes(i) ? '3px dashed #8b5cf6' : '3px solid rgba(0,0,0,0.07)',
+              boxShadow: '0 2px 12px rgba(0,0,0,0.06)',
             }}>
             {blanks.includes(i) ? (answers[i] || '?') : item}
           </div>
@@ -80,35 +97,66 @@ export default function PatternGame() {
 
       {/* 선택지 */}
       {!checked && (
-        <div className="flex gap-3 mb-6">
+        <div style={{ display: 'flex', gap: 20, marginBottom: 28 }}>
           {ITEMS.slice(0, 3).map(item => (
             <button key={item} onClick={() => {
               const unfilled = blanks.find(i => !answers[i]);
               if (unfilled !== undefined) handleChoice(unfilled, item);
             }}
-              className="w-14 h-14 rounded-2xl text-3xl shadow-md active:scale-90 transition-transform bg-white"
-              style={{ border: '2px solid #e5e7eb' }}>
+              style={{
+                width: 72, height: 72, borderRadius: 20,
+                background: 'rgba(255,255,255,0.9)',
+                border: '3px solid rgba(0,0,0,0.08)',
+                fontSize: 40, cursor: 'pointer',
+                boxShadow: '0 4px 16px rgba(0,0,0,0.08)',
+                transition: 'all 0.15s',
+                display: 'flex', alignItems: 'center', justifyContent: 'center',
+              }}>
               {item}
             </button>
           ))}
         </div>
       )}
 
-      {/* 결과 / 버튼 */}
+      {/* 결과 / 확인 버튼 */}
       {checked ? (
-        <div className="text-center">
-          <p className="text-2xl font-bold mb-4" style={{ color: correct ? '#16a34a' : '#dc2626' }}>
+        <div style={{ textAlign: 'center' }}>
+          <p style={{ fontSize: 28, fontWeight: 900, marginBottom: 24, fontFamily: FONT,
+            color: correct ? '#16a34a' : '#dc2626' }}>
             {correct ? '🎉 완벽해요!' : '💪 다시 해볼까요?'}
           </p>
-          {correct && level < 3
-            ? <button onClick={() => setLevel(l => l + 1)} className="px-6 py-3 rounded-2xl text-white font-bold bg-purple-500 active:scale-95">다음 레벨 →</button>
-            : <button onClick={() => startLevel(level)} className="px-6 py-3 rounded-2xl text-white font-bold bg-purple-500 active:scale-95">🔄 다시</button>
-          }
+          {correct && level < 3 ? (
+            <button onClick={() => setLevel(l => l + 1)}
+              style={{
+                padding: '18px 48px', borderRadius: 22, border: 'none',
+                background: 'linear-gradient(135deg, #8b5cf6, #7c3aed)',
+                color: 'white', fontSize: 20, fontWeight: 900, fontFamily: FONT,
+                cursor: 'pointer', boxShadow: '0 6px 20px rgba(139,92,246,0.4)',
+              }}>
+              다음 레벨 →
+            </button>
+          ) : (
+            <button onClick={() => startLevel(level)}
+              style={{
+                padding: '18px 48px', borderRadius: 22, border: 'none',
+                background: 'linear-gradient(135deg, #8b5cf6, #7c3aed)',
+                color: 'white', fontSize: 20, fontWeight: 900, fontFamily: FONT,
+                cursor: 'pointer', boxShadow: '0 6px 20px rgba(139,92,246,0.4)',
+              }}>
+              🔄 다시
+            </button>
+          )}
         </div>
       ) : (
         <button onClick={check} disabled={!allFilled}
-          className="px-8 py-4 rounded-2xl text-white font-bold text-xl transition-all active:scale-95 disabled:opacity-40"
-          style={{ background: '#8b5cf6' }}>
+          style={{
+            padding: '18px 56px', borderRadius: 22, border: 'none',
+            background: allFilled ? 'linear-gradient(135deg, #8b5cf6, #7c3aed)' : '#e5e7eb',
+            color: allFilled ? 'white' : '#9ca3af',
+            fontSize: 20, fontWeight: 900, fontFamily: FONT,
+            cursor: allFilled ? 'pointer' : 'not-allowed',
+            boxShadow: allFilled ? '0 6px 20px rgba(139,92,246,0.4)' : 'none',
+          }}>
           확인하기!
         </button>
       )}

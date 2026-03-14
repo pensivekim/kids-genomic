@@ -1,4 +1,5 @@
 import { useState } from 'react';
+import { FONT } from '../../../styles/theme';
 
 interface Mix { a: string; b: string; result: string; name: string; emoji: string; }
 
@@ -29,63 +30,93 @@ export default function ColorMix() {
   }
 
   return (
-    <div className="flex flex-col items-center px-4 pb-8 max-w-lg mx-auto">
-      <p className="text-center text-gray-500 mb-6 text-lg">색을 섞으면 어떻게 될까요?</p>
+    <div style={{ maxWidth: 900, margin: '0 auto', padding: '0 24px 32px', fontFamily: FONT }}>
+      <p style={{ textAlign: 'center', color: '#9ca3af', marginBottom: 20, fontSize: 16 }}>
+        색을 섞으면 어떻게 될까요? 눌러서 선택해요!
+      </p>
 
-      <div className="grid grid-cols-2 gap-3 w-full mb-6">
+      <div style={{
+        display: 'grid', gridTemplateColumns: 'repeat(3, 1fr)',
+        gap: 16, marginBottom: 28,
+      }}>
         {MIXES.map((mix, i) => (
           <button
             key={i}
             onClick={() => handleSelect(mix)}
-            className="flex items-center gap-2 p-4 rounded-2xl bg-white shadow transition-all active:scale-95"
-            style={{ border: selected === mix ? '3px solid #6366f1' : '2px solid #e5e7eb' }}
+            style={{
+              display: 'flex', alignItems: 'center', justifyContent: 'center', gap: 10,
+              padding: '20px 16px',
+              borderRadius: 24,
+              background: selected === mix
+                ? 'rgba(99,102,241,0.08)'
+                : 'rgba(255,255,255,0.85)',
+              border: `3px solid ${selected === mix ? '#6366f1' : 'rgba(0,0,0,0.07)'}`,
+              boxShadow: selected === mix ? '0 6px 20px rgba(99,102,241,0.2)' : '0 2px 12px rgba(0,0,0,0.06)',
+              cursor: 'pointer', transition: 'all 0.18s',
+            }}
           >
-            <div className="w-8 h-8 rounded-full" style={{ background: mix.a }} />
-            <span className="text-xl font-bold text-gray-400">+</span>
-            <div className="w-8 h-8 rounded-full" style={{ background: mix.b }} />
-            <span className="text-xl font-bold text-gray-400">=</span>
-            <div className="w-8 h-8 rounded-full bg-gray-200 flex items-center justify-center text-gray-400 text-lg">
-              ?
-            </div>
+            <div style={{ width: 36, height: 36, borderRadius: '50%', background: mix.a,
+              boxShadow: '0 2px 8px rgba(0,0,0,0.15)', border: '2px solid rgba(255,255,255,0.5)' }} />
+            <span style={{ fontSize: 22, fontWeight: 900, color: '#9ca3af', fontFamily: FONT }}>+</span>
+            <div style={{ width: 36, height: 36, borderRadius: '50%', background: mix.b,
+              boxShadow: '0 2px 8px rgba(0,0,0,0.15)', border: '2px solid rgba(0,0,0,0.1)' }} />
+            <span style={{ fontSize: 22, fontWeight: 900, color: '#9ca3af', fontFamily: FONT }}>=</span>
+            <div style={{ width: 36, height: 36, borderRadius: '50%', background: '#f3f4f6',
+              display: 'flex', alignItems: 'center', justifyContent: 'center',
+              fontSize: 18, color: '#9ca3af', border: '2px dashed #d1d5db' }}>?</div>
           </button>
         ))}
       </div>
 
       {selected && (
-        <div className="w-full bg-white rounded-3xl p-6 shadow-lg text-center">
-          <div className="flex items-center justify-center gap-4 mb-4">
-            <div className="flex flex-col items-center gap-1">
-              <div className="w-16 h-16 rounded-full shadow" style={{ background: selected.a }} />
-              <span className="text-xs text-gray-500">{COLOR_NAMES[selected.a]}</span>
+        <div style={{
+          background: 'rgba(255,255,255,0.9)', borderRadius: 28,
+          padding: '32px', boxShadow: '0 8px 32px rgba(0,0,0,0.08)',
+          border: '2px solid rgba(0,0,0,0.06)',
+        }}>
+          <div style={{ display: 'flex', alignItems: 'center', justifyContent: 'center', gap: 24, marginBottom: 24 }}>
+            <div style={{ display: 'flex', flexDirection: 'column', alignItems: 'center', gap: 8 }}>
+              <div style={{ width: 80, height: 80, borderRadius: '50%', background: selected.a,
+                boxShadow: '0 6px 20px rgba(0,0,0,0.15)', border: '3px solid rgba(255,255,255,0.5)' }} />
+              <span style={{ fontSize: 14, color: '#6b7280', fontFamily: FONT }}>{COLOR_NAMES[selected.a]}</span>
             </div>
-            <span className="text-3xl font-bold text-gray-400">+</span>
-            <div className="flex flex-col items-center gap-1">
-              <div className="w-16 h-16 rounded-full shadow" style={{ background: selected.b }} />
-              <span className="text-xs text-gray-500">{COLOR_NAMES[selected.b]}</span>
+            <span style={{ fontSize: 40, fontWeight: 900, color: '#9ca3af', fontFamily: FONT }}>+</span>
+            <div style={{ display: 'flex', flexDirection: 'column', alignItems: 'center', gap: 8 }}>
+              <div style={{ width: 80, height: 80, borderRadius: '50%', background: selected.b,
+                boxShadow: '0 6px 20px rgba(0,0,0,0.15)', border: '3px solid rgba(0,0,0,0.1)' }} />
+              <span style={{ fontSize: 14, color: '#6b7280', fontFamily: FONT }}>{COLOR_NAMES[selected.b]}</span>
             </div>
-            <span className="text-3xl font-bold text-gray-400">=</span>
+            <span style={{ fontSize: 40, fontWeight: 900, color: '#9ca3af', fontFamily: FONT }}>=</span>
             {revealed ? (
-              <div className="flex flex-col items-center gap-1">
-                <div className="w-16 h-16 rounded-full shadow" style={{ background: selected.result }} />
-                <span className="text-xs text-gray-500">{selected.name}</span>
+              <div style={{ display: 'flex', flexDirection: 'column', alignItems: 'center', gap: 8 }}>
+                <div style={{ width: 80, height: 80, borderRadius: '50%', background: selected.result,
+                  boxShadow: '0 6px 20px rgba(0,0,0,0.15)', border: '3px solid rgba(255,255,255,0.5)' }} />
+                <span style={{ fontSize: 14, color: '#6b7280', fontFamily: FONT }}>{selected.name}</span>
               </div>
             ) : (
               <button
                 onClick={() => setRevealed(true)}
-                className="w-16 h-16 rounded-full bg-gray-100 border-2 border-dashed border-gray-300 flex items-center justify-center text-2xl active:scale-90"
-              >
-                ?
-              </button>
+                style={{
+                  width: 80, height: 80, borderRadius: '50%',
+                  background: 'linear-gradient(135deg, #ede9fe, #ddd6fe)',
+                  border: '3px dashed #8b5cf6',
+                  fontSize: 28, cursor: 'pointer',
+                  display: 'flex', alignItems: 'center', justifyContent: 'center',
+                  color: '#8b5cf6', fontWeight: 900,
+                  boxShadow: '0 4px 16px rgba(139,92,246,0.2)',
+                }}
+              >?</button>
             )}
           </div>
 
-          {revealed && (
-            <p className="text-2xl font-bold text-indigo-600 mt-2">
+          {revealed ? (
+            <p style={{ fontSize: 26, fontWeight: 900, color: '#6366f1', textAlign: 'center', fontFamily: FONT }}>
               {selected.emoji} {selected.name}이 됐어요!
             </p>
-          )}
-          {!revealed && (
-            <p className="text-gray-400">? 를 눌러서 확인해봐요!</p>
+          ) : (
+            <p style={{ textAlign: 'center', color: '#9ca3af', fontSize: 16, fontFamily: FONT }}>
+              ? 를 눌러서 확인해봐요!
+            </p>
           )}
         </div>
       )}

@@ -1,6 +1,7 @@
 import { useState } from 'react';
 import { ANIMALS, type Animal } from '../data/science';
 import { speak } from '../../../utils/tts';
+import { FONT } from '../../../styles/theme';
 
 type Category = 'land' | 'sea' | 'sky';
 
@@ -23,44 +24,87 @@ export default function AnimalBook() {
   }
 
   return (
-    <div className="px-4 pb-8 max-w-lg mx-auto">
+    <div style={{ maxWidth: 1100, margin: '0 auto', padding: '0 24px 32px', fontFamily: FONT }}>
       {/* 탭 */}
-      <div className="flex gap-2 justify-center mb-4">
+      <div style={{ display: 'flex', gap: 12, justifyContent: 'center', marginBottom: 24 }}>
         {TABS.map(t => (
           <button key={t.id} onClick={() => { setTab(t.id); setSelected(null); }}
-            className="px-5 py-2 rounded-full font-bold text-sm transition-all"
-            style={{ background: tab === t.id ? t.color : '#f3f4f6', color: tab === t.id ? 'white' : '#6b7280' }}>
+            style={{
+              padding: '12px 32px', borderRadius: 24, border: 'none',
+              background: tab === t.id
+                ? `linear-gradient(135deg, ${t.color}, ${t.color}cc)`
+                : 'rgba(255,255,255,0.85)',
+              color: tab === t.id ? 'white' : '#6b7280',
+              fontSize: 18, fontWeight: 900, fontFamily: FONT, cursor: 'pointer',
+              boxShadow: tab === t.id ? `0 4px 16px ${t.color}40` : '0 2px 8px rgba(0,0,0,0.06)',
+              transition: 'all 0.2s',
+            }}>
             {t.emoji} {t.label}
           </button>
         ))}
       </div>
 
       {/* 동물 그리드 */}
-      <div className="grid grid-cols-4 gap-3 mb-4">
-        {animals.map(a => (
-          <button key={a.name} onClick={() => handleClick(a)}
-            className="flex flex-col items-center gap-1 p-3 rounded-2xl bg-white shadow-md transition-all active:scale-90"
-            style={{ border: selected?.name === a.name ? `3px solid ${tabInfo.color}` : '2px solid #e5e7eb' }}>
-            <span className="text-4xl">{a.emoji}</span>
-            <span className="text-xs font-bold text-gray-600">{a.name}</span>
-          </button>
-        ))}
+      <div style={{
+        display: 'grid',
+        gridTemplateColumns: 'repeat(auto-fill, minmax(130px, 1fr))',
+        gap: 16, marginBottom: 24,
+      }}>
+        {animals.map(a => {
+          const isSelected = selected?.name === a.name;
+          return (
+            <button key={a.name} onClick={() => handleClick(a)}
+              style={{
+                display: 'flex', flexDirection: 'column', alignItems: 'center', gap: 8,
+                padding: '20px 12px',
+                borderRadius: 24,
+                background: isSelected
+                  ? `linear-gradient(135deg, ${tabInfo.color}25, ${tabInfo.color}12)`
+                  : 'rgba(255,255,255,0.9)',
+                border: `3px solid ${isSelected ? tabInfo.color : 'rgba(0,0,0,0.07)'}`,
+                boxShadow: isSelected ? `0 8px 24px ${tabInfo.color}30` : '0 2px 12px rgba(0,0,0,0.06)',
+                transform: isSelected ? 'scale(1.05)' : 'scale(1)',
+                transition: 'all 0.18s', cursor: 'pointer', fontFamily: FONT,
+              }}>
+              <span style={{ fontSize: 48 }}>{a.emoji}</span>
+              <span style={{ fontSize: 15, fontWeight: 800, color: isSelected ? tabInfo.color : '#374151' }}>
+                {a.name}
+              </span>
+            </button>
+          );
+        })}
       </div>
 
       {/* 선택된 동물 설명 */}
       {selected ? (
-        <div className="bg-white rounded-3xl p-5 shadow-lg flex items-start gap-4"
-          style={{ border: `2px solid ${tabInfo.color}33` }}>
-          <span className="text-6xl">{selected.emoji}</span>
+        <div style={{
+          background: `linear-gradient(145deg, ${tabInfo.color}12, ${tabInfo.color}06)`,
+          borderRadius: 28, padding: '28px 32px',
+          border: `2px solid ${tabInfo.color}25`,
+          boxShadow: `0 8px 32px ${tabInfo.color}15`,
+          display: 'flex', alignItems: 'flex-start', gap: 24,
+        }}>
+          <span style={{ fontSize: 72, flexShrink: 0 }}>{selected.emoji}</span>
           <div>
-            <p className="text-xl font-bold text-gray-800 mb-1">{selected.name}</p>
-            <p className="text-base text-gray-600 leading-relaxed">{selected.fact}</p>
+            <p style={{ fontSize: 26, fontWeight: 900, color: tabInfo.color, margin: '0 0 10px', fontFamily: FONT }}>
+              {selected.name}
+            </p>
+            <p style={{ fontSize: 18, color: '#374151', lineHeight: 1.7, margin: '0 0 16px', fontFamily: FONT }}>
+              {selected.fact}
+            </p>
             <button onClick={() => speak(`${selected.name}. ${selected.fact}`)}
-              className="mt-2 text-sm text-blue-400 underline">🔊 다시 듣기</button>
+              style={{
+                background: 'none', border: 'none', color: '#60a5fa',
+                fontSize: 14, cursor: 'pointer', textDecoration: 'underline', fontFamily: FONT,
+              }}>
+              🔊 다시 듣기
+            </button>
           </div>
         </div>
       ) : (
-        <p className="text-center text-gray-400">동물을 눌러봐요!</p>
+        <p style={{ textAlign: 'center', color: '#9ca3af', fontSize: 18, fontFamily: FONT }}>
+          동물을 눌러봐요!
+        </p>
       )}
     </div>
   );
