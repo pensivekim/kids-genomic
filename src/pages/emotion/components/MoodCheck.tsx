@@ -1,4 +1,5 @@
 import { useState } from 'react';
+import { speak } from '../../../utils/tts';
 
 const MOODS = [
   { emoji: '😁', label: '너무 좋아!', color: '#fbbf24', message: '와! 오늘 기분이 최고예요! 그 기쁨을 친구와 나눠봐요 🌟', activity: '좋아하는 노래 크게 불러봐요 🎵' },
@@ -7,13 +8,6 @@ const MOODS = [
   { emoji: '😔', label: '별로예요',   color: '#6b7280', message: '속상한 일이 있었나요? 말해보면 나아질 거예요.',           activity: '좋아하는 책을 읽어봐요 📚' },
   { emoji: '😢', label: '슬퍼요',     color: '#60a5fa', message: '많이 속상하군요. 엄마, 아빠한테 안아달라고 해봐요.',      activity: '엄마, 아빠 손 잡아봐요 🤝' },
 ];
-
-function speak(text: string) {
-  window.speechSynthesis.cancel();
-  const u = new SpeechSynthesisUtterance(text);
-  u.lang = 'ko-KR'; u.rate = 0.8;
-  window.speechSynthesis.speak(u);
-}
 
 export default function MoodCheck() {
   const [selected, setSelected] = useState<typeof MOODS[0] | null>(null);

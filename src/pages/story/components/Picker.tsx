@@ -60,7 +60,7 @@ export default function Picker({ onGenerate, error }: Props) {
   const ready = character && setting && theme;
 
   return (
-    <div className="max-w-2xl mx-auto px-4 pb-12">
+    <div className="max-w-4xl mx-auto px-8 pb-12">
 
       {/* 주인공 */}
       <div className="mb-8">

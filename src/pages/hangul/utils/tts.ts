@@ -1,8 +1,6 @@
-export function speak(text: string, rate = 0.8) {
-  window.speechSynthesis.cancel();
-  const utter = new SpeechSynthesisUtterance(text);
-  utter.lang = 'ko-KR';
-  utter.rate = rate;
-  utter.pitch = 1.1;
-  window.speechSynthesis.speak(utter);
+// Compatibility wrapper for hangul components that call speak(text, rate)
+import { speak as globalSpeak } from '../../../utils/tts';
+
+export function speak(text: string, rate = 0.85) {
+  globalSpeak(text, 'ko-KR', rate);
 }

@@ -1,4 +1,5 @@
 import { useState } from 'react';
+import { speak } from '../../../utils/tts';
 
 const EMOTIONS = [
   { emoji: '😊', name: '기쁨',  color: '#fbbf24', desc: '좋은 일이 생겼을 때 기뻐요. 웃음이 나와요!',              tip: '기쁠 때는 친구에게 나눠봐요 🤝' },
@@ -10,13 +11,6 @@ const EMOTIONS = [
   { emoji: '😔', name: '실망',  color: '#6b7280', desc: '바라던 것이 안 됐을 때 속이 상해요.',                    tip: '실망해도 괜찮아요. 다음에 또 도전해봐요 💪' },
   { emoji: '🥰', name: '사랑',  color: '#ec4899', desc: '소중한 사람이 있으면 마음이 따뜻해요.',                   tip: '사랑하는 사람에게 "사랑해"라고 말해봐요 ❤️' },
 ];
-
-function speak(text: string) {
-  window.speechSynthesis.cancel();
-  const u = new SpeechSynthesisUtterance(text);
-  u.lang = 'ko-KR'; u.rate = 0.8;
-  window.speechSynthesis.speak(u);
-}
 
 export default function EmotionCards() {
   const [selected, setSelected] = useState<typeof EMOTIONS[0] | null>(null);

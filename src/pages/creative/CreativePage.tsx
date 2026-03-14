@@ -1,8 +1,9 @@
 import { useState } from 'react';
-import { useNavigate } from 'react-router-dom';
 import PatternGame from './components/PatternGame';
 import DotConnect from './components/DotConnect';
 import ShapeMatch from './components/ShapeMatch';
+import PageHeader from '../../components/ui/PageHeader';
+import { FONT } from '../../styles/theme';
 
 type Mode = 'home' | 'pattern' | 'dot' | 'shape';
 
@@ -14,53 +15,51 @@ const MODES = [
 
 export default function CreativePage() {
   const [mode, setMode] = useState<Mode>('home');
-  const navigate = useNavigate();
   const current = MODES.find(m => m.id === mode);
 
   return (
-    <div className="min-h-screen" style={{ background: 'linear-gradient(135deg, #f5f3ff 0%, #fdf4ff 50%, #fffbeb 100%)' }}>
-      <div className="text-center pt-8 pb-4 px-4">
-        {mode === 'home' ? (
-          <>
-            <button onClick={() => navigate('/')} className="mb-4 text-purple-400 text-base underline">
-              ← 세계지도로 돌아가기
-            </button>
-            <h1 className="text-4xl font-bold text-purple-600 mb-1">🧩 창의 놀이터</h1>
-            <p className="text-lg text-purple-400">생각하면서 놀아요!</p>
-          </>
-        ) : (
-          <div className="flex items-center justify-between max-w-lg mx-auto">
-            <button onClick={() => setMode('home')}
-              className="w-12 h-12 rounded-full bg-white shadow flex items-center justify-center text-2xl active:scale-90 transition-transform">
-              ←
-            </button>
-            <h1 className="text-2xl font-bold" style={{ color: current?.color }}>
-              {current?.emoji} {current?.label}
-            </h1>
-            <div className="w-12" />
+    <div className="min-h-screen" style={{
+      background: 'linear-gradient(135deg, #f5f3ff 0%, #fdf4ff 50%, #fffbeb 100%)',
+      fontFamily: FONT,
+    }}>
+      <PageHeader emoji="🧩" title="창의 놀이터" color="#7c3aed" />
+
+      <div style={{ paddingTop: 80 }}>
+        {mode !== 'home' && (
+          <div className="text-center pt-4 pb-2 px-4">
+            <div className="flex items-center justify-between max-w-4xl mx-auto">
+              <button onClick={() => setMode('home')}
+                className="w-12 h-12 rounded-full bg-white shadow flex items-center justify-center text-2xl active:scale-90 transition-transform">
+                ←
+              </button>
+              <h2 className="text-2xl font-bold" style={{ color: current?.color }}>
+                {current?.emoji} {current?.label}
+              </h2>
+              <div className="w-12" />
+            </div>
           </div>
         )}
+
+        {mode === 'home' && (
+          <div className="grid grid-cols-1 gap-4 px-8 pb-8 max-w-4xl mx-auto mt-6">
+            {MODES.map((m) => (
+              <button key={m.id} onClick={() => setMode(m.id as Mode)}
+                className="flex items-center gap-4 p-5 rounded-3xl shadow-md active:scale-95 transition-all"
+                style={{ background: m.bg, border: `3px solid ${m.color}22` }}>
+                <span className="text-5xl">{m.emoji}</span>
+                <div className="text-left">
+                  <p className="text-xl font-bold" style={{ color: m.color }}>{m.label}</p>
+                  <p className="text-sm text-gray-400">{m.sublabel}</p>
+                </div>
+              </button>
+            ))}
+          </div>
+        )}
+
+        {mode === 'pattern' && <div className="mt-6"><PatternGame /></div>}
+        {mode === 'dot'     && <div className="mt-4"><DotConnect /></div>}
+        {mode === 'shape'   && <div className="mt-6"><ShapeMatch /></div>}
       </div>
-
-      {mode === 'home' && (
-        <div className="grid grid-cols-1 gap-4 px-4 pb-8 max-w-sm mx-auto mt-4">
-          {MODES.map((m) => (
-            <button key={m.id} onClick={() => setMode(m.id as Mode)}
-              className="flex items-center gap-4 p-5 rounded-3xl shadow-md active:scale-95 transition-all"
-              style={{ background: m.bg, border: `3px solid ${m.color}22` }}>
-              <span className="text-5xl">{m.emoji}</span>
-              <div className="text-left">
-                <p className="text-xl font-bold" style={{ color: m.color }}>{m.label}</p>
-                <p className="text-sm text-gray-400">{m.sublabel}</p>
-              </div>
-            </button>
-          ))}
-        </div>
-      )}
-
-      {mode === 'pattern' && <div className="mt-6"><PatternGame /></div>}
-      {mode === 'dot'     && <div className="mt-4"><DotConnect /></div>}
-      {mode === 'shape'   && <div className="mt-6"><ShapeMatch /></div>}
     </div>
   );
 }

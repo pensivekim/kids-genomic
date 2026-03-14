@@ -1,13 +1,6 @@
 import { useState } from 'react';
 import { INSTRUMENTS } from '../data/music';
-
-function speak(text: string) {
-  window.speechSynthesis.cancel();
-  const u = new SpeechSynthesisUtterance(text);
-  u.lang = 'ko-KR';
-  u.rate = 0.8;
-  window.speechSynthesis.speak(u);
-}
+import { speak } from '../../../utils/tts';
 
 export default function InstrumentCards() {
   const [active, setActive] = useState<string | null>(null);

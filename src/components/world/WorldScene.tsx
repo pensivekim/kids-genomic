@@ -2,6 +2,7 @@ import { useState, useEffect, useRef } from 'react';
 import { useNavigate } from 'react-router-dom';
 import { BUILDINGS } from '../../config/buildings';
 import WelcomeModal from '../ui/WelcomeModal';
+import { speak } from '../../utils/tts';
 
 const FONT = "'Jua', 'system-ui', sans-serif";
 
@@ -74,7 +75,7 @@ function BuildingCard({ building, onClick }: {
     alignItems: 'center',
     justifyContent: 'center',
     gap: 6,
-    padding: '20px 12px 16px',
+    padding: '24px 16px 20px',
     borderRadius: 28,
     cursor: isLive ? 'pointer' : 'default',
     userSelect: 'none',
@@ -92,21 +93,26 @@ function BuildingCard({ building, onClick }: {
         : 'scale(1) translateY(0)',
     transition: 'all 0.22s cubic-bezier(0.34, 1.56, 0.64, 1)',
     fontFamily: FONT,
-    minHeight: 130,
+    minHeight: 160,
   };
+
+  function handleMouseEnter() {
+    setHovered(true);
+    if (isLive) speak(building.name);
+  }
 
   return (
     <div
       style={cardStyle}
       onClick={isLive ? onClick : undefined}
-      onMouseEnter={() => setHovered(true)}
+      onMouseEnter={handleMouseEnter}
       onMouseLeave={() => { setHovered(false); setPressed(false); }}
       onPointerDown={() => isLive && setPressed(true)}
       onPointerUp={() => setPressed(false)}
     >
       {/* 이모지 */}
       <span style={{
-        fontSize: 46,
+        fontSize: 54,
         lineHeight: 1,
         filter: isLive ? 'none' : 'grayscale(1) opacity(0.5)',
         animation: hovered && isLive ? 'emojiPop 0.4s ease' : 'none',
@@ -116,11 +122,14 @@ function BuildingCard({ building, onClick }: {
 
       {/* 이름 */}
       <span style={{
-        fontSize: 15,
+        fontSize: 17,
         fontWeight: 'bold',
         color: isLive ? building.roofColor : '#94a3b8',
         textAlign: 'center',
         lineHeight: 1.3,
+        textShadow: isLive
+          ? '-1px -1px 0 rgba(255,255,255,0.8), 1px -1px 0 rgba(255,255,255,0.8), -1px 1px 0 rgba(255,255,255,0.8), 1px 1px 0 rgba(255,255,255,0.8)'
+          : 'none',
       }}>
         {building.name}
       </span>
@@ -312,8 +321,8 @@ export default function WorldScene() {
         <div style={{ display: 'flex', alignItems: 'center', gap: 10 }}>
           <span style={{ fontSize: 28 }}>🌳</span>
           <div>
-            <div style={{ fontSize: 11, color: '#94a3b8', lineHeight: 1 }}>어서 와요,</div>
-            <div style={{ fontSize: 17, fontWeight: 800, color: '#0f172a', lineHeight: 1.2 }}>
+            <div style={{ fontSize: 12, color: '#94a3b8', lineHeight: 1 }}>어서 와요,</div>
+            <div style={{ fontSize: 20, fontWeight: 800, color: '#0f172a', lineHeight: 1.2 }}>
               {kidName}의 어린이 마을
             </div>
           </div>
@@ -340,16 +349,20 @@ export default function WorldScene() {
           textAlign: 'center', padding: '24px 20px 8px',
           position: 'relative', display: 'inline-block', width: '100%',
         }}>
-          <span style={{ fontSize: 52, display: 'block', animation: 'mascotBob 2s ease-in-out infinite' }}>
+          <span style={{ fontSize: 60, display: 'block', animation: 'mascotBob 2s ease-in-out infinite' }}>
             🐰
           </span>
           <h1 style={{
-            fontSize: 22, fontWeight: 800, color: '#0f172a',
+            fontSize: 26, fontWeight: 800, color: '#0f172a',
             margin: '8px 0 4px', letterSpacing: '-0.3px',
+            textShadow: '-2px -2px 0 rgba(255,255,255,0.9), 2px -2px 0 rgba(255,255,255,0.9), -2px 2px 0 rgba(255,255,255,0.9), 2px 2px 0 rgba(255,255,255,0.9)',
           }}>
             오늘 어디 갈까요?
           </h1>
-          <p style={{ fontSize: 14, color: '#64748b', margin: 0 }}>
+          <p style={{
+            fontSize: 16, color: '#334155', margin: 0,
+            textShadow: '-1px -1px 0 rgba(255,255,255,0.8), 1px -1px 0 rgba(255,255,255,0.8), -1px 1px 0 rgba(255,255,255,0.8), 1px 1px 0 rgba(255,255,255,0.8)',
+          }}>
             건물을 눌러서 입장해요! ✨
           </p>
         </div>
@@ -376,11 +389,13 @@ export default function WorldScene() {
         {/* 건물 그리드 */}
         <div style={{
           display: 'grid',
-          gridTemplateColumns: 'repeat(3, 1fr)',
-          gap: 12,
-          padding: '16px 16px 32px',
-          maxWidth: 480,
+          gridTemplateColumns: 'repeat(auto-fill, minmax(200px, 1fr))',
+          gap: 16,
+          padding: '16px 40px 32px',
+          maxWidth: 1400,
+          width: '100%',
           margin: '0 auto',
+          boxSizing: 'border-box',
         }}>
           {BUILDINGS.map(b => (
             <BuildingCard key={b.id} building={b} onClick={() => setSelected(b)} />

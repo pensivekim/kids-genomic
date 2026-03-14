@@ -1,7 +1,8 @@
 import { useState } from 'react';
-import { useNavigate } from 'react-router-dom';
 import Picker from './components/Picker';
 import StoryDisplay from './components/StoryDisplay';
+import PageHeader from '../../components/ui/PageHeader';
+import { FONT } from '../../styles/theme';
 
 const API = 'https://genomic-ai-backend.pensive-kim.workers.dev/api/story/generate';
 
@@ -18,7 +19,6 @@ export default function StoryPage() {
   const [step, setStep] = useState<Step>('pick');
   const [result, setResult] = useState<StoryResult | null>(null);
   const [error, setError] = useState('');
-  const navigate = useNavigate();
 
   async function handleGenerate(character: string, setting: string, theme: string) {
     setStep('loading');
@@ -45,31 +45,27 @@ export default function StoryPage() {
   }
 
   return (
-    <div className="min-h-screen" style={{ background: 'linear-gradient(135deg, #fef9c3 0%, #fce7f3 50%, #dbeafe 100%)' }}>
-      <div className="text-center pt-8 pb-4 px-4">
-        <button
-          onClick={() => navigate('/')}
-          className="mb-2 text-purple-400 text-base underline block mx-auto"
-        >
-          ← 세계지도로 돌아가기
-        </button>
-        <h1 className="text-4xl font-bold text-purple-700 mb-1">📖 동화 나라</h1>
-        <p className="text-lg text-purple-400">나만의 동화를 만들어 봐요!</p>
+    <div className="min-h-screen" style={{
+      background: 'linear-gradient(135deg, #fef9c3 0%, #fce7f3 50%, #dbeafe 100%)',
+      fontFamily: FONT,
+    }}>
+      <PageHeader emoji="📖" title="동화 나라" color="#7c3aed" />
+
+      <div style={{ paddingTop: 80 }}>
+        {step === 'pick' && <Picker onGenerate={handleGenerate} error={error} />}
+
+        {step === 'loading' && (
+          <div className="flex flex-col items-center justify-center py-24 gap-6">
+            <div className="text-7xl animate-bounce">✨</div>
+            <p className="text-2xl font-bold text-purple-600">동화를 만들고 있어요...</p>
+            <p className="text-lg text-purple-400">잠깐만 기다려 주세요!</p>
+          </div>
+        )}
+
+        {step === 'story' && result && (
+          <StoryDisplay result={result} onReset={handleReset} />
+        )}
       </div>
-
-      {step === 'pick' && <Picker onGenerate={handleGenerate} error={error} />}
-
-      {step === 'loading' && (
-        <div className="flex flex-col items-center justify-center py-24 gap-6">
-          <div className="text-7xl animate-bounce">✨</div>
-          <p className="text-2xl font-bold text-purple-600">동화를 만들고 있어요...</p>
-          <p className="text-lg text-purple-400">잠깐만 기다려 주세요!</p>
-        </div>
-      )}
-
-      {step === 'story' && result && (
-        <StoryDisplay result={result} onReset={handleReset} />
-      )}
     </div>
   );
 }

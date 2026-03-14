@@ -1,12 +1,6 @@
 import { useState } from 'react';
 import { CONSTELLATIONS, type Star } from '../data/science';
-
-function speak(text: string) {
-  window.speechSynthesis.cancel();
-  const u = new SpeechSynthesisUtterance(text);
-  u.lang = 'ko-KR'; u.rate = 0.8;
-  window.speechSynthesis.speak(u);
-}
+import { speak } from '../../../utils/tts';
 
 export default function StarMap() {
   const [selected, setSelected] = useState<Star | null>(null);

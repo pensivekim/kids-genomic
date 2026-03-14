@@ -1,5 +1,6 @@
 import { useState } from 'react';
 import { ANIMALS, type Animal } from '../data/science';
+import { speak } from '../../../utils/tts';
 
 type Category = 'land' | 'sea' | 'sky';
 
@@ -8,13 +9,6 @@ const TABS: { id: Category; label: string; emoji: string; color: string }[] = [
   { id: 'sea',  label: '바다', emoji: '🌊', color: '#3b82f6' },
   { id: 'sky',  label: '하늘', emoji: '☁️', color: '#8b5cf6' },
 ];
-
-function speak(text: string) {
-  window.speechSynthesis.cancel();
-  const u = new SpeechSynthesisUtterance(text);
-  u.lang = 'ko-KR'; u.rate = 0.8;
-  window.speechSynthesis.speak(u);
-}
 
 export default function AnimalBook() {
   const [tab, setTab] = useState<Category>('land');

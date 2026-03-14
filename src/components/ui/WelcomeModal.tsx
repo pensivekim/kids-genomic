@@ -1,4 +1,5 @@
 import { useState, useEffect, useRef } from 'react';
+import { speak } from '../../utils/tts';
 
 const FONT = "'Jua', 'system-ui', sans-serif";
 
@@ -24,13 +25,6 @@ export default function WelcomeModal({ onDone }: Props) {
       return () => clearTimeout(t);
     }
   }, [phase]);
-
-  function speak(text: string) {
-    window.speechSynthesis.cancel();
-    const u = new SpeechSynthesisUtterance(text);
-    u.lang = 'ko-KR'; u.rate = 0.85; u.pitch = 1.2;
-    window.speechSynthesis.speak(u);
-  }
 
   function handleSubmit() {
     const trimmed = name.trim();
