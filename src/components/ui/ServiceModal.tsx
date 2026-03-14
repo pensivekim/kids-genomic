@@ -1,3 +1,4 @@
+import { useNavigate } from 'react-router-dom';
 import { type BuildingConfig } from '../../config/buildings';
 
 interface Props {
@@ -6,10 +7,14 @@ interface Props {
 }
 
 export default function ServiceModal({ building, onClose }: Props) {
+  const navigate = useNavigate();
   if (!building) return null;
 
   function handleGo() {
-    if (building?.serviceUrl) {
+    if (!building?.serviceUrl) return;
+    if (building.serviceUrl.startsWith('/')) {
+      navigate(building.serviceUrl);
+    } else {
       window.open(building.serviceUrl, '_blank');
     }
     onClose();
