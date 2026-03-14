@@ -13,33 +13,42 @@ export default function PageHeader({ emoji, title, color, bg }: Props) {
   return (
     <header style={{
       position: 'fixed', top: 0, left: 0, right: 0, zIndex: 50,
-      height: 64,
-      display: 'flex', alignItems: 'center',
-      padding: '0 24px',
-      background: bg || 'rgba(255,255,255,0.85)',
-      backdropFilter: 'blur(16px)',
-      borderBottom: '1px solid rgba(255,255,255,0.5)',
-      boxShadow: '0 2px 20px rgba(0,0,0,0.06)',
+      height: 68,
+      display: 'flex', alignItems: 'center', justifyContent: 'center',
+      padding: '0 80px',
+      background: bg || 'rgba(255,255,255,0.92)',
+      backdropFilter: 'blur(20px)',
+      borderBottom: '1px solid rgba(0,0,0,0.06)',
+      boxShadow: '0 2px 24px rgba(0,0,0,0.06)',
       fontFamily: FONT,
-      gap: 12,
     }}>
+      {/* Back button — absolute left */}
       <button
         onClick={() => navigate('/')}
         style={{
-          width: 44, height: 44, borderRadius: 14,
-          background: color + '22', border: 'none',
-          fontSize: 20, cursor: 'pointer',
+          position: 'absolute', left: 20, top: '50%', transform: 'translateY(-50%)',
+          width: 48, height: 48, borderRadius: 16,
+          background: color + '15', border: `2px solid ${color}30`,
+          fontSize: 22, cursor: 'pointer',
           display: 'flex', alignItems: 'center', justifyContent: 'center',
-          color: color, fontWeight: 800, fontFamily: FONT,
+          color, fontWeight: 900, fontFamily: FONT,
           transition: 'all 0.15s',
         }}
       >
         ←
       </button>
-      <span style={{ fontSize: 28 }}>{emoji}</span>
-      <h1 style={{ fontSize: 22, fontWeight: 800, color, margin: 0, letterSpacing: '-0.3px' }}>
-        {title}
-      </h1>
+
+      {/* Centered title */}
+      <div style={{ display: 'flex', alignItems: 'center', gap: 10 }}>
+        <span style={{ fontSize: 32 }}>{emoji}</span>
+        <h1 style={{
+          fontSize: 24, fontWeight: 900, color, margin: 0,
+          letterSpacing: '-0.3px',
+          textShadow: `0 0 20px ${color}30`,
+        }}>
+          {title}
+        </h1>
+      </div>
     </header>
   );
 }
