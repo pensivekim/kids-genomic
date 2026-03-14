@@ -12,11 +12,12 @@ export default function WorldScene() {
   const [selected, setSelected] = useState<BuildingConfig | null>(null);
 
   return (
-    <div className="w-full h-full" style={{ background: 'linear-gradient(to bottom, #bae6fd 0%, #e0f2fe 60%, #86efac 100%)' }}>
+    <div style={{ width: '100%', height: '100%', position: 'relative', background: 'linear-gradient(to bottom, #bae6fd 0%, #e0f2fe 60%, #86efac 100%)' }}>
       <Canvas
+        style={{ position: 'absolute', top: 0, left: 0, width: '100%', height: '100%' }}
         orthographic
         camera={{ zoom: 70, position: [12, 12, 12], near: 0.1, far: 500 }}
-        frameloop="demand"
+        frameloop="always"
         dpr={[1, 1.5]}
         gl={{ antialias: false, alpha: false }}
         shadows={false}
