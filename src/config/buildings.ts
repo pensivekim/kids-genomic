@@ -105,13 +105,13 @@ export const BUILDINGS: BuildingConfig[] = [
   {
     id: 'art',
     name: '미술 갤러리',
-    subtitle: '색칠·AI 그림',
+    subtitle: '그림·도장·색 섞기',
     icon: '🎨',
     position: [5, 0, -3],
     color: '#fdba74',
     roofColor: '#ea580c',
-    serviceUrl: '',
-    status: 'coming_soon',
+    serviceUrl: '/art',
+    status: 'live',
     component: 'library',
   },
   {
