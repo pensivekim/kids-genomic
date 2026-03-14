@@ -7,6 +7,7 @@ import FlatWorldMap from './components/ui/FlatWorldMap';
 const WorldScene = lazy(() => import('./components/world/WorldScene'));
 const HangulPage = lazy(() => import('./pages/hangul/HangulPage'));
 const StoryPage = lazy(() => import('./pages/story/StoryPage'));
+const EnglishPage = lazy(() => import('./pages/english/EnglishPage'));
 
 function World() {
   const isLowEnd = useIsLowEndDevice();
@@ -28,6 +29,7 @@ export default function App() {
           <Route path="/" element={<World />} />
           <Route path="/hangul" element={<HangulPage />} />
           <Route path="/story" element={<StoryPage />} />
+          <Route path="/english" element={<EnglishPage />} />
         </Routes>
       </Suspense>
     </BrowserRouter>

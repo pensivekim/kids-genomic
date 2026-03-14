@@ -86,8 +86,8 @@ export const BUILDINGS: BuildingConfig[] = [
     position: [5, 0, 3],
     color: '#7dd3fc',
     roofColor: '#0284c7',
-    serviceUrl: '',
-    status: 'coming_soon',
+    serviceUrl: '/english',
+    status: 'live',
     component: 'school',
   },
   {
