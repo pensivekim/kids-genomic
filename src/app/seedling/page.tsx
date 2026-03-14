@@ -31,7 +31,7 @@ export default function SeedlingPage() {
         <div style={{ display: 'grid', gridTemplateColumns: 'repeat(auto-fill, minmax(220px, 1fr))', gap: 24, marginBottom: 48 }}>
           {MODULES.map(m => (
             <button key={m.id}
-              onClick={() => window.open(`https://seedling.genomic.cc/play/${m.id}`, '_self')}
+              onClick={() => router.push(`/seedling/play/${m.id}`)}
               style={{
                 background: `linear-gradient(145deg, ${m.color}22, ${m.color}0d)`,
                 border: `2px solid ${m.color}35`, borderRadius: 28, padding: '36px 20px',
