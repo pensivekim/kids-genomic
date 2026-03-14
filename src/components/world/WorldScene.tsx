@@ -56,12 +56,12 @@ export default function WorldScene() {
       </Canvas>
 
       {/* 상단 타이틀 */}
-      <div className="absolute top-4 left-1/2 -translate-x-1/2 bg-white/80 backdrop-blur-sm rounded-2xl px-6 py-2 shadow-lg pointer-events-none">
-        <h1 className="text-xl font-bold text-green-700">🌳 제노믹 어린이 마을</h1>
+      <div className="absolute top-4 left-1/2 -translate-x-1/2 bg-white/80 backdrop-blur-sm rounded-2xl px-6 py-3 shadow-lg pointer-events-none">
+        <h1 className="text-2xl font-bold text-green-700">🌳 제노믹 어린이 마을</h1>
       </div>
 
       {/* 조작 힌트 */}
-      <div className="absolute bottom-4 left-1/2 -translate-x-1/2 bg-black/30 text-white text-xs rounded-full px-4 py-2 pointer-events-none">
+      <div className="absolute bottom-4 left-1/2 -translate-x-1/2 bg-black/30 text-white text-sm rounded-full px-5 py-2 pointer-events-none">
         건물을 클릭하면 입장할 수 있어요!
       </div>
 

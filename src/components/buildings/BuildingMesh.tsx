@@ -92,9 +92,9 @@ export default function BuildingMesh({ building, onClick }: Props) {
       <Html position={[0, 3.0, 0]} center style={{ pointerEvents: 'none' }}>
         <div style={{
           background: 'rgba(255,255,255,0.88)',
-          borderRadius: '10px',
-          padding: '3px 8px',
-          fontSize: '11px',
+          borderRadius: '12px',
+          padding: '5px 12px',
+          fontSize: '15px',
           fontWeight: 'bold',
           color: '#1f2937',
           whiteSpace: 'nowrap',
@@ -103,7 +103,7 @@ export default function BuildingMesh({ building, onClick }: Props) {
           userSelect: 'none',
         }}>
           {building.icon} {building.name}
-          {!isLive && <span style={{ marginLeft: '4px', fontSize: '9px', color: '#9ca3af' }}>준비중</span>}
+          {!isLive && <span style={{ marginLeft: '6px', fontSize: '12px', color: '#9ca3af' }}>준비중</span>}
         </div>
       </Html>
     </group>
