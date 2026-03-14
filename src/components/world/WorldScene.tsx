@@ -4,6 +4,8 @@ import { MOUSE, TOUCH } from 'three';
 import { Suspense, useState } from 'react';
 import Terrain from './Terrain';
 import DecorationGroup from './DecorationGroup';
+import PathNetwork from './PathNetwork';
+import Mascot from './Mascot';
 import BuildingGroup from '../buildings/BuildingGroup';
 import ServiceModal from '../ui/ServiceModal';
 import { type BuildingConfig } from '../../config/buildings';
@@ -27,7 +29,9 @@ export default function WorldScene() {
           <directionalLight position={[8, 15, 8]} intensity={1.5} />
 
           <Terrain />
+          <PathNetwork />
           <DecorationGroup />
+          <Mascot />
           <BuildingGroup onSelect={setSelected} />
 
           <OrbitControls
